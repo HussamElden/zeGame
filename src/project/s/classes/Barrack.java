@@ -10,7 +10,11 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Barrack extends Buildings implements IBuild
-{   
+{   PriceLists price=new PriceLists();
+private void setPrice(){
+    price.Setwood(150);
+  
+    }
     @Override
     public String Build(){
         incrementNumber();
@@ -18,7 +22,7 @@ public class Barrack extends Buildings implements IBuild
     };
     @Override
     public String Destroy(){
-    return "Barrack is destroied";
+    return "Barrack is destroyed";
     };
     @Override
     public String spawn(){

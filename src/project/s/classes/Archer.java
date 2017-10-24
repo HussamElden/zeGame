@@ -12,16 +12,17 @@ package project.s.classes;
 public class Archer extends Movables implements  Ibehavior{
  PriceLists price=new PriceLists();
    protected int Range;
-   public Throwable arrow;
-   public void setPrice(){
-    price.Setgold;
-    }
-
-    Archer()
-    {
-    arrow = new Throwable();
-    
-    Range=5;
+   public Throwable arrow = new Throwable();
+   Archer(){
+      
+    price.Setgold(20);
+    price.Setfood(25);
+    Range=4;
+    arrow.setDamage(4);
+    setattackSpeed(0.96);
+    setHealth(30);
+    setagrorange(6);
+    setAgility(1);
     }
 
 public void setRange (int archRange)

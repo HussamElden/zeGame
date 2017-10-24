@@ -11,4 +11,9 @@ package project.s.classes;
  */
 public class General extends Movables {
    private int Buffrange;
+    PriceLists price=new PriceLists();
+    General(){
+    price.Setfood(70);
+    price.Setgold(80);
+    }
 }

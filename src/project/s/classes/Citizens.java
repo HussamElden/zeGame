@@ -11,7 +11,7 @@ package project.s.classes;
  */
 public class Citizens extends Movables {
     PriceLists price=new PriceLists();
-    public void setPrice(){
+    Citizens(){
     price.Setfood(20);
     }
     public PriceLists Getprice(){

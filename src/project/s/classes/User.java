@@ -180,9 +180,19 @@ br.close();
     @Override
     public void save() {
     }
-    public boolean Checkuser(){
-    return true;
-    }
+    public  boolean Checkuser()
+    {
+        int i=0;
+        readU(Username);
+
+        while(checkNew)
+        {
+       if (Username != AllUsers[i].Username)
+        return false;
+            i++;
+        } 
+      return true;
+        }
      public void setUsername (String UN){
         if (UN.length()<=16)
             Username=UN;

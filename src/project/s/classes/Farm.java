@@ -11,9 +11,11 @@ package project.s.classes;
  */
 public class Farm extends Buildings implements IBuild{
     
-    private int WorkerLimit;
+    private int WorkerLimit=1;
     public void IncreaseFood(Inventory  food){
-        
+        int x = inventory.getFood();
+       x+=5;
+       inventory.setFood(x);
     }
     @Override
     public String Build(){

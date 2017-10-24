@@ -13,7 +13,9 @@ public class Mine extends Buildings implements IBuild{
     
     private int WorkerLimit;
     void IncreaseStone(){
-        
+        int x = inventory.getMetal();
+       x+=5;
+       inventory.setMetal(x);
     }
     @Override
     public String Build(){

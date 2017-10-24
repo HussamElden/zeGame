@@ -13,7 +13,11 @@ public class Chariots extends Movables implements  Ibehavior{
     private Horse H;
     private Throwable arrow;
     private int Range;
-    
+     PriceLists price=new PriceLists();
+    Chariots(){
+    price.Setwood(60);
+    price.Setgold(40);
+    }
     public void RideHorse()
    { setAgility(H.getAgility()); }
     @Override

@@ -10,9 +10,16 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Catapult extends Movables implements  Ibehavior {
-    
+    PriceLists price=new PriceLists();
     private int Range;
     private Throwable Stone;
+    Catapult(){
+    price.Setwood(125);
+    price.Setgold(80);
+     setHealth(70);
+     
+    }
+    
   
   
 public void setRange (int cataRange)

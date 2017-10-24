@@ -12,7 +12,11 @@ package project.s.classes;
 public class Cavalry extends Movables implements  Ibehavior{
     private Horse H;
     private Melee spear;
-   
+   PriceLists price=new PriceLists();
+    Cavalry(){
+    price.Setfood(60);
+    price.Setgold(75);
+    }
     public void RideHorse()
    {  }
     @Override

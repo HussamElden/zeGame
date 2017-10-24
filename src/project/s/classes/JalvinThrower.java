@@ -13,11 +13,20 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    
    private int Range;
    Throwable spear ;
-    
+   PriceLists price=new PriceLists();
+    JalvinThrower(){
+    price.Setfood(20);
+    price.Setgold(25);
+    spear.setDamage(5);
+    setHealth(50);
+    setagrorange(4);
+    setAgility(1);
+            
+    }
    
    public void setRange (int JalRange){
    if (Range>0)
-       JalRange=Range;
+       Range=JalRange;
    } 
    public int getRange(){
        return Range;
@@ -30,7 +39,7 @@ public class JalvinThrower extends Movables implements  Ibehavior{
       @Override
      public String attack(){
      return "Archer is Attacking";
-     };
+     }
     
 }
     
