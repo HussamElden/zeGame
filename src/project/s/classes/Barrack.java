@@ -43,7 +43,7 @@ private void setPrice(){
     int choice=sc.nextInt();
     switch(choice){
         case 1:{
-        inventory=new Inventory();
+       Inventory inventory=new Inventory();
         Soldier s=new Soldier();
         if(inventory.getFood()>=s.price.Getfood()&&inventory.getGold()>=s.price.Getgold()){
         s.incrementNumber();
@@ -56,7 +56,7 @@ private void setPrice(){
         
         }
         case 2:{
-        inventory=new Inventory();
+      Inventory  inventory=new Inventory();
         Archer a=new Archer();
         if(inventory.getFood()>=a.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
         a.incrementNumber();
@@ -68,9 +68,9 @@ private void setPrice(){
         }
         }
         case 3:{
-        inventory=new Inventory();
+        Inventory inventory=new Inventory();
         JalvinThrower j=new JalvinThrower();
-         if(inventory.getFood()>=j.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
+         if(inventory.getFood()>=j.price.Getfood()&&inventory.getGold()>=j.price.Getgold()){
         j.incrementNumber();
         inventory.Decfood(j.price.Getfood());
         inventory.Decgold(j.price.Getgold());
@@ -82,6 +82,7 @@ private void setPrice(){
         }default:{
         
         return"Wrong choice";
+        
         }
     
     

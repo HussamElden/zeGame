@@ -10,7 +10,7 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Citizens extends Movables {
-    PriceLists price=new PriceLists();
+    private PriceLists price=new PriceLists();
      private static int Number=0;
    public void incrementNumber(){
    Number++;

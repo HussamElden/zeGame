@@ -22,7 +22,7 @@ public class Mine extends Buildings implements IBuild{
    public int  GetNumber(){
    return Number;
    }
-    void IncreaseStone(){
+    void IncreaseStone(Inventory inventory){
         int x = inventory.getMetal();
        x+=5;
        inventory.setMetal(x);

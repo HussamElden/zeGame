@@ -17,9 +17,20 @@ public class ProjectSClasses {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
         //Object ob=new Object();
-       Scanner sc=new Scanner(System.in);
+       
+            Object[][] ob = new Object[100][100];
+            ob[0][0] = new Citizens();
+            String Caster =ob[0][0].toString();
+            
+            
+            String v=Getcaster(Caster);
+            
+            ((Citizens)ob[0][0]).Getprice();
+            
+        Scanner sc=new Scanner(System.in);
         Base base=new Base();
        User user = new User();
        Music music=new Music();
@@ -120,12 +131,9 @@ public class ProjectSClasses {
           
     }while(choice!=-1);
        
-        while (base.getalive()&&choice!=666){
-        
-        
-        
-        
-        
+        while (base.getalive()&&choice!=666)
+        {
+            
         }
          
         
@@ -135,5 +143,23 @@ public class ProjectSClasses {
         
         
     }
+    public static String Getcaster(String Caster){
+    int ctr=0;
+    String newCaster = new String();
+            newCaster="";
+            for (int i = 0; i <Caster.length();i++)
+            {
+                if(Caster.charAt(i)=='@'){
+                break;
+                }else if(ctr>=3){
+                    newCaster+=Caster.charAt(i);
+                
+                }else if(Caster.charAt(i)=='.'){
+                ctr++;
+                }
+//               
+            }
     
+    return newCaster;
+    }
 }

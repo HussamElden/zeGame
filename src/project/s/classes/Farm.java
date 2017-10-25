@@ -22,7 +22,8 @@ public class Farm extends Buildings implements IBuild{
    public int  GetNumber(){
    return Number;
    }
-    public void IncreaseFood(Inventory  food){
+    public void IncreaseFood(Inventory inventory){
+  
         int x = inventory.getFood();
        x+=5;
        inventory.setFood(x);

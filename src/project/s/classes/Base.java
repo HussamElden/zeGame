@@ -11,9 +11,7 @@ package project.s.classes;
  */
 public class Base extends Buildings implements IBuild  {
    public void setlvl(){};
-   public Boolean Isdestroyed(){
-   return false;
-   }
+   
    Citizens citizen=new Citizens();
     @Override
     public String Build() {
@@ -28,10 +26,11 @@ public class Base extends Buildings implements IBuild  {
 
     @Override
     public String spawn() {
-        inventory=new Inventory();
-        if(inventory.getFood()>=citizen.price.Getfood()){
+       Inventory inventory=new Inventory();
+       PriceLists p=citizen.Getprice();
+        if(inventory.getFood()>=p.Getfood()){
         citizen.incrementNumber();
-        inventory.Decfood(citizen.price.Getfood());
+        inventory.Decfood(p.Getfood());
         return "Now you have "+citizen.GetNumber()+" citizen";
         }else{
         return "You dont have enough food";
