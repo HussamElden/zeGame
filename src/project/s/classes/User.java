@@ -187,7 +187,7 @@ br.close();
 
         while(checkNew)
         {
-       if (Username != AllUsers[i].Username)
+       if (Username == null ? AllUsers[i].Username != null : !Username.equals(AllUsers[i].Username))
         return false;
             i++;
         } 

@@ -57,7 +57,31 @@ private void setPrice(){
         }
         case 2:{
         inventory=new Inventory();
-        Archer archer
+        Archer a=new Archer();
+        if(inventory.getFood()>=a.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
+        a.incrementNumber();
+        inventory.Decfood(a.price.Getfood());
+        inventory.Decgold(a.price.Getgold());
+        return "Now you have "+a.GetNumber()+" Archer";
+        }else{
+        return "You dont have enough resources";
+        }
+        }
+        case 3:{
+        inventory=new Inventory();
+        JalvinThrower j=new JalvinThrower();
+         if(inventory.getFood()>=j.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
+        j.incrementNumber();
+        inventory.Decfood(j.price.Getfood());
+        inventory.Decgold(j.price.Getgold());
+        return "Now you have "+j.GetNumber()+" JalvinThrower";
+        }else{
+        return "You dont have enough resources";
+        }
+        
+        }default:{
+        
+        return"Wrong choice";
         }
     
     

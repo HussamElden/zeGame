@@ -99,11 +99,13 @@ public class ProjectSClasses {
                    {
                        System.out.println("enter the desired name to delete");
                       user.deleteu();
+                       choice=-1;
                       break;
                    }
                    case 3:
                    {
                       user.editu();
+                       choice=-1;
                       break;
                    
                    }
