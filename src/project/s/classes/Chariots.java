@@ -14,6 +14,16 @@ public class Chariots extends Movables implements  Ibehavior{
     private Throwable arrow;
     private int Range;
      PriceLists price=new PriceLists();
+      private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     Chariots(){
     price.Setwood(60);
     price.Setgold(40);

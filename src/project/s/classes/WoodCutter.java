@@ -15,6 +15,16 @@ import java.util.TimerTask;
 public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
 
     public WoodCutter() {
         

@@ -12,6 +12,16 @@ package project.s.classes;
 public class Mine extends Buildings implements IBuild{
     
     private int WorkerLimit;
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     void IncreaseStone(){
         int x = inventory.getMetal();
        x+=5;

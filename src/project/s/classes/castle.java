@@ -12,6 +12,16 @@ package project.s.classes;
 public class castle extends Buildings implements IBuild{
    private Throwable arrow=new Throwable();
     private int AgroRange;
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     public void Throw(){}
     @Override
     public String Build(){

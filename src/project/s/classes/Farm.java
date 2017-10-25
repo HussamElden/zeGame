@@ -12,6 +12,16 @@ package project.s.classes;
 public class Farm extends Buildings implements IBuild{
     
     private int WorkerLimit=1;
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     public void IncreaseFood(Inventory  food){
         int x = inventory.getFood();
        x+=5;

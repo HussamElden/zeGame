@@ -5,12 +5,16 @@
  */
 package project.s.classes;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Ahmed
  */
 public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
+    private static int Number=0;
+    
 private void setPrice(){
     price.Setwood(150);
   
@@ -24,8 +28,39 @@ private void setPrice(){
     public String Destroy(){
     return "Barrack is destroyed";
     };
+    public void incrementNumber(){
+     Number++;
+     }
+     public void dcrementNumber(){
+     Number--;
+     }
+     public int  GetNumber(){
+     return Number;
+      }
     @Override
     public String spawn(){
-    return"";
-    };
+    Scanner sc=new Scanner(System.in);
+    int choice=sc.nextInt();
+    switch(choice){
+        case 1:{
+        inventory=new Inventory();
+        Soldier s=new Soldier();
+        if(inventory.getFood()>=s.price.Getfood()&&inventory.getGold()>=s.price.Getgold()){
+        s.incrementNumber();
+        inventory.Decfood(s.price.Getfood());
+        inventory.Decgold(s.price.Getgold());
+        return "Now you have "+s.GetNumber()+" Soldier";
+        }else{
+        return "You dont have enough resources";
+        }
+        
+        }
+        case 2:{
+        inventory=new Inventory();
+        Archer archer
+        }
+    
+    
+    }
+    }
 }

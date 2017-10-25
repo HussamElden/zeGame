@@ -14,7 +14,16 @@ public class Tower extends Buildings{
     private int Range;
     private int AgroRange;
   private int Attackspeed;
-    
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
   public void setarrows (Throwable Arrows){
           Arrows=arrows;
     }

@@ -10,7 +10,16 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Knight extends Movables implements  Ibehavior {
-    
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
   public void RideHorse()
    {  }
     @Override
@@ -20,5 +29,5 @@ public class Knight extends Movables implements  Ibehavior {
       @Override
      public String attack(){
      return "Archer is Attacking";
-     };
+     }
 }

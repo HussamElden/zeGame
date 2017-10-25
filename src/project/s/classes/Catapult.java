@@ -13,6 +13,16 @@ public class Catapult extends Movables implements  Ibehavior {
     PriceLists price=new PriceLists();
     private int Range;
     private Throwable Stone;
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     Catapult(){
     price.Setwood(125);
     price.Setgold(80);

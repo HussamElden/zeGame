@@ -13,6 +13,16 @@ public class Cavalry extends Movables implements  Ibehavior{
     private Horse H;
     private Melee spear;
    PriceLists price=new PriceLists();
+    private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     Cavalry(){
     price.Setfood(60);
     price.Setgold(75);

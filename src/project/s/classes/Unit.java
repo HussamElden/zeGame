@@ -12,19 +12,11 @@ package project.s.classes;
 public class Unit {
     protected Coordinates position;
    private  int Health;
-   private int Number=0;
+   
   private String status;
   Inventory inventory;
    private boolean aLive;
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
+   
     public void setposition (Coordinates pos){
          position= pos;
     }

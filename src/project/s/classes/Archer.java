@@ -13,6 +13,16 @@ public class Archer extends Movables implements  Ibehavior{
  PriceLists price=new PriceLists();
    protected int Range;
    public Throwable arrow = new Throwable();
+   private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
    Archer(){
       
     price.Setgold(20);

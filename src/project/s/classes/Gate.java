@@ -11,6 +11,16 @@ package project.s.classes;
  */
 public class Gate extends Buildings implements IBuild{
    private boolean open;
+    private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     public Boolean open(boolean x){
     return true;
     }
