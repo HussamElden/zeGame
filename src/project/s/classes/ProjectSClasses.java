@@ -21,23 +21,16 @@ public class ProjectSClasses {
     public static void main(String[] args) {
         //Object ob=new Object();
        
-            Object[][] ob = new Object[100][100];
-            ob[0][0] = new Citizens();
-            String Caster =ob[0][0].toString();
-            
-            
-            String v=Getcaster(Caster);
-            
-            ((Citizens)ob[0][0]).Getprice();
-            
+    
         Scanner sc=new Scanner(System.in);
         Base base=new Base();
        User user = new User();
        Music music=new Music();
        Timer T=new Timer();
+       String US =new String ();
    
        String x = new String();
-          // music.Playsound();
+          music.Playsound();
        int choice = -1;
        do {
            
@@ -69,9 +62,11 @@ public class ProjectSClasses {
                case 2:
                {
                    System.out.println("Enter your new Username");
-                   user.setUsername(sc.nextLine());
+                    x=sc.next();
+                      user.setUsername(x);
                    System.out.println("Enter you Password");
-                   user.setPassword(sc.nextLine());
+                   x=sc.next();
+                      user.setPassword(x);
                    user.addu();
                    break;
                }
@@ -85,13 +80,14 @@ public class ProjectSClasses {
                    case 1:
                    {    int choice1 =-1;
                        do{
-                        System.out.println("your base is ready enter 1 to spawn workers ,2 to check your inventory");
+                        System.out.println("your base is ready enter 1 to spawn Citizen ,2 to check your inventory");
                         
                         choice1=sc.nextInt();
                         switch(choice1){
                             case 1:{System.out.println(base.spawn());
-                            choice=-1;
-                            choice1=-1;
+                            //Display();
+                            choice= -1;
+                            choice1= -1;
                                     break;
                             }
                             case 2:{
@@ -131,8 +127,52 @@ public class ProjectSClasses {
           
     }while(choice!=-1);
        
-        while (base.getalive()&&choice!=666)
+        while (base.getalive()&&US!="END")
         {
+            System.out.println("Enter the name of the Unit you want to select or enter All");
+            Display();
+            US=sc.next();
+            US = US.toUpperCase();
+            if(US.equals("CITIZEN")){
+            Citizens C =new Citizens();
+            if(C.GetNumber()==0){
+            System.out.println("You dont have any Citizens to select enter 1 to spawn a Citizen or 2 to Cancel");
+            choice=sc.nextInt();
+            switch(choice){
+                case 1:{
+                base.spawn();
+                break; 
+                }
+                default:{
+                break;
+                 }
+            }
+            }else{
+                System.out.println("Enter 1 to build woodCutter,2 to build a Mine,3 to build a Farm,4 to ArmyBuildings");
+                int choise2=sc.nextInt();
+                switch(choise2){
+                    case 1:{
+                    WoodCutter woodcutter=new WoodCutter();
+                   
+                    System.out.println(woodcutter.Build());
+                    break;
+                    }
+                    case 2:{
+                    Mine mine=new Mine();
+                    System.out.println(mine.Build());
+                    break;
+                    }
+                    case 3:{
+                    Farm farm=new Farm();
+                    System.out.println(farm.Build());
+                    
+                    }
+                
+                }
+            
+            
+            }
+            }
             
         }
          
@@ -157,9 +197,52 @@ public class ProjectSClasses {
                 }else if(Caster.charAt(i)=='.'){
                 ctr++;
                 }
-//               
+
             }
     
     return newCaster;
+    }
+    public static void Display(){
+            Object[] ob = new Object[9];
+            ob[0] = new Citizens();
+            ob[1] = new Soldier();
+            ob[2] = new Knight();
+            ob[3] = new JalvinThrower();
+            ob[4] = new Archer();
+            ob[5] = new Cavalry();
+            ob[6] = new General();
+            ob[7] = new Chariots();
+            for(int i=0;i<8;i++){
+             String v=new String();
+             v=ob[i].toString();
+             if(Getcaster(v)=="Citizens"&&((Citizens)ob[i]).GetNumber()!=0){
+             System.out.print(((Citizens)ob[i]).GetNumber()+" Citizen ");
+             }
+             else if(Getcaster(v)=="Soldier"&&((Soldier)ob[i]).GetNumber()!=0){
+              System.out.print(((Soldier)ob[i]).GetNumber()+" Soldier ");
+             }
+             else if("Knight".equals(v)&&((Knight)ob[i]).GetNumber()!=0){
+                  System.out.print(((Knight)ob[i]).GetNumber()+" Knight ");
+             }
+             else if("JalvinThrower".equals(v)&&((JalvinThrower)ob[i]).GetNumber()!=0){
+             System.out.print(((JalvinThrower)ob[i]).GetNumber()+" JalvinThrower ");
+             }
+             else if("Archer".equals(v)&&((Archer)ob[i]).GetNumber()!=0){
+             System.out.print(((Archer)ob[i]).GetNumber()+" Archer ");
+             }
+             else if("Cavalry".equals(v)&&((Cavalry)ob[i]).GetNumber()!=0){
+             System.out.print(((Cavalry)ob[i]).GetNumber()+" Cavalry ");
+             }
+             else if("General".equals(v)&&((General)ob[i]).GetNumber()!=0){
+             System.out.print(((General)ob[i]).GetNumber()+" General ");
+             }
+             else if("Chariots".equals(v)&&((Chariots)ob[i]).GetNumber()!=0){
+             System.out.print(((Chariots)ob[i]).GetNumber()+" Chariots ");
+             }
+            }
+            
+           
+            
+            
     }
 }

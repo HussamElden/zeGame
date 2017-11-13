@@ -24,12 +24,14 @@ public class Mine extends Buildings implements IBuild{
    }
     void IncreaseStone(Inventory inventory){
         int x = inventory.getMetal();
-       x+=5;
+       x+=10;
        inventory.setMetal(x);
     }
     @Override
     public String Build(){
+        Inventory inventory =new Inventory();
         incrementNumber();
+        IncreaseStone(inventory);
     return"Mine is built";
     };
     @Override

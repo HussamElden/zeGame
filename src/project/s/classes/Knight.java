@@ -11,7 +11,19 @@ package project.s.classes;
  */
 public class Knight extends Movables implements  Ibehavior {
      private static int Number=0;
-   public void incrementNumber(){
+     private Melee sword=new Melee();
+    PriceLists price=new PriceLists();
+     Knight()
+     {
+         sword.setdamage(10);
+         price.Setfood(60);
+         price.Setgold(75);
+         setagrorange(2);
+         setAgility(1);
+         setattackSpeed(0.96);
+        
+     }
+     public void incrementNumber(){
    Number++;
    }
    public void dcrementNumber(){

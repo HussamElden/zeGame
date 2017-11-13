@@ -25,11 +25,13 @@ public class Farm extends Buildings implements IBuild{
     public void IncreaseFood(Inventory inventory){
   
         int x = inventory.getFood();
-       x+=5;
+       x+=10;
        inventory.setFood(x);
     }
     @Override
     public String Build(){
+        Inventory inventory=new Inventory();
+        IncreaseFood(inventory);
         incrementNumber();
     return"Farm is built";
     };

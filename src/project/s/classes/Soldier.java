@@ -10,7 +10,7 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Soldier extends Movables implements  Ibehavior{
-  private  Melee sword;
+  private  Melee sword=new Melee();
     private static int Number=0;
      PriceLists price=new PriceLists();
 

@@ -11,7 +11,7 @@ package project.s.classes;
  */
 public class Cavalry extends Movables implements  Ibehavior{
     private Horse H;
-    private Melee spear;
+    private Melee spear= new Melee();
    PriceLists price=new PriceLists();
     private static int Number=0;
    public void incrementNumber(){
@@ -23,9 +23,14 @@ public class Cavalry extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-    Cavalry(){
+   Cavalry(){
     price.Setfood(60);
     price.Setgold(75);
+    spear.setdamage(3);
+    spear.setrange(3);
+    setAgility(3);
+    setattackSpeed(0.96);
+    setagrorange(4);
     }
     public void RideHorse()
    {  }
@@ -37,4 +42,10 @@ public class Cavalry extends Movables implements  Ibehavior{
      public String attack(){
      return "Cavalry is Attacking";
      };
+
+    @Override
+    void AutoAttack() {
+        super.AutoAttack(); //To change body of generated methods, choose Tools | Templates.
+    }
+     
 }

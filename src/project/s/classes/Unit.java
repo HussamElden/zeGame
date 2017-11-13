@@ -14,7 +14,7 @@ public class Unit {
    private  int Health;
   private String status;
   private Inventory inventory;
-   private boolean aLive;
+   private boolean aLive=true;
    
     public void setposition (Coordinates pos){
          position= pos;

@@ -16,6 +16,12 @@ public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
      private static int Number=0;
+     PriceLists price=new PriceLists();
+   Inventory inventory=new Inventory();
+     WoodCutter()
+     {
+         price.Setwood(25);   
+     }
    public void incrementNumber(){
    Number++;
    }
@@ -26,9 +32,7 @@ public class WoodCutter extends Buildings implements IBuild{
    return Number;
    }
 
-    public WoodCutter() {
-        
-    }
+   
     
     public void settree (Trees Tree){
           Tree=tree;
@@ -39,12 +43,15 @@ public class WoodCutter extends Buildings implements IBuild{
     }
     void increasewood(Inventory inventory){
        int x = inventory.getWood();
-       x+=5;
+       x+=10;
        inventory.setWood(x);
     }
     @Override
     public String Build(){
+         if(inventory.getWood()>=price.Getwood())
         incrementNumber();
+   
+        increasewood(inventory);
     return"Woodcutter is built";
     };
     @Override

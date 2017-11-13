@@ -173,26 +173,32 @@ br.close();
             }
             }
               pr.close();
-            
-       
     }
 
     @Override
     public void save() {
     }
-    public  boolean Checkuser()
+    public boolean Checkuser()
     {
-        int i=0;
-        readU(Username);
-
-        while(checkNew)
-        {
-       if (Username == null ? AllUsers[i].Username != null : !Username.equals(AllUsers[i].Username))
-        return false;
-            i++;
-        } 
-      return true;
+//        int i=0;
+//        readU(Username);
+//
+//        while(i<10)
+//        {AllUsers[i] = new User();
+//       if (Username == AllUsers[i].Username)
+//       {
+//       if (Password == AllUsers[i].Password){
+//           return true;
+//            }
+//       }
+//       i++;
+//        }
+//
+//      return false;
+        return true;
         }
+
+        
      public void setUsername (String UN){
         if (UN.length()<=16)
             Username=UN;
