@@ -152,9 +152,9 @@ public class ProjectSClasses {
                 int choise2=sc.nextInt();
                 switch(choise2){
                     case 1:{
-                    WoodCutter woodcutter=new WoodCutter();
-                   
-                    System.out.println(woodcutter.Build());
+                    WoodCutter[] woodcutter=new WoodCutter[1];
+                    
+                    System.out.println(woodcutter[0].Build());
                     break;
                     }
                     case 2:{
