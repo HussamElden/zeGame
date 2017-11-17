@@ -47,5 +47,9 @@ public class Cavalry extends Movables implements  Ibehavior{
     void AutoAttack() {
         super.AutoAttack(); //To change body of generated methods, choose Tools | Templates.
     }
+    @Override
+     public String toString() { 
+         return "Cavalry";
+      } 
      
 }

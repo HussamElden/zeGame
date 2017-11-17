@@ -29,4 +29,8 @@ public class General extends Movables {
     price.Setfood(70);
     price.Setgold(80);
     }
+    @Override
+     public String toString() { 
+         return "General";
+      } 
 }

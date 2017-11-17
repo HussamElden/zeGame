@@ -42,4 +42,8 @@ public class Knight extends Movables implements  Ibehavior {
      public String attack(){
      return "Archer is Attacking";
      }
+     @Override
+     public String toString() { 
+         return "Knight";
+      } 
 }

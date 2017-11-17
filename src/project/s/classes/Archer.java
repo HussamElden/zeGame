@@ -53,6 +53,10 @@ public int getRange ()
      public String attack(){
      return "Archer is Attacking";
      };
+     @Override
+     public String toString() { 
+         return "Archer";
+      } 
     }
 
 

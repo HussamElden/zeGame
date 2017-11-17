@@ -63,4 +63,8 @@ public class WoodCutter extends Buildings implements IBuild{
     public String spawn(){
     return"";
     };
+    @Override
+     public String toString() { 
+         return "WoodCutter";
+      } 
 }

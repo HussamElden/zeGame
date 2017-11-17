@@ -87,5 +87,10 @@ private void setPrice(){
     
     
     }
+    
     }
+    @Override
+     public String toString() { 
+         return "Barrack";
+      } 
 }

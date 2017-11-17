@@ -26,7 +26,7 @@ public class ProjectSClasses {
         Base base=new Base();
        User user = new User();
        Music music=new Music();
-       Timer T=new Timer();
+       
        String US =new String ();
    
        String x = new String();
@@ -215,6 +215,7 @@ public class ProjectSClasses {
             for(int i=0;i<8;i++){
              String v=new String();
              v=ob[i].toString();
+             //System.out.print(((v)ob[i]));
              if(Getcaster(v)=="Citizens"&&((Citizens)ob[i]).GetNumber()!=0){
              System.out.print(((Citizens)ob[i]).GetNumber()+" Citizen ");
              }

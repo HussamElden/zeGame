@@ -46,5 +46,9 @@ public class Chariots extends Movables implements  Ibehavior{
          
      return "Cavalry is Attacking";
      }
+     @Override
+     public String toString() { 
+         return "Chariots";
+      } 
     }
 

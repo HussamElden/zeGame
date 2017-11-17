@@ -43,5 +43,8 @@ public class Farm extends Buildings implements IBuild{
     @Override
     public String spawn(){
     return null;};
-    
+    @Override
+     public String toString() { 
+         return "Farm";
+      } 
 }

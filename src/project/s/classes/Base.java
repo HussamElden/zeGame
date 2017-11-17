@@ -36,4 +36,8 @@ public class Base extends Buildings implements IBuild  {
         return "You dont have enough food";
         }
     }
+    @Override
+     public String toString() { 
+         return "Base";
+      } 
 }

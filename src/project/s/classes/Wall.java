@@ -20,4 +20,8 @@ public class Wall extends Buildings{
        price.Setwood(10);
     
    }
+    @Override
+     public String toString() { 
+         return "Wall";
+      } 
 }
