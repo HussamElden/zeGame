@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -15,6 +17,8 @@ public class Chariots extends Movables implements  Ibehavior{
     private int Range;
      PriceLists price=new PriceLists();
       private static int Number=0;
+    static public ArrayList<Chariots>ArrChariots=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

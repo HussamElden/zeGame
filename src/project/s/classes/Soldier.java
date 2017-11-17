@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -13,6 +15,7 @@ public class Soldier extends Movables implements  Ibehavior{
   private  Melee sword=new Melee();
     private static int Number=0;
      PriceLists price=new PriceLists();
+    static public ArrayList<Soldier>ArrSoldier=new ArrayList<>();
 
     Soldier()
   {

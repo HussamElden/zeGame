@@ -5,6 +5,7 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,8 @@ public class castle extends Buildings implements IBuild{
      private static int Number=0;
      PriceLists price=new PriceLists();
      Inventory inventory=new Inventory();
+    static public ArrayList<castle>ArrCastle=new ArrayList<>();
+
  castle()
      {
          price.Setmetal(120);

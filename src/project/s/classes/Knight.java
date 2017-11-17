@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -13,6 +15,8 @@ public class Knight extends Movables implements  Ibehavior {
      private static int Number=0;
      private Melee sword=new Melee();
     PriceLists price=new PriceLists();
+            static public ArrayList<Knight>ArrKnight=new ArrayList<>();
+
      Knight()
      {
          sword.setdamage(10);

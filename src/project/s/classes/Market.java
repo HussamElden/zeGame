@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -13,6 +15,8 @@ public class Market extends Buildings implements IBuild {
    private int ctr;
    private int price[]=new int[3];
    private static int Number=0;
+          static public ArrayList<Market>ArrMarket=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -15,7 +17,8 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    Throwable spear=new Throwable();
    PriceLists price=new PriceLists();
     private static int Number=0;
-   
+     static public ArrayList<JalvinThrower>ArrJalvin=new ArrayList<>();
+
     public void incrementNumber(){
    Number++;
    }

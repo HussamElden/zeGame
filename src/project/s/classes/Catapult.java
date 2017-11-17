@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -14,6 +16,8 @@ public class Catapult extends Movables implements  Ibehavior {
     private int Range;
     private Throwable Stone=new Throwable();
      private static int Number=0;
+          static public ArrayList<Catapult>ArrCatapult=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

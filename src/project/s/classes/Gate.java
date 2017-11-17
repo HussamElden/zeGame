@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author hos20
@@ -14,7 +16,8 @@ public class Gate extends Buildings implements IBuild{
     private static int Number=0;
     Inventory inventory=new Inventory();
    PriceLists price=new PriceLists();
-     
+        static public ArrayList<Gate>ArrGate=new ArrayList<>();
+
    Gate()
    {
        price.Setwood(35);

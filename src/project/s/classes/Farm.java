@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -13,6 +15,8 @@ public class Farm extends Buildings implements IBuild{
     
     private int WorkerLimit=1;
      private static int Number=0;
+     static public ArrayList<Farm>ArrFarm=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

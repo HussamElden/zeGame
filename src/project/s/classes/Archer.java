@@ -5,6 +5,8 @@
  */
 package project.s.classes;
      
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -14,6 +16,8 @@ public class Archer extends Movables implements  Ibehavior{
    protected int Range;
    public Throwable arrow = new Throwable();
    private static int Number=0;
+      static public ArrayList<Archer> ArrArcher= new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

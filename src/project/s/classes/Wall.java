@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -14,7 +16,8 @@ public class Wall extends Buildings{
  PriceLists price=new PriceLists();
    private static int Number=0;
     Inventory inventory=new Inventory();
-    
+        static public ArrayList<Wall>ArrWall=new ArrayList<>();
+
     Wall()
    {
        price.Setwood(10);

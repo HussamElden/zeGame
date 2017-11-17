@@ -5,6 +5,7 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -18,6 +19,8 @@ public class WoodCutter extends Buildings implements IBuild{
      private static int Number=0;
      PriceLists price=new PriceLists();
    Inventory inventory=new Inventory();
+          static public ArrayList<WoodCutter>ArrWood=new ArrayList<>();
+
      WoodCutter()
      {
          price.Setwood(25);   

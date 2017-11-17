@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed
@@ -15,6 +17,8 @@ public class Tower extends Buildings{
     private int AgroRange;
   private int Attackspeed;
      private static int Number=0;
+      static public ArrayList<Wall>ArrWall=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }

@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author hos20
@@ -13,7 +15,8 @@ public class General extends Movables {
    private int Buffrange;
     PriceLists price=new PriceLists();
       private static int Number=0;
-  
+      static public ArrayList<General>ArrGeneral=new ArrayList<>();
+
    public void incrementNumber(){
    Number++;
    }
