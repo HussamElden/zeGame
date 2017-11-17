@@ -27,7 +27,7 @@ public class Music
 	
 	static double seconds = 0.0d; // The amount of seconds to wait before the sound starts playing
 	
-	static boolean looped_forever = false; // It will keep looping forever if this is true
+	static boolean looped_forever = true; // It will keep looping forever if this is true
 	
 	static int loop_times = 0; // Set the amount of extra times you want the sound to loop (you don't need to have looped_forever set to true)
 	static int loops_done = 0; // When the program is running this is counting the times the sound has looped so it knows when to stop

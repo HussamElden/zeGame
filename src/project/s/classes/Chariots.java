@@ -11,12 +11,29 @@ package project.s.classes;
  */
 public class Chariots extends Movables implements  Ibehavior{
     private Horse H;
-    private Throwable arrow;
+    private Throwable arrow=new Throwable();
     private int Range;
      PriceLists price=new PriceLists();
-    Chariots(){
+      private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
+    Chariots()
+    {
     price.Setwood(60);
     price.Setgold(40);
+    Range=4;
+    arrow.setDamage(4);
+    setattackSpeed(0.96);
+    setHealth(30);
+    setagrorange(6);
+    setAgility(1);
     }
     public void RideHorse()
    { setAgility(H.getAgility()); }

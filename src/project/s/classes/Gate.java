@@ -11,6 +11,24 @@ package project.s.classes;
  */
 public class Gate extends Buildings implements IBuild{
    private boolean open;
+    private static int Number=0;
+    Inventory inventory=new Inventory();
+   PriceLists price=new PriceLists();
+     
+   Gate()
+   {
+       price.Setwood(35);
+       
+   }
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     public Boolean open(boolean x){
     return true;
     }
@@ -19,6 +37,7 @@ public class Gate extends Buildings implements IBuild{
     }
     @Override
     public String Build(){
+         if(inventory.getWood()>=price.Getwood())
         incrementNumber();
     return"Gate is built\n";
     };

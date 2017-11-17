@@ -12,7 +12,20 @@ package project.s.classes;
 public class General extends Movables {
    private int Buffrange;
     PriceLists price=new PriceLists();
-    General(){
+      private static int Number=0;
+  
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
+
+    General()
+    {
     price.Setfood(70);
     price.Setgold(80);
     }

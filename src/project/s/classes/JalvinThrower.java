@@ -12,8 +12,19 @@ package project.s.classes;
 public class JalvinThrower extends Movables implements  Ibehavior{
    
    private int Range;
-   Throwable spear ;
+   Throwable spear=new Throwable();
    PriceLists price=new PriceLists();
+    private static int Number=0;
+   
+    public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     JalvinThrower(){
     price.Setfood(20);
     price.Setgold(25);

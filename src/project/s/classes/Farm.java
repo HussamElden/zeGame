@@ -12,13 +12,26 @@ package project.s.classes;
 public class Farm extends Buildings implements IBuild{
     
     private int WorkerLimit=1;
-    public void IncreaseFood(Inventory  food){
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
+    public void IncreaseFood(Inventory inventory){
+  
         int x = inventory.getFood();
-       x+=5;
+       x+=10;
        inventory.setFood(x);
     }
     @Override
     public String Build(){
+        Inventory inventory=new Inventory();
+        IncreaseFood(inventory);
         incrementNumber();
     return"Farm is built";
     };

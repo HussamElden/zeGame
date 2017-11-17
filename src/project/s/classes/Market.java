@@ -12,7 +12,16 @@ package project.s.classes;
 public class Market extends Buildings implements IBuild {
    private int ctr;
    private int price[]=new int[3];
-  
+   private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
    public void setctr (int counter){
    if (ctr>0)
        counter=ctr;

@@ -11,4 +11,13 @@ package project.s.classes;
  */
 public class Wall extends Buildings{
     public void PutArcher(Archer archer){}
+ PriceLists price=new PriceLists();
+   private static int Number=0;
+    Inventory inventory=new Inventory();
+    
+    Wall()
+   {
+       price.Setwood(10);
+    
+   }
 }

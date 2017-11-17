@@ -10,21 +10,12 @@ package project.s.classes;
  * @author Ahmed
  */
 public class Unit {
-    protected Coordinates position;
+    private Coordinates position;
    private  int Health;
-   private int Number=0;
   private String status;
-  Inventory inventory;
-   private boolean aLive;
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
+  private Inventory inventory;
+   private boolean aLive=true;
+   
     public void setposition (Coordinates pos){
          position= pos;
     }
@@ -58,4 +49,5 @@ public class Unit {
     public void setalive(boolean x){
     aLive=x;
     }
+    
 }

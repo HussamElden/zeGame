@@ -12,13 +12,27 @@ package project.s.classes;
 public class Catapult extends Movables implements  Ibehavior {
     PriceLists price=new PriceLists();
     private int Range;
-    private Throwable Stone;
+    private Throwable Stone=new Throwable();
+     private static int Number=0;
+   public void incrementNumber(){
+   Number++;
+   }
+   public void dcrementNumber(){
+   Number--;
+   }
+   public int  GetNumber(){
+   return Number;
+   }
     Catapult(){
     price.Setwood(125);
     price.Setgold(80);
      setHealth(70);
+     Stone.setDamage(15);
+     Stone.setSpeed(1);
+     setattackSpeed(0.96);
      
-    }
+     Range=7;
+}
     
   
   
