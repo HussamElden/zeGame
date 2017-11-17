@@ -51,5 +51,9 @@ public class Soldier extends Movables implements  Ibehavior{
      public String attack(){
      return "Soldier is Attacking";
      }
+     @Override
+     public String toString() { 
+         return "Soldier";
+      } 
     }
 

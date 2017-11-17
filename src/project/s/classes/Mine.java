@@ -47,4 +47,8 @@ public class Mine extends Buildings implements IBuild{
     public String spawn(){
     return"";
     };
+    @Override
+     public String toString() { 
+         return "Mine";
+      } 
 }

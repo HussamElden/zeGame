@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  *
  * @author Ahmed
  */
-public class User implements Iuser{
+public class User implements Iuser,Serializable{
     private int ID;
     private String Username=new String();
     private String Password = new String();

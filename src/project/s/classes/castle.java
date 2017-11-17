@@ -75,4 +75,8 @@ public class castle extends Buildings implements IBuild{
         }
     }
 }
+    @Override
+     public String toString() { 
+         return "castle";
+      } 
 }

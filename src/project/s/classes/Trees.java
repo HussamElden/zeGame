@@ -21,4 +21,8 @@ public class Trees {
     void Spawn(){
         
     }
+    @Override
+     public String toString() { 
+         return "Trees";
+      } 
 }
