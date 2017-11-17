@@ -96,5 +96,9 @@ public class Stable extends Buildings implements IBuild {
     }
     }
 }
+    @Override
+     public String toString() { 
+         return "Stable";
+      } 
 }
 

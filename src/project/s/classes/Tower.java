@@ -50,4 +50,8 @@ public void setAttackspeed (int Aspeed){
     public int getAttackspeed (){
         return  Attackspeed;
     }
+    @Override
+     public String toString() { 
+         return "Tower";
+      } 
 }

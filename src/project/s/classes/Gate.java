@@ -51,4 +51,8 @@ public class Gate extends Buildings implements IBuild{
     @Override
     public String spawn(){
     return null;};
+    @Override
+     public String toString() { 
+         return "Gate";
+      } 
 }

@@ -34,4 +34,8 @@ public class Citizens extends Movables {
     public void Build(){
        
     }
+    @Override
+     public String toString() { 
+         return "Citizens";
+      } 
 }

@@ -60,5 +60,9 @@ public int getRange ()
      public String attack(){
      return "Catapult is Attacking";
      };
+    @Override
+      public String toString() { 
+         return "Catapult";
+      } 
     }
 
