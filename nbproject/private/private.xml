@@ -2,35 +2,8 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Knight.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/ProjectSClasses.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Market.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Tower.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Soldier.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Farm.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Trees.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Wall.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/User.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Catapult.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/General.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Mine.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Barrack.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Coordinates.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Chariots.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Citizens.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/WoodCutter.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Archer.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Gate.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Cavalry.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/save.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/Stable.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/castle.java</file>
-            <file>file:/C:/Users/hos20/Documents/NetBeansProjects/Strategy%20Game/src/project/s/classes/JalvinThrower.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/project/s/classes/Archer.java</file>
         </group>
->>>>>>> 054daddf4a75c0e1060d8c34aab0dd153596f3cb
     </open-files>
 </project-private>
