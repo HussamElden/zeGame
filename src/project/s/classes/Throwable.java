@@ -15,14 +15,14 @@ public class Throwable {
     
     public void setSpeed (int Tspeed){
         if (Speed >=0)
-            Tspeed=Speed;
+            Tspeed = Speed;
     }
     public int getSpeed (){
         return  Speed;
     }
     public void setDamage (int TDamage){
         if (Damage >0)
-            TDamage=Damage;
+            TDamage = Damage;
     }
     public int getDamage (){
         return  Damage;

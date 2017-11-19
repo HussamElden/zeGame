@@ -9,14 +9,14 @@ package project.s.classes;
  *
  * @author hos20
  */
-public class Coordinates {
+public abstract class Coordinates {
     private float x;
     private float y;
     public void setX(float x){
-    this.x=x;
+    this.x = x;
     }
     public void setY(float y){
-    this.y=y;
+    this.y = y;
     }
     public float getX(){
     return x;

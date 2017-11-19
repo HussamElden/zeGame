@@ -9,33 +9,37 @@ package project.s.classes;
  *
  * @author Ahmed
  */
-public class Unit {
+public abstract class Unit {
     private Coordinates position;
-   private  int Health;
-  private String status;
-  private Inventory inventory;
-   private boolean aLive=true;
+    private  int Health;
+    private String status;
+    private Inventory inventory;
+    private boolean aLive = true;
    
     public void setposition (Coordinates pos){
-         position= pos;
+         position = pos;
     }
   
     public Coordinates getposition (){
         return  position;
     }
     public void setHealth (int health){
-        if (health >=0)
-            Health=health;
+        if (health >= 0)
+            Health = health;
     }
+    
     public int getHealth (){
         return  Health;
     }
+    
     public void setStatus (String Stat){
-       status= Stat;
+       status = Stat;
     }
+    
     public String getStatus (){
         return  status;
     }
+    
     public int decreasingHealth(){
         return 0;
     }
@@ -43,11 +47,13 @@ public class Unit {
     public void Delete(){
         
     }
+    
     public boolean getalive(){
-    return aLive;
+        return aLive;
     }
+    
     public void setalive(boolean x){
-    aLive=x;
+        aLive = x;
     }
     
 }

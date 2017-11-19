@@ -9,7 +9,7 @@ package project.s.classes;
  *
  * @author hos20
  */
-public class Movables extends Unit {
+public abstract class Movables extends Unit {
 
     private int Agility;
     private int ID;
@@ -23,9 +23,8 @@ public class Movables extends Unit {
     }
 
     public void setid(int mID) {
-        if (ID > 0) {
-            mID = ID;
-        }
+        if (ID > 0) 
+            mID = ID;        
     }
 
     public int getid() {
@@ -43,9 +42,8 @@ public class Movables extends Unit {
     }
 
     public void setAgility(int Ag) {
-        if (Ag > 0) {
-            Agility = Ag;
-        }
+        if (Ag > 0) 
+            Agility = Ag;        
     }
 
     public int getAgility() {
@@ -53,9 +51,8 @@ public class Movables extends Unit {
     }
 
     public void setattackSpeed(double AS) {
-        if (AttackSpeed > 0) {
+        if (AttackSpeed > 0) 
             AttackSpeed = AS;
-        }
     }
 
     public double getattackSpeed() {
