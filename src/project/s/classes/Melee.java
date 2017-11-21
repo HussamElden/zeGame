@@ -9,7 +9,7 @@ package project.s.classes;
  *
  * @author hos20
  */
-public class Melee {
+public  class Melee {
     private int damage;
     private int range;
     private int lvl;

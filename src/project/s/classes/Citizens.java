@@ -12,8 +12,8 @@ import java.util.ArrayList;
  * @author Ahmed
  */
 public class Citizens extends Movables {
-    private PriceLists price=new PriceLists();
-     private static int Number=0;
+    private PriceLists price = new PriceLists();
+     private static int Number = 0;
      static public ArrayList<Citizens>ArrCitizens=new ArrayList<>();
 
    public void incrementNumber(){
