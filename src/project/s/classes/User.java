@@ -4,20 +4,58 @@
  * and open the template in the editor.
  */
 package project.s.classes;
+import java.io.Serializable;
 
-
-import java.io.*;
-import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
  *
- * @author Ahmed
+ * @author Omar Anas
  */
-public class User implements Iuser,Serializable{
+public class User implements Serializable
+{
     private int ID;
+    private String Username;
+    private String Password;
+    private String Nation;
+
+    public String getNation() {
+        return Nation;
+    }
+
+    public void setNation(String Nation) {
+        this.Nation = Nation;
+    }
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+}
+
+  /*  private int ID;
     private String Username=new String();
     private String Password = new String();
     boolean loggedIn;
@@ -230,5 +268,4 @@ br.close();
             }
         }
         return Result;
-    }
-}
+    }*/

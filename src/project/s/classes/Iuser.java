@@ -5,12 +5,16 @@
  */
 package project.s.classes;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  *
  * @author hos20
  */
-public interface Iuser {
-    public void addu();
+public interface Iuser 
+{
+    public void addu(String x,String y)throws FileNotFoundException,IOException,ClassNotFoundException;
     public void editu();
     public void deleteu();
     public void save();
