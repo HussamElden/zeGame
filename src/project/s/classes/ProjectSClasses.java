@@ -6,6 +6,8 @@
 package project.s.classes;
 
 import java.util.*;
+import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 
 /**
@@ -20,9 +22,12 @@ public class ProjectSClasses {
     
     public static void main(String[] args) {
         //Object ob=new Object();
-       
-    
-        Scanner sc=new Scanner(System.in);
+        UserGUI g=new UserGUI("Login");
+        g.setVisible(true);
+        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+
+    /*    Scanner sc=new Scanner(System.in);
         Base base=new Base();
        User user = new User();
        Music music=new Music();
@@ -240,7 +245,7 @@ public class ProjectSClasses {
              else if("Chariots".equals(v)&&((Chariots)ob[i]).GetNumber()!=0){
              System.out.print(((Chariots)ob[i]).GetNumber()+" Chariots ");
              }
-            }
+            }*/
             
            
             
