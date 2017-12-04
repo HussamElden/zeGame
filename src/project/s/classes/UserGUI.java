@@ -124,7 +124,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
  }
 @Override
     public void addu(String UN, String Pass) throws FileNotFoundException,IOException,ClassNotFoundException
-    {    String FileName= "d://tusers.txt";
+    {    String FileName= "tusers.txt";
 
       checkU(UN);
      // readU();
@@ -146,7 +146,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
 
 public void readU() throws FileNotFoundException, IOException, ClassNotFoundException,  InvalidClassException
 {
-  String FileName= "d://tusers.txt";
+  String FileName= "tusers.txt";
 AllUsers=null;
  ObjectInputStream InFile=new ObjectInputStream(new FileInputStream(FileName));
 AllUsers=(ArrayList<User>)InFile.readObject();
