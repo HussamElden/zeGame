@@ -17,6 +17,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.security.auth.login.AppConfigurationEntry;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
@@ -43,7 +44,6 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         JLabel Passlbl2;
         JTextField UNtxt2;
         JPasswordField Passtxt2;
-        
         ArrayList<User>AllUsers=new ArrayList<>();
         User u = new User();
         ObjectOutputStream OutFile;
@@ -95,7 +95,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
      if(AllUsers.get(i).getUsername().equals(u))
      {
      CheckNew=false;
-     return;
+//     return;
      }
      else
      {
@@ -105,15 +105,16 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
  }
 
  }
-  private void checkUserForLogin(String u,String pass) throws IOException, FileNotFoundException, ClassNotFoundException 
+  private void checkUserForLogin(String UN,String pass) throws IOException, FileNotFoundException, ClassNotFoundException 
  {
   readU();
  for(int i=0;i<AllUsers.size();i++)
  {
-     if(AllUsers.get(i).getUsername().equals(u))
+     if(AllUsers.get(i).getUsername().equals(UN))
      {
       if (AllUsers.get(i).getPassword().equals(pass))
-      CheckLogin=true;
+      { CheckLogin=true;
+      }
      }
      else
      {
@@ -138,7 +139,9 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         OutFile.close();
         }
         else
-            JOptionPane.showMessageDialog(null, "Username already exists! Try another one.","Alert",JOptionPane.ERROR_MESSAGE);
+        {  JOptionPane.showMessageDialog(null, "Username already exists! Try another one.","Alert",JOptionPane.ERROR_MESSAGE);
+        CheckNew=false;
+        }
     }
 
 public void readU() throws FileNotFoundException, IOException, ClassNotFoundException,  InvalidClassException
@@ -215,7 +218,7 @@ InFile.close();
             String Pass= Passtxt2.getText();
             String ConfirmPass= ConfirmPasstxt.getText();
         if (UN.equals("")|| Pass.equals("")||ConfirmPass.equals(""))
-           JOptionPane.showMessageDialog(null, "Don't leave a blank tab","Alert",JOptionPane.ERROR_MESSAGE);
+           JOptionPane.showMessageDialog(null, "Don't leave a blank tab.","Alert",JOptionPane.ERROR_MESSAGE);
         else if (UN.length()>16 || UN.length()< 4 || Pass.length()>16 || Pass.length()< 4)
         {
             JOptionPane.showMessageDialog(null, "Username & Passsword must range from 4 to 16 letters","Alert",JOptionPane.ERROR_MESSAGE);
@@ -225,14 +228,20 @@ InFile.close();
             if (ConfirmPass.equals(Pass))
                 try {
                     addu(UN, Pass);
-                     InGame g=new InGame();
+                   if (CheckNew==true)
+                   {  InGame g=new InGame();
            g.setVisible(true);
            g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                   }
            } catch (IOException | ClassNotFoundException ex) {
                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
            }
         else
-           JOptionPane.showMessageDialog(null, "Passwords doesn't match!","Alert",JOptionPane.ERROR_MESSAGE);
+        {  
+            JOptionPane.showMessageDialog(null, "Passwords doesn't match!","Alert",JOptionPane.ERROR_MESSAGE);
+            Passtxt2.setText("");
+            ConfirmPasstxt.setText("");
+        }
         }
     }
  }
@@ -251,13 +260,16 @@ InFile.close();
             }
             if (CheckLogin==true)
             {
+           //     dispose();
         InGame g=new InGame();
         g.setVisible(true);
         g.setDefaultCloseOperation(EXIT_ON_CLOSE);
           }
        else 
            JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
-    }
+   
+        }
 
   }
 }
+

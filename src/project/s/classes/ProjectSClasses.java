@@ -26,7 +26,6 @@ public class ProjectSClasses {
         g.setVisible(true);
         g.setDefaultCloseOperation(EXIT_ON_CLOSE);
     g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-
     /*    Scanner sc=new Scanner(System.in);
         Base base=new Base();
        User user = new User();
