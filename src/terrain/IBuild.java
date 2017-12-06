@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.s.classes;
-
-import User.User;
+package terrain;
 
 /**
  *
  * @author hos20
  */
-public class save extends User{
-   public void Addsave(){};
-   public void Loadsave(){};
+public interface IBuild {
+    public String Build();
+    public String Destroy();
+    public String spawn();
 }

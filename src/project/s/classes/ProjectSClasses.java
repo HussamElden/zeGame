@@ -5,9 +5,11 @@
  */
 package project.s.classes;
 
+import User.UserGUI;
 import java.util.*;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import terrain.Barrack;
 
 
 /**
@@ -19,9 +21,8 @@ public class ProjectSClasses {
     /**
      * @param args the command line arguments
      */
-    
+     
     public static void main(String[] args) {
-        //Object ob=new Object();
         UserGUI g=new UserGUI("Login");
         g.setVisible(true);
         g.setDefaultCloseOperation(EXIT_ON_CLOSE);
