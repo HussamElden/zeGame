@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import User.UserGUI;
+import User.User;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Graphics;

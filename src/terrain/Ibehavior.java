@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.s.classes;
+package terrain;
 
-import User.User;
+import project.s.classes.Coordinates;
 
 /**
  *
  * @author hos20
  */
-public class save extends User{
-   public void Addsave(){};
-   public void Loadsave(){};
+public interface Ibehavior {
+    public String move(Coordinates XY);
+    public String attack();
+    
 }
