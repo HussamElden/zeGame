@@ -56,11 +56,11 @@ JButton Quit;
           c.add(Help);
           c.add(Credits);
           c.add(Quit);
-          Quit.addActionListener(new Quit());
-        MyAccount.addActionListener(new MyAccount());
+          Quit.addActionListener(new AllButtons());
+        MyAccount.addActionListener(new AllButtons());
     }
 
-    private static class MyAccount extends JFrame implements ActionListener {
+ /*   private static class MyAccount extends JFrame implements ActionListener {
 UserGUI ugui;
 User u;
 JButton deletebtn;
@@ -97,26 +97,27 @@ public MyAccount()
 
         }
     }
-
-    private class Quit implements ActionListener {
+*/
+    private class AllButtons implements ActionListener {
         
         @Override
         public void actionPerformed(ActionEvent ae) 
         {
+           if (ae.getSource()== Quit)
+           {
             int x= JOptionPane.showConfirmDialog (null, "Would You Like to Quit?","Quit",JOptionPane.YES_NO_CANCEL_OPTION);
             if(x==0)
             {
             System.exit(0);
             }
-    }
-    }
-
-    private class Play implements ActionListener,Serializable {
-
-        @Override
-        public void actionPerformed(ActionEvent ae) 
-        {
-
+           }
+           else if (ae.getSource()==MyAccount)
+           {
+               
+           }
+    
+        
         }
     }
-}
+    }
+

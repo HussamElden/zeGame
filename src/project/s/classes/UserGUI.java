@@ -83,8 +83,8 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         container.add(LoginBtn);
         container.add(SignUpBtn);
         container.add(SignUplbl);
-        SignUpBtn.addActionListener(new SignUp());
-        LoginBtn.addActionListener(new Login());
+        SignUpBtn.addActionListener(new SignUpndLogin());
+        LoginBtn.addActionListener(new SignUpndLogin());
     }
   
  private void checkU(String u) throws IOException, FileNotFoundException, ClassNotFoundException
@@ -165,10 +165,10 @@ InFile.close();
     @Override
     public void save() {
     }
-  private class SignUp extends JFrame implements ActionListener,Serializable {
+  private class SignUpndLogin extends JFrame implements ActionListener,Serializable {
 
    
-        public SignUp()
+        public SignUpndLogin()
         {
         setSize(400, 400);
         setTitle("Register");
@@ -202,11 +202,33 @@ InFile.close();
         
         
         @Override
-        public void actionPerformed(ActionEvent ae) {
-            
-            SignUp g=new SignUp();
+        public void actionPerformed(ActionEvent ae) 
+        {
+            if (ae.getSource()== SignUpBtn){
+            SignUpndLogin g=new SignUpndLogin();
         g.setVisible(true);
         g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+            }
+            else if (ae.getSource()== LoginBtn){
+                String UN= UNtxt.getText();
+            String Pass=Passtxt.getText();
+          
+            try {
+                checkUserForLogin(UN, Pass);
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (CheckLogin==true)
+            {
+           //     dispose();
+        InGame g=new InGame();
+        g.setVisible(true);
+        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+          }
+       else 
+           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
+            
+            }
         }
     }
  private class Register implements ActionListener {
@@ -245,31 +267,29 @@ InFile.close();
         }
     }
  }
-  private class Login implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent ae) 
-        {
-            String UN= UNtxt.getText();
-            String Pass=Passtxt.getText();
-          
-            try {
-                checkUserForLogin(UN, Pass);
-            } catch (IOException | ClassNotFoundException ex) {
-                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (CheckLogin==true)
-            {
-           //     dispose();
-        InGame g=new InGame();
-        g.setVisible(true);
-        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
-          }
-       else 
-           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
-   
-        }
+//  private class Login implements ActionListener {
+//
+//        @Override
+//        public void actionPerformed(ActionEvent ae) 
+//        {
+//            String UN= UNtxt.getText();
+//            String Pass=Passtxt.getText();
+//          
+//            try {
+//                checkUserForLogin(UN, Pass);
+//            } catch (IOException | ClassNotFoundException ex) {
+//                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            if (CheckLogin==true)
+//            {
+//           //     dispose();
+//        InGame g=new InGame();
+//        g.setVisible(true);
+//        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//          }
+//       else 
+//           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
+//   
+//        }
 
   }
-}
-
