@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.s.classes;
-
-import User.User;
+package terrain;
 
 /**
  *
- * @author hos20
+ * @author Ahmed
  */
-public class save extends User{
-   public void Addsave(){};
-   public void Loadsave(){};
+public class Horse {
+   private  int Agility;
+   private int color;
+   void setAgility(int ag){
+   Agility=ag;
+   }
+   int getAgility(){
+   return Agility;
+   }
 }
