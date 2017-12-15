@@ -5,6 +5,7 @@
  */
 package terrain;
 
+import java.awt.Point;
 import project.s.classes.Coordinates;
 
 /**
@@ -12,7 +13,7 @@ import project.s.classes.Coordinates;
  * @author hos20
  */
 public interface Ibehavior {
-    public String move(Coordinates XY);
+    public String move(Point XY);
     public String attack();
     
 }

@@ -27,7 +27,7 @@ import javax.swing.JPanel;
  * @author Omar Anas
  */
 public class InGame extends JFrame {
-
+//public  UserGUI ugui= new UserGUI();
 JButton NewGameBtn;
 JButton MyAccount;
 JButton Options;
@@ -36,30 +36,33 @@ JButton Credits;
 JButton Quit;
         public InGame() 
     {   
-     setSize(400, 400);
-        setTitle("Main Menu");
+          setSize(5000, 5000);
+
+       //setTitle("Main Menu");
         NewGameBtn= new JButton("New Game");
         MyAccount= new JButton("My Account");
         Options= new JButton("Options");
         Help= new JButton("Help");
         Credits= new JButton("Credits");
         Quit= new JButton("Quit");
-        Container c=getContentPane();
-        c.setLayout(null);
+        //Container c=getContentPane();
+        setLayout(null);
+         setVisible(false);
      NewGameBtn.setBounds(850, 300, 150, 50);
      Options.setBounds(850,NewGameBtn.getY()+60,150,50);
      MyAccount.setBounds(850,Options.getY()+60,150,50);
              Help.setBounds(850,MyAccount.getY()+60,150,50);
              Credits.setBounds(850,Help.getY()+60,150,50);
              Quit.setBounds(850, Credits.getY()+60, 150, 50);
-     c.add(NewGameBtn);
-     c.add(Options);
-          c.add(MyAccount);
-          c.add(Help);
-          c.add(Credits);
-          c.add(Quit);
+     add(NewGameBtn);
+     add(Options);
+          add(MyAccount);
+          add(Help);
+          add(Credits);
+          add(Quit);
           Quit.addActionListener(new AllButtons());
         MyAccount.addActionListener(new AllButtons());
+       
     }
 
  /*   private static class MyAccount extends JFrame implements ActionListener {

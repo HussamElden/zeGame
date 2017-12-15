@@ -19,14 +19,20 @@ import project.s.classes.PriceLists;
 public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
     private static int Number=0;
+           Inventory inventory=new Inventory();
 
 private void setPrice(){
-    price.Setwood(150);
+    
   
     }
     @Override
     public String Build(){
-        incrementNumber();
+        price.Setwood(150);
+        if(inventory.p.Getwood() >= price.Getwood()){  
+            int x = inventory.getWood() - price.Getwood();
+            inventory.setWood(x);
+            incrementNumber();
+        }
     return "Barrack is built";
     };
     @Override
@@ -62,10 +68,12 @@ private void setPrice(){
         }
         case 2:{
       Inventory  inventory=new Inventory();
-        Archer a=new Archer();
+        Archer a=new Archer("");
         if(inventory.getFood()>=a.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
         a.incrementNumber();
-        inventory.Decfood(a.price.Getfood());
+        price.Setfood(choice);
+            
+//Decfood(a.price.Getfood());
         inventory.Decgold(a.price.Getgold());
         return "Now you have "+a.GetNumber()+" Archer";
         }else{
