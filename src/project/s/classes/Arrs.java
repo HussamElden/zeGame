@@ -6,22 +6,7 @@
 package project.s.classes;
 
 import java.util.ArrayList;
-import terrain.Barrack;
-import terrain.Catapult;
-import terrain.Cavalry;
-import terrain.Chariots;
-import terrain.Citizens;
-import terrain.Farm;
-import terrain.Gate;
-import terrain.JalvinThrower;
-import terrain.Knight;
-import terrain.Market;
-import terrain.Mine;
-import terrain.Soldier;
-import terrain.Stable;
-import terrain.Wall;
-import terrain.WoodCutter;
-
+import terrain.*;
 /**
  *
  * @author al 7asob
