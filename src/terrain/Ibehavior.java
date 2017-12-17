@@ -6,6 +6,7 @@
 package terrain;
 
 import java.awt.Point;
+import javax.swing.JLabel;
 import project.s.classes.Coordinates;
 
 /**
@@ -14,6 +15,6 @@ import project.s.classes.Coordinates;
  */
 public interface Ibehavior {
     public String move(Point XY);
-    public String attack();
+    public Thread attack(Point no2ta, Point nextNo2ta , JLabel arrow);
     
 }

@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/project/s/classes/InGame.java</file>
-            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/project/s/classes/ProjectSClasses.java</file>
-            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/User/User.java</file>
-            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/User/Registration.java</file>
-            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/User/UserGUI.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Ibehavior.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Knight.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/IBuild.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Archer.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Citizens.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Movables.java</file>
         </group>
     </open-files>
 </project-private>

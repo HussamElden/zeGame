@@ -18,7 +18,7 @@ import project.s.classes.PriceLists;
  *
  * @author Ahmed
  */
-public class Archer extends Movables implements  Ibehavior{
+public class Archer extends Movables implements  Ibehavior {
  PriceLists price=new PriceLists();
    protected int Range;
    public Throwable arrow = new Throwable();
@@ -73,9 +73,40 @@ public int getRange ()
      return"Archer is moving";
      }
       @Override
-     public String attack(){
-     return "Archer is Attacking";
-     };
+     public String attack() {
+     
+      return "Archer Attacking";
+     }
+//         Thread byt7rak=new Thread()
+//                 {
+//      public void run()
+//             {  while(no2ta!=nextNo2ta)
+//        {
+//        if(no2ta.x<nextNo2ta.x)
+//        {
+//            no2ta.x+=getattackSpeed();
+//        }
+//        else if(no2ta.x>nextNo2ta.x)
+//        {
+//           no2ta.x=-getattackSpeed();
+//        }
+//        else if(no2ta.y<nextNo2ta.y)
+//        {
+//            no2ta.y+=getattackSpeed();
+//        }
+//        else if(no2ta.y>nextNo2ta.y)
+//        {
+//            no2ta.y=-getattackSpeed();
+//            
+//        }
+//                 }
+//          arrow.setLocation(no2ta);
+//         
+//     
+//     }
+//                 }
+//                 return byt7rak;
+                 
      @Override
      public String toString() { 
          return "Archer";
