@@ -49,14 +49,14 @@ public class WoodCutter extends Buildings implements IBuild{
        x+=10;
        inventory.setWood(x);
     }
-    @Override
-    public String Build(){
-         if(inventory.getWood()>=price.Getwood())
-        incrementNumber();
-   
-        increasewood(inventory);
-    return"Woodcutter is built";
-    };
+//    @Override
+//    public String Build(){
+//         if(inventory.getWood()>=price.Getwood())
+//        incrementNumber();
+//   
+//        increasewood(inventory);
+//    return"Woodcutter is built";
+//    };
     @Override
     public String Destroy(){
         

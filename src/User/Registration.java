@@ -21,7 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import project.s.classes.InGame;
+import project.s.classes.MainMenu;
 
 /**
  *
@@ -97,7 +97,7 @@ public class Registration extends JFrame implements Serializable {
                    ugui.addu(UN, Pass,Nation);
                    if (ugui.CheckNew==true)
                    {   dispose();
-                       InGame g=new InGame();
+                       MainMenu g=new MainMenu();
                        g.setVisible(true);
                        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
                        g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -113,5 +113,5 @@ public class Registration extends JFrame implements Serializable {
         }
         }
     }
-}
+    }
 }

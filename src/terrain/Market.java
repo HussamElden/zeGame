@@ -65,11 +65,11 @@ public class Market extends Buildings implements IBuild {
     int Buy(){
         return 0;
     }
-    @Override
-    public String Build(){
-        incrementNumber();
-    return "market is built";
-    };
+//    @Override
+//    public String Build(){
+//        incrementNumber();
+//    return "market is built";
+//    };
     @Override
     public String Destroy(){
     return "marker is destroyed\n";

@@ -26,15 +26,16 @@ import javax.swing.JPanel;
  *
  * @author Omar Anas
  */
-public class InGame extends JFrame {
+public class MainMenu extends JFrame {
 //public  UserGUI ugui= new UserGUI();
+   
 JButton NewGameBtn;
 JButton MyAccount;
 JButton Options;
 JButton Help;
 JButton Credits;
 JButton Quit;
-        public InGame() 
+        public MainMenu() 
     {   
           setSize(5000, 5000);
 
@@ -59,11 +60,41 @@ JButton Quit;
           add(MyAccount);
           add(Help);
           add(Credits);
+          
           add(Quit);
           Quit.addActionListener(new AllButtons());
+          NewGameBtn.addActionListener(new AllButtons());
         MyAccount.addActionListener(new AllButtons());
        
     }
+
+    private class AllButtons implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent ae) 
+        {
+           if (ae.getSource()== Quit)
+           {
+            int x= JOptionPane.showConfirmDialog (null, "Would You Like to Quit?","Quit",JOptionPane.YES_NO_CANCEL_OPTION);
+            if(x==0)
+            {
+            System.exit(0);
+            }
+           }
+           else if (ae.getSource()==NewGameBtn)
+           { dispose();
+                                                     System.out.println("moveing");
+
+                LeGame game=new LeGame();
+                game.setVisible(true);
+                game.setDefaultCloseOperation(3);
+           }
+    
+        
+        }
+    }
+    }
+
 
  /*   private static class MyAccount extends JFrame implements ActionListener {
 UserGUI ugui;
@@ -103,26 +134,3 @@ public MyAccount()
         }
     }
 */
-    private class AllButtons implements ActionListener {
-        
-        @Override
-        public void actionPerformed(ActionEvent ae) 
-        {
-           if (ae.getSource()== Quit)
-           {
-            int x= JOptionPane.showConfirmDialog (null, "Would You Like to Quit?","Quit",JOptionPane.YES_NO_CANCEL_OPTION);
-            if(x==0)
-            {
-            System.exit(0);
-            }
-           }
-           else if (ae.getSource()==MyAccount)
-           {
-               
-           }
-    
-        
-        }
-    }
-    }
-

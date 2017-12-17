@@ -5,6 +5,7 @@
  */
 package project.s.classes;
 
+import User.User;
 import User.UserGUI;
 import java.io.IOException;
 import java.util.*;
@@ -26,6 +27,7 @@ public class ProjectSClasses {
    
  
     public static void main(String[] args) throws IOException {
+       
        UserGUI g= new UserGUI();
        g.setVisible(true);
        g.setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -33,10 +33,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import project.s.classes.InGame;
+import project.s.classes.MainMenu;
 public class UserGUI extends JFrame implements Iuser,Serializable  {
       
     int j=0;
+     
+         
         JButton LoginBtn;
         JButton SignUpBtn;
         JLabel UNlbl;
@@ -60,18 +62,20 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         //-----------------
         ArrayList<User>AllUsers=new ArrayList<>();
         User u = new User();
+           static Arrs xyz=new Arrs();
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
    boolean CheckLogin= true;
-             InGame MM=new InGame();
+             MainMenu MM=new MainMenu();
 
    //SignUpndLogin Sl = new SignUpndLogin();
 
    
   public UserGUI()  
     {
+        
        setSize(5000, 5000);
-      //  setTitle("Login");
+        setTitle("Login");
       LoginBtn= new JButton("Login");
         SignUpBtn= new JButton("Sign Up");
       UNlbl= new JLabel ("Username");
@@ -114,6 +118,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
     }
  private void checkU(String u) throws IOException, FileNotFoundException, ClassNotFoundException
  {
+     
  readU();
  for(int i=0;i<AllUsers.size();i++)
  {
@@ -131,7 +136,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
 
  }
   private void checkUserForLogin(String UN,String pass) throws IOException, FileNotFoundException, ClassNotFoundException 
- {
+ {  
   readU();
  for(int i=0;i<AllUsers.size();i++)
  {
@@ -139,6 +144,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
      {
       if (AllUsers.get(i).getPassword().equals(pass))
       { CheckLogin=true;
+        Arrs.u=AllUsers.get(i);
       }
      }
      else
@@ -192,8 +198,43 @@ InFile.close();
     public void save() {
     }
   private class SignUpndLogin implements ActionListener,Serializable {
-        
-     
+   
+        @Override
+        public void actionPerformed(ActionEvent ae)
+        {
+            if (ae.getSource()== SignUpBtn)
+            {  dispose();
+               Registration g = new Registration();
+                g.setVisible(true);
+                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+            }
+            else if (ae.getSource()== LoginBtn){
+                String UN= UNtxt.getText();
+            String Pass=Passtxt.getText();
+          
+            try {
+                checkUserForLogin(UN, Pass);
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (CheckLogin==true)
+            {
+           dispose();
+            MainMenu g = new MainMenu();
+            g.setVisible(true);
+                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+               g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+            }
+       else 
+           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
+            
+            }
+        }
+    }
+  
+  
+       
 //      public SignUpndLogin()
 //        {
 //        setSize(5000, 5000);
@@ -232,41 +273,9 @@ InFile.close();
 //        }
 
         
-        
-        
-        @Override
-        public void actionPerformed(ActionEvent ae)
-        {
-            if (ae.getSource()== SignUpBtn)
-            {  dispose();
-               Registration g = new Registration();
-                g.setVisible(true);
-                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
-                g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-            }
-            else if (ae.getSource()== LoginBtn){
-                String UN= UNtxt.getText();
-            String Pass=Passtxt.getText();
-          
-            try {
-                checkUserForLogin(UN, Pass);
-            } catch (IOException | ClassNotFoundException ex) {
-                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (CheckLogin==true)
-            {
-           dispose();
-            InGame g = new InGame();
-            g.setVisible(true);
-                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
-               g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-            }
-       else 
-           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
-            
-            }
-        }
-    }
+  
+  
+  
 // private class Register implements ActionListener {
 //
 //        @Override

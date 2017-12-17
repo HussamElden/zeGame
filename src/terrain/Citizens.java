@@ -5,7 +5,11 @@
  */
 package terrain;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
 /**
@@ -13,6 +17,7 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Citizens extends Movables {
+    JLabel  tab=new JLabel();
     private PriceLists price = new PriceLists();
      private static int Number = 0;
 
@@ -31,8 +36,18 @@ public class Citizens extends Movables {
     public PriceLists Getprice(){
     return price;
     }
+//    public JLabel ShowTab( Dimension screenSize){
+//        
+//    }
     public void Build(){
+       if(true){
+       Barrack b=new Barrack();
+       if(inventory.equals(b.price)){
+      
        
+       }
+       
+       }
     }
     @Override
      public String toString() { 

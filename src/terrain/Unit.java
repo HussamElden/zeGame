@@ -5,6 +5,7 @@
  */
 package terrain;
 
+import User.Arrs;
 import project.s.classes.Coordinates;
 
 /**
@@ -13,9 +14,10 @@ import project.s.classes.Coordinates;
  */
 public abstract class Unit {
     private Coordinates position;
+    public static Arrs ALS=new Arrs();
     private  int Health;
     private String status;
-    private static Inventory inventory=new Inventory();
+    public static Inventory inventory=new Inventory();
     private boolean aLive = true;
    private String Nation;
 

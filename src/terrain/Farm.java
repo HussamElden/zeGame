@@ -31,13 +31,13 @@ public class Farm extends Buildings implements IBuild{
        x+=10;
        inventory.setFood(x);
     }
-    @Override
-    public String Build(){
-        Inventory inventory=new Inventory();
-        IncreaseFood(inventory);
-        incrementNumber();
-    return"Farm is built";
-    };
+//    @Override
+//    public String Build(){
+//        Inventory inventory=new Inventory();
+//        IncreaseFood(inventory);
+//        incrementNumber();
+//    return"Farm is built";
+//    };
     @Override
     public String Destroy(){
         

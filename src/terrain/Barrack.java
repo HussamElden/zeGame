@@ -10,6 +10,7 @@ import terrain.Soldier;
 import terrain.Archer;
 import java.util.ArrayList;
 import java.util.Scanner;
+import User.Arrs;
 import project.s.classes.PriceLists;
 
 /**
@@ -18,6 +19,7 @@ import project.s.classes.PriceLists;
  */
 public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
+
            Inventory inventory=new Inventory();
 
 private void setPrice(){
@@ -60,12 +62,12 @@ private void setPrice(){
       Inventory  inventory=new Inventory();
         Archer a=new Archer("");
         if(inventory.getFood()>=a.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
-        a.incrementNumber();
+       // a.incrementNumber();
         price.Setfood(choice);
             
 //Decfood(a.price.Getfood());
         inventory.Decgold(a.price.Getgold());
-        return "Now you have "+a.GetNumber()+" Archer";
+       // return "Now you have "+a.GetNumber()+" Archer";
         }else{
         return "You dont have enough resources";
         }

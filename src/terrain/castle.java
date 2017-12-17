@@ -37,12 +37,12 @@ public class castle extends Buildings implements IBuild{
    return Number;
    }
     public void Throw(){}
-    @Override
-   public String Build()
-    {    
-     incrementNumber();
-    return "Castle is built";
-    };
+//    @Override
+//   public String Build()
+//    {    
+//     incrementNumber();
+//    return "Castle is built";
+//    };
     @Override
     public String Destroy()
     {  
