@@ -5,13 +5,23 @@
  */
 package terrain;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Ahmed
  */
 public class Trees {
    private int Number;
-    public void setNumber (int Num){
+    JLabel lbl = new JLabel();
+   public Trees ()
+   {
+              lbl=new JLabel(new ImageIcon(new ImageIcon("Pics://Trees.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+
+   }
+   public void setNumber (int Num){
         if (Number >0)
             Num=Number;
     }

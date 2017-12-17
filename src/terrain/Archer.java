@@ -35,7 +35,8 @@ public class Archer extends Movables implements  Ibehavior {
    return Number;
    }
    Archer(String nation){
-          
+                    Nation = nation;
+
        lbl[0]=new JLabel(nation+" Archer");
           
       if(nation.equals("Human Hunters"))

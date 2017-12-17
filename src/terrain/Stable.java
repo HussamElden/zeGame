@@ -5,11 +5,14 @@
  */
 package terrain;
 
+import java.awt.Image;
 import terrain.Cavalry;
 import terrain.Knight;
 import terrain.Chariots;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
 /**
@@ -20,7 +23,22 @@ public class Stable extends Buildings implements IBuild {
      private static int Number=0;
    Inventory inventory=new Inventory();
    PriceLists price=new PriceLists();
-
+   public JLabel [] lbl = new JLabel[3];
+public Stable (String nation)
+{Nation = nation;
+       lbl[0]=new JLabel(nation+" Stable");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Stable_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Stable_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+}
    public void incrementNumber(){
    Number++;
    }
@@ -57,7 +75,7 @@ public class Stable extends Buildings implements IBuild {
         case 1:
         {
        Inventory inventory=new Inventory();
-        Knight k=new Knight();
+        Knight k=new Knight(Nation);
         if(inventory.getFood()>=k.price.Getfood()&&inventory.getGold()>=k.price.Getgold()){
         k.incrementNumber();
         inventory.Decfood(k.price.Getfood());
@@ -83,7 +101,7 @@ public class Stable extends Buildings implements IBuild {
         }
         case 3:{
         Inventory inventory=new Inventory();
-        Chariots ch=new Chariots();
+        Chariots ch=new Chariots(Nation);
          if(inventory.getWood()>=ch.price.Getwood()&&inventory.getGold()>=ch.price.Getgold()){
         ch.incrementNumber();
         inventory.Decwood(ch.price.Getwood());

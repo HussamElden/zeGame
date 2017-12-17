@@ -5,8 +5,11 @@
  */
 package terrain;
 
+import java.awt.Image;
 import java.awt.Point;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
@@ -20,7 +23,8 @@ public class Chariots extends Movables implements  Ibehavior{
     private int Range;
      PriceLists price=new PriceLists();
       private static int Number=0;
-
+public JLabel [] lbl = new JLabel[3];
+     
    public void incrementNumber(){
    Number++;
    }
@@ -30,8 +34,21 @@ public class Chariots extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-    Chariots()
-    {
+    public Chariots(String nation)
+    {          Nation = nation;
+
+         lbl[0]=new JLabel(nation+" Chariots");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Chariot_HumanHuinters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Chariot_HumanHuinters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Chariot_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Chariot_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
     price.Setwood(60);
     price.Setgold(40);
     Range=4;

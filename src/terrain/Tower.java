@@ -5,8 +5,11 @@
  */
 package terrain;
 
+import java.awt.Image;
 import terrain.Throwable;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -18,7 +21,24 @@ public class Tower extends Buildings{
     private int AgroRange;
   private int Attackspeed;
      private static int Number=0;
-
+public JLabel [] lbl =  new JLabel[3];
+     public Tower (String nation)
+     {
+     Nation = nation;
+       lbl[0]=new JLabel(nation+" Tower");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Tower_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Tower_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Tower_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Tower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+     }
+     
    public void incrementNumber(){
    Number++;
    }

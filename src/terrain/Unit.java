@@ -17,7 +17,7 @@ public abstract class Unit {
     private String status;
     private static Inventory inventory=new Inventory();
     private boolean aLive = true;
-   private String Nation;
+   public String Nation;
 
     public String getNation() {
         return Nation;

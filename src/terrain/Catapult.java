@@ -32,8 +32,10 @@ JLabel[] lbl = new JLabel[3];
    public int  GetNumber(){
    return Number;
    }
-    Catapult(String nation)
+public Catapult(String nation)
     {
+                 Nation = nation;
+
         lbl[0]=new JLabel(nation+" Catapult");
           
       if(nation.equals("Human Hunters"))

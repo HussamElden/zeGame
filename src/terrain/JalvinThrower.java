@@ -5,8 +5,11 @@
  */
 package terrain;
 
+import java.awt.Image;
 import java.awt.Point;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
@@ -20,7 +23,7 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    Throwable spear=new Throwable();
    PriceLists price=new PriceLists();
     private static int Number=0;
-
+public JLabel [] lbl =  new JLabel[3];
     public void incrementNumber(){
    Number++;
    }
@@ -30,8 +33,23 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-    JalvinThrower(){
-    price.Setfood(20);
+    public JalvinThrower(String nation)
+    {          Nation = nation;
+
+      lbl[0]=new JLabel(nation+" Jalvin Thrower");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://JalvinThrower_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://JalvinThrower_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://JalvinThrower_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://JalvinThrower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+        
+        price.Setfood(20);
     price.Setgold(25);
     spear.setDamage(5);
     setHealth(50);

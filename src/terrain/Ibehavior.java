@@ -15,6 +15,6 @@ import project.s.classes.Coordinates;
  */
 public interface Ibehavior {
     public String move(Point XY);
-    public Thread attack(Point no2ta, Point nextNo2ta , JLabel arrow);
+    public String attack();
     
 }

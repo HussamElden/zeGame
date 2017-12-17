@@ -5,9 +5,12 @@
  */
 package terrain;
 
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
 /**
@@ -20,9 +23,22 @@ public class WoodCutter extends Buildings implements IBuild{
      private static int Number=0;
      PriceLists price=new PriceLists();
    Inventory inventory=new Inventory();
-
-     WoodCutter()
+public JLabel [] lbl = new JLabel[3];
+     public WoodCutter(String nation)
      {
+         Nation = nation;
+       lbl[0]=new JLabel(nation+" Logging Mine");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
          price.Setwood(25);   
      }
    public void incrementNumber(){
