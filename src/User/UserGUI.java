@@ -93,14 +93,14 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
        UNlbl.setBounds(770, 320, 70, 10);
        Passlbl.setBounds(770, UNlbl.getY()+50, 70, 10);
 
-      add(UNtxt);
+       add(UNtxt);
        add(Passtxt);
        add(UNlbl);
         add(Passlbl);
         add(LoginBtn);
        add(SignUpBtn);
         add(SignUplbl);
-        
+
 //         container.add(UNtxt);
 //       container.add(Passtxt);
 //       container.add(UNlbl);
@@ -143,8 +143,13 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
      if(AllUsers.get(i).getUsername().equals(UN))
      {
       if (AllUsers.get(i).getPassword().equals(pass))
+<<<<<<< HEAD
       { CheckLogin=true;
         Arrs.u=AllUsers.get(i);
+=======
+      { 
+          CheckLogin=true;
+>>>>>>> Omar
       }
      }
      else

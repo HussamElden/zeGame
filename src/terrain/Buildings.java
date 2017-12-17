@@ -19,7 +19,7 @@ public abstract class Buildings extends Unit  {
     private  boolean isBuilt;
     private  boolean isFull;
     private Point SpawnPoint;
-    private String Nation;
+    
 
     public String getNation() {
         return Nation;

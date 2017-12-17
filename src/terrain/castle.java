@@ -5,10 +5,13 @@
  */
 package terrain;
 
+import java.awt.Image;
 import terrain.General;
 import terrain.Throwable;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
 /**
@@ -21,11 +24,24 @@ public class castle extends Buildings implements IBuild{
      private static int Number=0;
      PriceLists price=new PriceLists();
      Inventory inventory=new Inventory();
-  
- castle()
+  public JLabel []lbl = new JLabel[3];
+ castle(String nation)
      {
+          Nation = nation;
+       lbl[0]=new JLabel(nation+" Logging Mine");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+         
          price.Setmetal(120);
-     
      }
    public void incrementNumber(){
    Number++;
@@ -59,7 +75,7 @@ public class castle extends Buildings implements IBuild{
           case 1:
           {
        Inventory inventory=new Inventory();
-        General g=new General();
+        General g=new General(Nation);
         if(inventory.getFood()>=g.price.Getfood()&&inventory.getGold()>=g.price.Getgold()){
         g.incrementNumber();
         inventory.Decfood(g.price.Getfood());

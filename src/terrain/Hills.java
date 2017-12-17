@@ -5,13 +5,22 @@
  */
 package terrain;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Ahmed
  */
 public class Hills {
    private int Number;
-
+   public JLabel lbl = new JLabel();
+       public Hills ()
+        {
+       lbl=new JLabel(new ImageIcon(new ImageIcon("Pics://Stones.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      }
+        
    public void setNumber (int num)
    {
        if (Number >0)

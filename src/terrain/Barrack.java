@@ -5,12 +5,18 @@
  */
 package terrain;
 
+import java.awt.Image;
 import terrain.JalvinThrower;
 import terrain.Soldier;
 import terrain.Archer;
 import java.util.ArrayList;
 import java.util.Scanner;
+<<<<<<< HEAD
 import User.Arrs;
+=======
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+>>>>>>> Omar
 import project.s.classes.PriceLists;
 
 /**
@@ -21,7 +27,25 @@ public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
 
            Inventory inventory=new Inventory();
+           public JLabel[] lbl = new JLabel[3];
+public Barrack (String nation)
+{          Nation = nation;
 
+  lbl[0]=new JLabel(nation+" Barracks");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Barracks_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Barracks_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Barracks_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Barracks_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+}
+           
+           
 private void setPrice(){
      price.Setwood(150);
   
@@ -47,7 +71,7 @@ private void setPrice(){
     switch(choice){
         case 1:{
        Inventory inventory=new Inventory();
-        Soldier s=new Soldier();
+        Soldier s=new Soldier(Nation);
         if(inventory.getFood()>=s.price.Getfood()&&inventory.getGold()>=s.price.Getgold()){
         s.incrementNumber();
         inventory.Decfood(s.price.Getfood());
@@ -74,7 +98,7 @@ private void setPrice(){
         }
         case 3:{
         Inventory inventory=new Inventory();
-        JalvinThrower j=new JalvinThrower();
+        JalvinThrower j=new JalvinThrower(Nation);
          if(inventory.getFood()>=j.price.Getfood()&&inventory.getGold()>=j.price.Getgold()){
         j.incrementNumber();
         inventory.Decfood(j.price.Getfood());

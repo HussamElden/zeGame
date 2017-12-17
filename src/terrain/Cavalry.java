@@ -32,8 +32,10 @@ public class Cavalry extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-   Cavalry(String nation){
-     lbl[0]=new JLabel(nation+" Cavalry");
+  public Cavalry(String nation){
+               Nation = nation;
+
+      lbl[0]=new JLabel(nation+" Cavalry");
           
       if(nation.equals("Human Hunters"))
       {
