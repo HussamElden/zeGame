@@ -5,6 +5,7 @@
  */
 package terrain;
 
+import java.awt.Point;
 import project.s.classes.Coordinates;
 
 /**
@@ -17,13 +18,20 @@ public abstract class Buildings extends Unit  {
     private int UpgradeTime;
     private  boolean isBuilt;
     private  boolean isFull;
-    private Coordinates SpawnPoint;
-    
-    public void setSpawnpoint(Coordinates spawnpoint){
+    private Point SpawnPoint;
+    private String Nation;
+
+    public String getNation() {
+        return Nation;
+    }
+    public void setNation(String Nation) {
+        this.Nation = Nation;
+    }
+    public void setSpawnpoint(Point spawnpoint){
        this.SpawnPoint = spawnpoint;
     }
     
-    public Coordinates getSpawnpoint(){
+    public Point getSpawnpoint(){
         return this.SpawnPoint;
     } 
   

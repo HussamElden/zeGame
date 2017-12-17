@@ -5,16 +5,26 @@
  */
 package terrain;
 
+import project.s.classes.*;
+
+
 /**
  *
  * @author Ahmed
  */
-public class Inventory 
-{
-    private static int Food=200, Wood=230, Metal=0, Gold=200;
+public class Inventory {
+     public static PriceLists price=new PriceLists();
+      PriceLists p=new PriceLists();
+    private static int Food = 200, Wood = 230, Metal = 0, Gold = 200;
     private static int maxStorage;
     private static int currentStorage;
-public void setFood(int FoodNum){
+    
+    public Inventory() {
+
+    }
+
+    
+    public void setFood(int FoodNum){
     if (Food>=0)
         Food=FoodNum;
 }
@@ -69,11 +79,8 @@ public void setFood(int FoodNum){
    Food=Food-x;
    }
    
-   
-
-    
-
     int Max (){
         return maxStorage;
     }
+
 }

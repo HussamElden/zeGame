@@ -71,7 +71,7 @@ public class Stable extends Buildings implements IBuild {
         case 2:
         {
       Inventory  inventory=new Inventory();
-        Cavalry ca=new Cavalry();
+        Cavalry ca=new Cavalry("");
         if(inventory.getFood()>=ca.price.Getfood()&&inventory.getGold()>=ca.price.Getgold()){
         ca.incrementNumber();
         inventory.Decfood(ca.price.Getfood());

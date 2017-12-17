@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public interface Iuser 
 {
-    public void addu(String x,String y)throws FileNotFoundException,IOException,ClassNotFoundException;
+    public void addu(String x,String y,String z)throws FileNotFoundException,IOException,ClassNotFoundException;
     public void editu();
     public void deleteu();
     public void save();

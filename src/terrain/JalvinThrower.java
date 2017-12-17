@@ -5,6 +5,7 @@
  */
 package terrain;
 
+import java.awt.Point;
 import java.util.ArrayList;
 import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
@@ -48,7 +49,7 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    }
      
      @Override
-     public String move(Coordinates XY){
+     public String move(Point XY){
      return"Archer is moving";
      }
       @Override

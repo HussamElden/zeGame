@@ -5,15 +5,36 @@
  */
 package project.s.classes;
 
+import terrain.Inventory;
+
 /**
  *
  * @author hos20
  */
 public class PriceLists {
-    private int food;
-    private  int wood;
+     private int food;
+    private int wood;
     private int metal;
     private int gold;
+
+    public PriceLists(int food, int wood, int metal, int gold) {
+        this.food = food;
+        this.wood = wood;
+        this.metal = metal;
+        this.gold = gold;
+    }
+
+    public PriceLists() {
+         this.food = 0;
+        this.wood = 0;
+        this.metal = 0;
+        this.gold = 0;
+    }
+  
+    
+   
+   
+ 
     public void Setmetal(int M){
             metal =M;
             
@@ -39,4 +60,5 @@ public class PriceLists {
     public int Getgold(){
     return gold;
     }
+    
 }

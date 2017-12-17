@@ -15,9 +15,17 @@ public abstract class Unit {
     private Coordinates position;
     private  int Health;
     private String status;
-    private Inventory inventory;
+    private static Inventory inventory=new Inventory();
     private boolean aLive = true;
-   
+   private String Nation;
+
+    public String getNation() {
+        return Nation;
+    }
+
+    public void setNation(String Nation) {
+        this.Nation = Nation;
+    }
     public void setposition (Coordinates pos){
          position = pos;
     }

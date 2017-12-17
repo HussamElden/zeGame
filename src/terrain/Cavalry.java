@@ -5,7 +5,11 @@
  */
 package terrain;
 
+import java.awt.Image;
+import java.awt.Point;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
@@ -18,7 +22,7 @@ public class Cavalry extends Movables implements  Ibehavior{
     private Melee spear= new Melee();
    PriceLists price=new PriceLists();
     private static int Number=0;
-
+   public JLabel [] lbl = new JLabel[3];
    public void incrementNumber(){
    Number++;
    }
@@ -28,8 +32,20 @@ public class Cavalry extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-   Cavalry(){
-    price.Setfood(60);
+   Cavalry(String nation){
+     lbl[0]=new JLabel(nation+" Cavalry");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Cavlary_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Cavlary_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Cavlary_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Cavlary_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+       price.Setfood(60);
     price.Setgold(75);
     spear.setdamage(3);
     spear.setrange(3);
@@ -40,7 +56,7 @@ public class Cavalry extends Movables implements  Ibehavior{
     public void RideHorse()
    {  }
     @Override
-     public String move(Coordinates XY){
+     public String move(Point XY){
      return"Cavalry is moving";
      }
       @Override

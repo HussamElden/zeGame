@@ -5,7 +5,12 @@
  */
 package terrain;
      
+import User.User;
+import java.awt.Image;
+import java.awt.Point;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
@@ -18,8 +23,8 @@ public class Archer extends Movables implements  Ibehavior{
    protected int Range;
    public Throwable arrow = new Throwable();
    private static int Number=0;
-      static public ArrayList<Archer> ArrArcher= new ArrayList<>();
-
+   public JLabel[] lbl=new JLabel[3];
+ 
    public void incrementNumber(){
    Number++;
    }
@@ -29,8 +34,20 @@ public class Archer extends Movables implements  Ibehavior{
    public int  GetNumber(){
    return Number;
    }
-   Archer(){
-      
+   Archer(String nation){
+          
+       lbl[0]=new JLabel(nation+" Archer");
+          
+      if(nation.equals("Human Hunters"))
+      {
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
     price.Setgold(20);
     price.Setfood(25);
     Range=4;
@@ -52,7 +69,7 @@ public int getRange ()
 }
     public void Throw() {}
     @Override
-     public String move(Coordinates XY){
+     public String move(Point XY){
      return"Archer is moving";
      }
       @Override
