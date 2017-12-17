@@ -17,11 +17,6 @@ public class Base extends Buildings implements IBuild  {
    
    Citizens citizen=new Citizens();
     @Override
-    public String Build() {
-        return null;
-    }
-
-    @Override
     public String Destroy() {
         setalive(false);
         return "Base was destroied and you Lost";

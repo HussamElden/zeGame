@@ -18,36 +18,26 @@ import project.s.classes.PriceLists;
  */
 public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
-    private static int Number=0;
            Inventory inventory=new Inventory();
 
 private void setPrice(){
-    
+     price.Setwood(150);
   
     }
-    @Override
-    public String Build(){
-        price.Setwood(150);
-        if(inventory.p.Getwood() >= price.Getwood()){  
-            int x = inventory.getWood() - price.Getwood();
-            inventory.setWood(x);
-            incrementNumber();
-        }
-    return "Barrack is built";
-    };
+//    @Override
+//    public String Build(){
+//       
+//        if(inventory.p.Getwood() >= price.Getwood()){  
+//            int x = inventory.getWood() - price.Getwood();
+//            inventory.setWood(x);
+//            incrementNumber();
+//        }
+//    return "Barrack is built";
+//    };
     @Override
     public String Destroy(){
     return "Barrack is destroyed";
     };
-    public void incrementNumber(){
-     Number++;
-     }
-     public void dcrementNumber(){
-     Number--;
-     }
-     public int  GetNumber(){
-     return Number;
-      }
     @Override
     public String spawn(){
     Scanner sc=new Scanner(System.in);
