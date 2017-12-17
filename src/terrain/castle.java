@@ -32,13 +32,13 @@ public class castle extends Buildings implements IBuild{
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
          
          price.Setmetal(120);

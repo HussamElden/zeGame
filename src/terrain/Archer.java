@@ -41,13 +41,13 @@ public class Archer extends Movables implements  Ibehavior {
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_HumanHunters.png").getImage().getScaledInstance(50,68 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Archer_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_NightElves.png").getImage().getScaledInstance(50,68 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
     price.Setgold(20);
     price.Setfood(25);
