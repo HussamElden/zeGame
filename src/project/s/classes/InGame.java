@@ -9,8 +9,12 @@ import User.UserGUI;
 import User.User;
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.HeadlessException;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
@@ -34,6 +38,11 @@ JButton Options;
 JButton Help;
 JButton Credits;
 JButton Quit;
+
+ Toolkit toolkit = Toolkit.getDefaultToolkit();
+             Image image = toolkit.getImage("Pics//sword.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
+           0), "img");
         public InGame() 
     {   
           setSize(5000, 5000);
@@ -60,6 +69,7 @@ JButton Quit;
           add(Help);
           add(Credits);
           add(Quit);
+          setCursor(c);
           Quit.addActionListener(new AllButtons());
         MyAccount.addActionListener(new AllButtons());
        
@@ -108,21 +118,16 @@ public MyAccount()
         @Override
         public void actionPerformed(ActionEvent ae) 
         {
-           if (ae.getSource()== Quit)
-           {
+           if (ae.getSource()== Quit){
             int x= JOptionPane.showConfirmDialog (null, "Would You Like to Quit?","Quit",JOptionPane.YES_NO_CANCEL_OPTION);
             if(x==0)
             {
             System.exit(0);
             }
-           }
-           else if (ae.getSource()==MyAccount)
-           {
-               
-           }
     
         
         }
     }
     }
+}
 

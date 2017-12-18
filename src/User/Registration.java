@@ -6,6 +6,10 @@
 package User;
 
 import java.awt.Container;
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -38,6 +42,10 @@ public class Registration extends JFrame implements Serializable {
         JTextField UNtxt2;
         JPasswordField Passtxt2;
        JComboBox NationCombo = new JComboBox(new String[]{"Human Hunters", "Night Elves"});
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+             Image image = toolkit.getImage("Pics//sword.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
+           0), "img");
          public Registration()
         {
         setSize(5000, 5000);
@@ -71,6 +79,7 @@ public class Registration extends JFrame implements Serializable {
         container.add(ConfirmPasstxt);
         container.add(NationCombo);
         container.add(NationLabel);
+            setCursor(c);
         RegisterBtn.addActionListener(new Register());
             setVisible(false);
         }
