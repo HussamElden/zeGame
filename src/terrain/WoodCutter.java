@@ -70,7 +70,7 @@ public JLabel [] lbl = new JLabel[3];
                 }
                 
              try {
-                       Thread.sleep(100000);
+                       Thread.sleep(12000);
                     } 
                   catch (InterruptedException ex) 
                     {   }
