@@ -10,7 +10,7 @@ package terrain;
  * @author hos20
  */
 public interface IBuild {
-    public String Build();
+    
     public String Destroy();
-    public String spawn();
+    public void spawn();
 }

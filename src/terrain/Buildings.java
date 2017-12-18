@@ -17,6 +17,14 @@ public abstract class Buildings extends Unit  {
     private int BuildingTime;
     private int UpgradeTime;
     private  boolean isBuilt;
+
+    public boolean isIsBuilt() {
+        return isBuilt;
+    }
+
+    public void setIsBuilt(boolean isBuilt) {
+        this.isBuilt = isBuilt;
+    }
     private  boolean isFull;
     private Point SpawnPoint;
     

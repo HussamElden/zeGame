@@ -50,20 +50,20 @@ public class Mine extends Buildings implements IBuild{
        x+=10;
        inventory.setMetal(x);
     }
-    @Override
-    public String Build(){
-        Inventory inventory =new Inventory();
-        incrementNumber();
-        IncreaseStone(inventory);
-    return"Mine is built";
-    };
+    //    @Override
+    //    public String Build(){
+    //        Inventory inventory =new Inventory();
+    //        incrementNumber();
+    //        IncreaseStone(inventory);
+    //    return"Mine is built";
+    //    };
     @Override
     public String Destroy(){
         
     return"Mine is Destroy";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
     return"";
     };
     @Override

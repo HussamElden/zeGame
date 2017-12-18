@@ -17,13 +17,14 @@ import java.io.Serializable;
  * @author Omar Anas
  */
 public class User implements Serializable
-{
+{   
     private int ID;
     private String Username;
     private String Password;
     private String Nation;
 
     public String getNation() {
+       
         return Nation;
     }
 

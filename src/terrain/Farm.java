@@ -50,20 +50,20 @@ public JLabel []  lbl  = new JLabel[3];
        x+=10;
        inventory.setFood(x);
     }
-    @Override
-    public String Build(){
-        Inventory inventory=new Inventory();
-        IncreaseFood(inventory);
-        incrementNumber();
-    return"Farm is built";
-    };
+//    @Override
+//    public String Build(){
+//        Inventory inventory=new Inventory();
+//        IncreaseFood(inventory);
+//        incrementNumber();
+//    return"Farm is built";
+//    };
     @Override
     public String Destroy(){
         
     return"Farm destroyed\n";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
     return null;};
     @Override
      public String toString() { 

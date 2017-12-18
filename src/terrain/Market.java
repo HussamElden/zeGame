@@ -85,17 +85,17 @@ public Market (String nation)
     int Buy(){
         return 0;
     }
-    @Override
-    public String Build(){
-        incrementNumber();
-    return "market is built";
-    };
+//    @Override
+//    public String Build(){
+//        incrementNumber();
+//    return "market is built";
+//    };
     @Override
     public String Destroy(){
     return "marker is destroyed\n";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
         return null;}
     @Override
      public String toString() { 

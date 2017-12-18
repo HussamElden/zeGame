@@ -11,6 +11,7 @@ import terrain.Soldier;
 import terrain.Archer;
 import java.util.ArrayList;
 import java.util.Scanner;
+import User.Arrs;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import project.s.classes.PriceLists;
@@ -21,7 +22,7 @@ import project.s.classes.PriceLists;
  */
 public class Barrack extends Buildings implements IBuild
 {   PriceLists price=new PriceLists();
-    private static int Number=0;
+
            Inventory inventory=new Inventory();
            public JLabel[] lbl = new JLabel[3];
 public Barrack (String nation)
@@ -43,34 +44,16 @@ public Barrack (String nation)
            
            
 private void setPrice(){
-    
+     price.Setwood(150);
   
     }
-    @Override
-    public String Build(){
-        price.Setwood(150);
-        if(inventory.p.Getwood() >= price.Getwood()){  
-            int x = inventory.getWood() - price.Getwood();
-            inventory.setWood(x);
-            incrementNumber();
-        }
-    return "Barrack is built";
-    };
+
     @Override
     public String Destroy(){
     return "Barrack is destroyed";
     };
-    public void incrementNumber(){
-     Number++;
-     }
-     public void dcrementNumber(){
-     Number--;
-     }
-     public int  GetNumber(){
-     return Number;
-      }
     @Override
-    public String spawn(){
+    public void spawn(){
     Scanner sc=new Scanner(System.in);
     int choice=sc.nextInt();
     switch(choice){
@@ -91,12 +74,12 @@ private void setPrice(){
       Inventory  inventory=new Inventory();
         Archer a=new Archer("");
         if(inventory.getFood()>=a.price.Getfood()&&inventory.getGold()>=a.price.Getgold()){
-        a.incrementNumber();
+       // a.incrementNumber();
         price.Setfood(choice);
             
 //Decfood(a.price.Getfood());
         inventory.Decgold(a.price.Getgold());
-        return "Now you have "+a.GetNumber()+" Archer";
+       // return "Now you have "+a.GetNumber()+" Archer";
         }else{
         return "You dont have enough resources";
         }
@@ -128,3 +111,13 @@ private void setPrice(){
          return "Barrack";
       } 
 }
+//    @Override
+//    public String Build(){
+//       
+//        if(inventory.p.Getwood() >= price.Getwood()){  
+//            int x = inventory.getWood() - price.Getwood();
+//            inventory.setWood(x);
+//            incrementNumber();
+//        }
+//    return "Barrack is built";
+//    };

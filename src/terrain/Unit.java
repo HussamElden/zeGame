@@ -5,6 +5,8 @@
  */
 package terrain;
 
+import User.Arrs;
+import java.awt.Point;
 import project.s.classes.Coordinates;
 
 /**
@@ -12,26 +14,34 @@ import project.s.classes.Coordinates;
  * @author Ahmed
  */
 public abstract class Unit {
-    private Coordinates position;
-    private  int Health;
+    private Point position;
+   private  int Health;
     private String status;
-    private static Inventory inventory=new Inventory();
     private boolean aLive = true;
    public String Nation;
 
+    public Point getPosition() {
+        return position;
+    }
+
+    public void setPosition(Point position) {
+        this.position = position;
+    }
+
+    public boolean isaLive() {
+        return aLive;
+    }
+
+    public void setaLive(boolean aLive) {
+        this.aLive = aLive;
+    }
+ 
     public String getNation() {
         return Nation;
     }
 
     public void setNation(String Nation) {
         this.Nation = Nation;
-    }
-    public void setposition (Coordinates pos){
-         position = pos;
-    }
-  
-    public Coordinates getposition (){
-        return  position;
     }
     public void setHealth (int health){
         if (health >= 0)

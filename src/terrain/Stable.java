@@ -51,13 +51,14 @@ public Stable (String nation)
    private void setPrice()
      {
     price.Setwood(175);
-    }
-@Override
-    public String Build() {
-    if(inventory.getWood()>=price.Getwood())
-        incrementNumber();
-    return "Stable is built";
-    }
+     }
+//    }
+//@Override
+//    public String Build() {
+//    if(inventory.getWood()>=price.Getwood())
+//        incrementNumber();
+//    return "Stable is built";
+//    }
 
     @Override
     public String Destroy() {
@@ -66,7 +67,7 @@ public Stable (String nation)
     }
 
     @Override
-    public String spawn() 
+    public void spawn() 
     {
          Scanner sc=new Scanner(System.in);
     int choice=sc.nextInt();

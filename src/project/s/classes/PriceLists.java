@@ -12,13 +12,27 @@ import terrain.Inventory;
  * @author hos20
  */
 public class PriceLists {
-
-    public PriceLists() {
-    }
-    public int food;
+     private int food;
     private int wood;
     private int metal;
     private int gold;
+
+    public PriceLists(int food, int wood, int metal, int gold) {
+        this.food = food;
+        this.wood = wood;
+        this.metal = metal;
+        this.gold = gold;
+    }
+
+    public PriceLists() {
+         this.food = 0;
+        this.wood = 0;
+        this.metal = 0;
+        this.gold = 0;
+    }
+  
+    
+   
    
  
     public void Setmetal(int M){
@@ -46,5 +60,23 @@ public class PriceLists {
     public int Getgold(){
     return gold;
     }
+    public void DecrementAny(PriceLists p)
+     {
+         this.food-=p.food;
+         this.wood-=p.wood;
+         this.gold-=p.gold;
+         this.metal-=p.metal;
+     }
+     
     
+      public boolean sheck(PriceLists p)
+     {
+         if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
+         {
+          this.DecrementAny(p);
+          return true;
+         }else{
+         return false;
+         }       
+     }
 }
