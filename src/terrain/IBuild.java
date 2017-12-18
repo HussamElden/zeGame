@@ -12,5 +12,5 @@ package terrain;
 public interface IBuild {
     
     public String Destroy();
-    public String spawn();
+    public void spawn();
 }

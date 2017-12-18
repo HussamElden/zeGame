@@ -11,12 +11,9 @@ import terrain.Soldier;
 import terrain.Archer;
 import java.util.ArrayList;
 import java.util.Scanner;
-<<<<<<< HEAD
 import User.Arrs;
-=======
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
->>>>>>> Omar
 import project.s.classes.PriceLists;
 
 /**
@@ -50,22 +47,13 @@ private void setPrice(){
      price.Setwood(150);
   
     }
-//    @Override
-//    public String Build(){
-//       
-//        if(inventory.p.Getwood() >= price.Getwood()){  
-//            int x = inventory.getWood() - price.Getwood();
-//            inventory.setWood(x);
-//            incrementNumber();
-//        }
-//    return "Barrack is built";
-//    };
+
     @Override
     public String Destroy(){
     return "Barrack is destroyed";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
     Scanner sc=new Scanner(System.in);
     int choice=sc.nextInt();
     switch(choice){
@@ -123,3 +111,13 @@ private void setPrice(){
          return "Barrack";
       } 
 }
+//    @Override
+//    public String Build(){
+//       
+//        if(inventory.p.Getwood() >= price.Getwood()){  
+//            int x = inventory.getWood() - price.Getwood();
+//            inventory.setWood(x);
+//            incrementNumber();
+//        }
+//    return "Barrack is built";
+//    };

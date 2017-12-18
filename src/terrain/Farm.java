@@ -63,7 +63,7 @@ public JLabel []  lbl  = new JLabel[3];
     return"Farm destroyed\n";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
     return null;};
     @Override
      public String toString() { 

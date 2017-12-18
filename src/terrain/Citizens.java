@@ -5,16 +5,14 @@
  */
 package terrain;
 
-<<<<<<< HEAD
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.util.ArrayList;
-=======
 import java.awt.Image;
+import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
->>>>>>> Omar
 import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
@@ -23,9 +21,9 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Citizens extends Movables {
-    JLabel  tab=new JLabel();
+  
     private PriceLists price = new PriceLists();
-     private static int Number = 0;
+
 public JLabel [] lbl = new JLabel[3];
      public Citizens(String nation)
      {          Nation = nation;
@@ -34,26 +32,16 @@ public JLabel [] lbl = new JLabel[3];
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Citizen_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Citizen_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_HumanHunters.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Citizen_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
      }
      
-     
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
     Citizens(){
     price.Setfood(20);
     }
@@ -64,17 +52,16 @@ public JLabel [] lbl = new JLabel[3];
 //        
 //    }
     public void Build(){
-       if(true){
-       Barrack b=new Barrack();
-       if(inventory.equals(b.price)){
       
-       
-       }
-       
-       }
     }
     @Override
      public String toString() { 
          return "Citizens";
       } 
+//      public void movieing(){
+//        Point SP=new ;
+//      MOVER m=new MOVER(this.lbl[1].getLocation(),SP,this.lbl[1]);
+//           m.TMove.start();
+//      }
+//    
 }

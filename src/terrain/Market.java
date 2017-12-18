@@ -95,7 +95,7 @@ public Market (String nation)
     return "marker is destroyed\n";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
         return null;}
     @Override
      public String toString() { 

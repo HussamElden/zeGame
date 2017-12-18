@@ -63,7 +63,7 @@ public class Mine extends Buildings implements IBuild{
     return"Mine is Destroy";
     };
     @Override
-    public String spawn(){
+    public void spawn(){
     return"";
     };
     @Override

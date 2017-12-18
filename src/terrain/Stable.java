@@ -67,7 +67,7 @@ public Stable (String nation)
     }
 
     @Override
-    public String spawn() 
+    public void spawn() 
     {
          Scanner sc=new Scanner(System.in);
     int choice=sc.nextInt();

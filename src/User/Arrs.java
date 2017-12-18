@@ -15,6 +15,7 @@ import terrain.*;
  */
 public  class  Arrs implements Serializable{
                public static User u=new User();
+               public static ArrayList<Unit> ALL=new ArrayList();
              public static ArrayList<Barrack>ArrBarrack= new ArrayList<>();
                         public static ArrayList<Catapult>ArrCatapult=new ArrayList<>();
          public static ArrayList<Cavalry>ArrCavalry=new ArrayList<>();

@@ -143,13 +143,10 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
      if(AllUsers.get(i).getUsername().equals(UN))
      {
       if (AllUsers.get(i).getPassword().equals(pass))
-<<<<<<< HEAD
       { CheckLogin=true;
         Arrs.u=AllUsers.get(i);
-=======
       { 
           CheckLogin=true;
->>>>>>> Omar
       }
      }
      else
@@ -158,7 +155,8 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
      }
  }
  }
-@Override
+ }
+        @Override
     public void addu(String UN, String Pass,String Nation) throws FileNotFoundException,IOException,ClassNotFoundException
     {    String FileName= "tusers.txt";
 
@@ -237,6 +235,9 @@ InFile.close();
             }
         }
     }
+}
+
+
   
   
        
@@ -322,7 +323,7 @@ InFile.close();
 //        }
 //        }
 //    }
- }
+ 
 //<<<<<<< HEAD:src/project/s/classes/UserGUI.java
 //  private class Login implements ActionListener {
 //

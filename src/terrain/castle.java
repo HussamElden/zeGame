@@ -66,7 +66,7 @@ public class castle extends Buildings implements IBuild{
     return "Castle is destroyed";
     };
     @Override
-    public String spawn()
+    public void spawn()
     { 
     Scanner sc=new Scanner(System.in);
     int choice=sc.nextInt();

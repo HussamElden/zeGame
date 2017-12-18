@@ -20,7 +20,6 @@ import project.s.classes.PriceLists;
 public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
-     private static int Number=0;
      PriceLists price=new PriceLists();
    Inventory inventory=new Inventory();
 public JLabel [] lbl = new JLabel[3];
@@ -31,28 +30,18 @@ public JLabel [] lbl = new JLabel[3];
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
          price.Setwood(25);   
+         setalive(true);
+         Work.start();
      }
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
-
-   
-    
     public void settree (Trees Tree){
           Tree=tree;
     }
@@ -73,17 +62,32 @@ public JLabel [] lbl = new JLabel[3];
 //        increasewood(inventory);
 //    return"Woodcutter is built";
 //    };
+    public Thread Work=new Thread(){
+                
+            public void run(){
+                while(getalive()){
+                Inventory.price.Setwood(Inventory.price.Getwood()+4);
+                }
+                
+             try {
+                       Thread.sleep(100000);
+                    } 
+                  catch (InterruptedException ex) 
+                    {   }
+            }};
+            
     @Override
     public String Destroy(){
         
     return"Woodcutter is Destroy";
     };
     @Override
-    public String spawn(){
-    return"";
+    public void spawn(){
+    
     };
     @Override
      public String toString() { 
          return "WoodCutter";
-      } 
+      }
+     
 }
