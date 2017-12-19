@@ -30,13 +30,13 @@ public JLabel [] lbl = new JLabel[3];
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Soldier_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Soldier_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Soldier_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics://Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }    price.Setgold(15);
     price.Setfood(20); 
     sword.setdamage(4);

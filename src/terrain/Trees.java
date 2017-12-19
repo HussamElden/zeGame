@@ -18,7 +18,7 @@ public class Trees {
     JLabel lbl = new JLabel();
    public Trees ()
    {
-              lbl=new JLabel(new ImageIcon(new ImageIcon("Pics://Trees.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+              lbl=new JLabel(new ImageIcon(new ImageIcon("Pics//Trees.png").getImage().getScaledInstance(300,205 ,Image.SCALE_DEFAULT)));
 
    }
    public void setNumber (int Num){

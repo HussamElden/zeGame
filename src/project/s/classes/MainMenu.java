@@ -9,8 +9,12 @@ import User.UserGUI;
 import User.User;
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.HeadlessException;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
@@ -35,7 +39,16 @@ JButton Options;
 JButton Help;
 JButton Credits;
 JButton Quit;
+<<<<<<< HEAD:src/project/s/classes/InGame.java
+
+ Toolkit toolkit = Toolkit.getDefaultToolkit();
+             Image image = toolkit.getImage("Pics//sword.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
+           0), "img");
+        public InGame() 
+=======
         public MainMenu() 
+>>>>>>> Hussam:src/project/s/classes/MainMenu.java
     {   
           setSize(5000, 5000);
 
@@ -62,6 +75,7 @@ JButton Quit;
           add(Credits);
           
           add(Quit);
+          setCursor(c);
           Quit.addActionListener(new AllButtons());
           NewGameBtn.addActionListener(new AllButtons());
         MyAccount.addActionListener(new AllButtons());
@@ -133,4 +147,26 @@ public MyAccount()
 
         }
     }
+<<<<<<< HEAD:src/project/s/classes/InGame.java
 */
+    private class AllButtons implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent ae) 
+        {
+           if (ae.getSource()== Quit){
+            int x= JOptionPane.showConfirmDialog (null, "Would You Like to Quit?","Quit",JOptionPane.YES_NO_CANCEL_OPTION);
+            if(x==0)
+            {
+            System.exit(0);
+            }
+    
+        
+        }
+    }
+    }
+}
+
+=======
+*/
+>>>>>>> Hussam:src/project/s/classes/MainMenu.java

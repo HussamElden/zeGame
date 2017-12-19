@@ -3,12 +3,21 @@ import User.User;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GraphicsEnvironment;
 import java.awt.HeadlessException;
+import java.awt.Image;
 import java.awt.LayoutManager;
+import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -44,20 +53,21 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         JLabel UNlbl;
         JLabel Passlbl;
         JLabel SignUplbl;
+        JLabel Background;
         JTextField UNtxt;
         JPasswordField Passtxt;
         JPanel panel=new JPanel();
         ImageIcon icon;
         //------------
-           JButton RegisterBtn=new JButton();
-      JLabel ConfirmPasslbl = new JLabel();
-      JPasswordField ConfirmPasstxt;
-       JLabel UNlbl2;
-        JLabel Passlbl2;
-         JLabel NationLabel;
-        JTextField UNtxt2;
-        JPasswordField Passtxt2;
-       JComboBox NationCombo = new JComboBox(new String[]{"Human Hunters", "Night Elves"});
+//           JButton RegisterBtn=new JButton();
+//      JLabel ConfirmPasslbl = new JLabel();
+//      JPasswordField ConfirmPasstxt;
+//       JLabel UNlbl2;
+//        JLabel Passlbl2;
+//         JLabel NationLabel;
+//        JTextField UNtxt2;
+//        JPasswordField Passtxt2;
+//       JComboBox NationCombo = new JComboBox(new String[]{"Human Hunters", "Night Elves"});
 
         //-----------------
         ArrayList<User>AllUsers=new ArrayList<>();
@@ -65,15 +75,38 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
            static Arrs xyz=new Arrs();
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
+<<<<<<< HEAD
+        boolean CheckLogin= true;
+        InGame MM=new InGame();
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        //Image Cursorimg = toolkit.getImage("‪Pics//Cursor.png");
+        //  Dimension CursorSize = toolkit.getBestCursorSize(32, 32);
+  //      Cursor c = toolkit.createCustomCursor(Cursorimg , new Point(0,0), "Cursor");
+=======
    boolean CheckLogin= true;
              MainMenu MM=new MainMenu();
+>>>>>>> Hussam
 
-   //SignUpndLogin Sl = new SignUpndLogin();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Font myFont =  new Font("SansSerif",Font.BOLD,20);
 
-   
-  public UserGUI()  
+        public UserGUI() 
     {
         
+<<<<<<< HEAD
+         setSize((int)screenSize.getWidth(), (int)screenSize.getHeight());
+         //setCursor(c);
+         setTitle("Login");
+         setLayout(null);
+         setVisible(false);
+         
+         LoginBtn= new JButton("Login");
+         SignUpBtn= new JButton("Sign Up");
+         UNlbl= new JLabel ("Username");
+         UNlbl.setFont(myFont);
+         Passlbl= new JLabel ("Password");
+         SignUplbl = new JLabel("Don't have an account?");
+=======
        setSize(5000, 5000);
         setTitle("Login");
       LoginBtn= new JButton("Login");
@@ -81,41 +114,52 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
       UNlbl= new JLabel ("Username");
         Passlbl= new JLabel ("Password");
         SignUplbl = new JLabel("Don't have an account?");
+>>>>>>> Hussam
          UNtxt= new JTextField(16);
          Passtxt= new JPasswordField(16);
+         
+         Background =  new JLabel();
+         Background.setIcon(new ImageIcon(new ImageIcon("Pics//wallpaper.jpg").getImage().getScaledInstance(1920, 1080, Image.SCALE_DEFAULT)));
+         Background.setBounds(0, 0, (int)screenSize.getWidth(), (int)screenSize.getHeight());
+        
+         UNtxt.setBounds(850,Passtxt.getY()+300, 170, 50);
+         Passtxt.setBounds(850,350,170, 50);
+         LoginBtn.setBounds(850,400,169, 50);
+         SignUpBtn.setBounds(942, LoginBtn.getY()+250, 77, 50);
+         SignUplbl.setBounds(Passlbl.getY()+770,LoginBtn.getY()+270,132,10);
+         UNlbl.setBounds(770, 320, 70, 10);
+         Passlbl.setBounds(770, UNlbl.getY()+50, 70, 10);
+       
+         add(UNtxt);
+         add(Passtxt);
+         add(UNlbl);
+         add(Passlbl);
+         add(LoginBtn);
+         add(SignUpBtn);
+         add(SignUplbl);
+         add(Background);
+        
+         SignUpBtn.addActionListener(new SignUpndLogin());
+        LoginBtn.addActionListener(new SignUpndLogin());
+        
+       
         //Container container= getContentPane();
-        setLayout(null);
-        UNtxt.setBounds(850,Passtxt.getY()+300, 170, 50);
-        Passtxt.setBounds(850,350,170, 50);
-      LoginBtn.setBounds(850,400,169, 50);
-        SignUpBtn.setBounds(942, LoginBtn.getY()+250, 77, 50);
-        SignUplbl.setBounds(Passlbl.getY()+770,LoginBtn.getY()+270,132,10);
-       UNlbl.setBounds(770, 320, 70, 10);
-       Passlbl.setBounds(770, UNlbl.getY()+50, 70, 10);
-
-       add(UNtxt);
-       add(Passtxt);
-       add(UNlbl);
-        add(Passlbl);
-        add(LoginBtn);
-       add(SignUpBtn);
-        add(SignUplbl);
-
-//         container.add(UNtxt);
+//        getContentPane().setBackground(Color.yellow);
+            //         container.add(UNtxt);
 //       container.add(Passtxt);
 //       container.add(UNlbl);
 //        container.add(Passlbl);
 //        container.add(LoginBtn);
 //        container.add(SignUpBtn);
-//        container.add(SignUplbl);
-        SignUpBtn.addActionListener(new SignUpndLogin());
-        LoginBtn.addActionListener(new SignUpndLogin());
-        setVisible(false);
-       
+//        container.add(SignUplbl
        // add(Sl);
        // add(MM);
         //Sl.setVisible(true);  
+        
+
     }
+
+
  private void checkU(String u) throws IOException, FileNotFoundException, ClassNotFoundException
  {
      
@@ -188,6 +232,7 @@ AllUsers=(ArrayList<User>)InFile.readObject();
 InFile.close();
 
 }
+
     @Override
     public void editu() 
     {
@@ -279,9 +324,50 @@ InFile.close();
 //        }
 
         
+<<<<<<< HEAD
+        
+        
+        @Override
+        public void actionPerformed(ActionEvent ae)
+        {
+            if (ae.getSource()== SignUpBtn)
+            {  dispose();
+               Registration g = new Registration();
+                g.setVisible(true);
+                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+            }
+            else if (ae.getSource()== LoginBtn){
+                String UN= UNtxt.getText();
+            String Pass=Passtxt.getText();
+          
+            try {
+                checkUserForLogin(UN, Pass);
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (CheckLogin==true)
+            {
+           dispose();
+            InGame g = new InGame();
+            g.setVisible(true);
+                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+               g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+            }
+       else 
+           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
+            
+            }
+        }
+          
+}
+    
+}
+=======
   
   
   
+>>>>>>> Hussam
 // private class Register implements ActionListener {
 //
 //        @Override
@@ -323,7 +409,10 @@ InFile.close();
 //        }
 //        }
 //    }
+<<<<<<< HEAD
+=======
  
+>>>>>>> Hussam
 //<<<<<<< HEAD:src/project/s/classes/UserGUI.java
 //  private class Login implements ActionListener {
 //

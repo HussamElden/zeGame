@@ -18,7 +18,7 @@ public class Hills {
    public JLabel lbl = new JLabel();
        public Hills ()
         {
-       lbl=new JLabel(new ImageIcon(new ImageIcon("Pics://Stones.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+       lbl=new JLabel(new ImageIcon(new ImageIcon("Pics//Stones.png").getImage().getScaledInstance(150,85 ,Image.SCALE_DEFAULT)));
       }
         
    public void setNumber (int num)

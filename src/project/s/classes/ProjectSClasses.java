@@ -7,6 +7,7 @@ package project.s.classes;
 
 import User.User;
 import User.UserGUI;
+import java.awt.Cursor;
 import java.io.IOException;
 import java.util.*;
 import javax.swing.JButton;
@@ -32,6 +33,8 @@ public class ProjectSClasses {
        g.setVisible(true);
        g.setDefaultCloseOperation(EXIT_ON_CLOSE);
        g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+      
+
     /*    Scanner sc=new Scanner(System.in);
         Base base=new Base();
        User user = new User();
