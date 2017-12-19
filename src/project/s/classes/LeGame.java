@@ -20,6 +20,7 @@ import javax.swing.JPanel;
 import terrain.Base;
 import terrain.Citizens;
 import terrain.MOVER;
+import terrain.Panel;
 import terrain.Unit;
 
 /**
@@ -30,6 +31,7 @@ public class LeGame extends JFrame{
 
     
     public static   JLabel mapaia=new JLabel();
+    Panel panel= new Panel();
      static Point NP=new Point();
      static Unit ob ;
     static public  Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -48,7 +50,6 @@ public class LeGame extends JFrame{
     jb.setVisible(true);
     jb.setBackground(Color.BLACK);
     setTitle("test run");
-     
     jb.setBackground(Color.green);  
     jb.setBounds(0, 0, screenSize.width, screenSize.height);
     mapaia.setIcon(new ImageIcon(new ImageIcon("terrain.png").getImage().getScaledInstance(screenSize.width*2,screenSize.height*2 , Image.SCALE_DEFAULT)));
@@ -66,6 +67,8 @@ public class LeGame extends JFrame{
    //mapaia.add(citizen.lbl[1]);
    jb.add(mapaia);
    add(jb);
+//   mapaia.add(panel);
+//   mapaia.add(panel.B.lbl[1]);
    b.Start();
   // mapaia.add( b.Start());
 //   MOVER m=new MOVER(Arrs.ArrCitizens.get(0).lbl[1].getLocation(),b.SP,Arrs.ArrCitizens.get(0).lbl[1]);

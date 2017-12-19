@@ -30,23 +30,14 @@ public JLabel [] lbl = new JLabel[3];
           
       if(nation.equals("Human Hunters"))
       {
-<<<<<<< HEAD
+
       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
-=======
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
-      }
-      else
-      {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics://WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
->>>>>>> Hussam
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
          price.Setwood(25);   
          setalive(true);

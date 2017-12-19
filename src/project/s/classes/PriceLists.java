@@ -73,7 +73,6 @@ public class PriceLists {
      {
          if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
          {
-          this.DecrementAny(p);
           return true;
          }else{
          return false;
