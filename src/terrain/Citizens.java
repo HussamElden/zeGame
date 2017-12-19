@@ -33,7 +33,6 @@ Tower T = new Tower(Nation);
 castle C = new castle(Nation);
 WoodCutter W = new WoodCutter(Nation);
 JLabel [] BuildLbls = new JLabel[8];
- private PriceLists price = new PriceLists();
 public JLabel [] lbl = new JLabel[3];
 public JPanel p = new JPanel();
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -92,22 +91,22 @@ public Citizens(String nation)
 
         @Override
         public void mousePressed(MouseEvent me) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
         public void mouseReleased(MouseEvent me) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
         public void mouseEntered(MouseEvent me) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
         public void mouseExited(MouseEvent me) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
 

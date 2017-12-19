@@ -10,7 +10,6 @@ import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
 /**
@@ -21,18 +20,8 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    
    private int Range;
    Throwable spear=new Throwable();
-   PriceLists price=new PriceLists();
-    private static int Number=0;
+
 public JLabel [] lbl =  new JLabel[3];
-    public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
     public JalvinThrower(String nation)
     {          Nation = nation;
 

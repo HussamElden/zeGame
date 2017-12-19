@@ -10,7 +10,6 @@ import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
 /**
@@ -18,20 +17,10 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Catapult extends Movables implements  Ibehavior {
-    PriceLists price=new PriceLists();
     private int Range;
     private Throwable Stone=new Throwable();
-     private static int Number=0;
+
 JLabel[] lbl = new JLabel[3];
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
 public Catapult(String nation)
     {
                  Nation = nation;

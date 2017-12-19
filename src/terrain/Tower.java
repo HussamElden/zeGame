@@ -20,7 +20,6 @@ public class Tower extends Buildings{
     private int Range;
     private int AgroRange;
   private int Attackspeed;
-     private static int Number=0;
 public JLabel [] lbl =  new JLabel[3];
      public Tower (String nation)
      {
@@ -38,16 +37,6 @@ public JLabel [] lbl =  new JLabel[3];
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Tower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
      }
-     
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
   public void setarrows (Throwable Arrows){
           Arrows=arrows;
     }

@@ -6,7 +6,6 @@
 package terrain;
 
 import java.awt.Point;
-import project.s.classes.Coordinates;
 
 /**
  *

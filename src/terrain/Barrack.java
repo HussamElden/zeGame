@@ -22,8 +22,6 @@ import project.s.classes.PriceLists;
  */
 public class Barrack extends Buildings implements IBuild
 {   
-
-           Inventory inventory=new Inventory();
            public JLabel[] lbl = new JLabel[3];
 public Barrack (String nation)
 {          Nation = nation;
@@ -56,7 +54,7 @@ public Barrack (String nation)
        Inventory inventory=new Inventory();
         Soldier s=new Soldier(Nation);
         if(inventory.getFood()>=s.price.Getfood()&&inventory.getGold()>=s.price.Getgold()){
-        s.incrementNumber();
+//        s.incrementNumber();
         inventory.Decfood(s.price.Getfood());
         inventory.Decgold(s.price.Getgold());
        // return "Now you have "+s.GetNumber()+" Soldier";
@@ -83,7 +81,7 @@ public Barrack (String nation)
         Inventory inventory=new Inventory();
         JalvinThrower j=new JalvinThrower(Nation);
          if(inventory.getFood()>=j.price.Getfood()&&inventory.getGold()>=j.price.Getgold()){
-        j.incrementNumber();
+        //j.incrementNumber();
         inventory.Decfood(j.price.Getfood());
         inventory.Decgold(j.price.Getgold());
       //  return "Now you have "+j.GetNumber()+" JalvinThrower";

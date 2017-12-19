@@ -10,7 +10,6 @@ import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
 /**
@@ -20,18 +19,7 @@ import project.s.classes.PriceLists;
 public class Cavalry extends Movables implements  Ibehavior{
     private Horse H;
     private Melee spear= new Melee();
-   PriceLists price=new PriceLists();
-    private static int Number=0;
    public JLabel [] lbl = new JLabel[3];
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
   public Cavalry(String nation){
                Nation = nation;
 

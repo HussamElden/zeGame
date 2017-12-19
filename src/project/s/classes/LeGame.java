@@ -39,7 +39,6 @@ public class LeGame extends JFrame{
      Citizens citizen=new Citizens(Arrs.u.getNation());
      JPanel jb=new JPanel();
      public LeGame()  {
-         JLabel LBL=new JLabel();
          setSize(screenSize);
          setLayout(null);
          setVisible(true);
@@ -67,8 +66,30 @@ public class LeGame extends JFrame{
    jb.add(mapaia);
    add(jb);
    b.Start();
+//   refresh r=new refresh();
+//   r.ref.start();
   // mapaia.add( b.Start());
 //   MOVER m=new MOVER(Arrs.ArrCitizens.get(0).lbl[1].getLocation(),b.SP,Arrs.ArrCitizens.get(0).lbl[1]);
 //           m.TMove.start();
      }
+     
+//     private  class refresh {
+//     
+//        Thread ref = new Thread()
+//            {
+//
+//            public void run()
+//              {  while(true)
+//                {
+//                    repaint();
+//                  try {
+//                       Thread.sleep(1000);
+//                    } 
+//                  catch (InterruptedException ex) 
+//                    {   }
+//                    
+//                 }
+//             
+//                 }}; 
+//    }
 }

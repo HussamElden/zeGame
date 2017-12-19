@@ -10,7 +10,6 @@ import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
 /**
@@ -18,9 +17,8 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Knight extends Movables implements  Ibehavior {
-     private static int Number=0;
+   
      private Melee sword=new Melee();
-    PriceLists price=new PriceLists();
    public JLabel [] lbl =  new JLabel[3];
      public Knight(String nation)
      {          Nation = nation;
@@ -46,15 +44,6 @@ public class Knight extends Movables implements  Ibehavior {
          setattackSpeed(0.96);
         
      }
-     public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
   public void RideHorse()
    {  }
     @Override

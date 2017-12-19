@@ -7,7 +7,6 @@ package terrain;
 
 import User.Arrs;
 import java.awt.Point;
-import project.s.classes.Coordinates;
 import project.s.classes.PriceLists;
 
 /**
@@ -19,7 +18,7 @@ public abstract class Unit {
    private  int Health;
     private String status;
     private boolean aLive = true;
-   public String Nation;
+   public  String Nation=new String();
  public PriceLists price=new PriceLists();
     public Point getPosition() {
         return position;

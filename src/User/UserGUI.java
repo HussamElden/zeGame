@@ -97,15 +97,6 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
          setTitle("Login");
          setLayout(null);
          setVisible(false);
-         
-         LoginBtn= new JButton("Login");
-         SignUpBtn= new JButton("Sign Up");
-         UNlbl= new JLabel ("Username");
-         UNlbl.setFont(myFont);
-         Passlbl= new JLabel ("Password");
-         SignUplbl = new JLabel("Don't have an account?");
-
-       setSize(5000, 5000);
         setTitle("Login");
       LoginBtn= new JButton("Login");
         SignUpBtn= new JButton("Sign Up");
@@ -140,19 +131,7 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         LoginBtn.addActionListener(new SignUpndLogin());
         
        
-        //Container container= getContentPane();
-//        getContentPane().setBackground(Color.yellow);
-            //         container.add(UNtxt);
-//       container.add(Passtxt);
-//       container.add(UNlbl);
-//        container.add(Passlbl);
-//        container.add(LoginBtn);
-//        container.add(SignUpBtn);
-//        container.add(SignUplbl
-       // add(Sl);
-       // add(MM);
-        //Sl.setVisible(true);  
-        
+
 
     }
 
@@ -280,9 +259,18 @@ InFile.close();
 }
 
 
-  
-  
-       
+          //Container container= getContentPane();
+//        getContentPane().setBackground(Color.yellow);
+            //         container.add(UNtxt);
+//       container.add(Passtxt);
+//       container.add(UNlbl);
+//        container.add(Passlbl);
+//        container.add(LoginBtn);
+//        container.add(SignUpBtn);
+//        container.add(SignUplbl
+       // add(Sl);
+       // add(MM);
+        //Sl.setVisible(true);       
 //      public SignUpndLogin()
 //        {
 //        setSize(5000, 5000);

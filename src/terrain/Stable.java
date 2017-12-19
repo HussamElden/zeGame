@@ -57,7 +57,7 @@ public Stable (String nation)
        Inventory inventory=new Inventory();
         Knight k=new Knight(Nation);
         if(inventory.getFood()>=k.price.Getfood()&&inventory.getGold()>=k.price.Getgold()){
-        k.incrementNumber();
+        //k.incrementNumber();
         inventory.Decfood(k.price.Getfood());
         inventory.Decgold(k.price.Getgold());
        // return "Now you have "+k.GetNumber()+" Knight";
@@ -71,7 +71,7 @@ public Stable (String nation)
       Inventory  inventory=new Inventory();
         Cavalry ca=new Cavalry("");
         if(inventory.getFood()>=ca.price.Getfood()&&inventory.getGold()>=ca.price.Getgold()){
-        ca.incrementNumber();
+     //   ca.incrementNumber();
         inventory.Decfood(ca.price.Getfood());
         inventory.Decgold(ca.price.Getgold());
       //  return "Now you have "+ca.GetNumber()+" Cavalry";
@@ -83,7 +83,7 @@ public Stable (String nation)
         Inventory inventory=new Inventory();
         Chariots ch=new Chariots(Nation);
          if(inventory.getWood()>=ch.price.Getwood()&&inventory.getGold()>=ch.price.Getgold()){
-        ch.incrementNumber();
+      //  ch.incrementNumber();
         inventory.Decwood(ch.price.Getwood());
         inventory.Decgold(ch.price.Getgold());
       //  return "Now you have "+ch.GetNumber()+" Chariots";
