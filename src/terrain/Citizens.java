@@ -5,7 +5,6 @@
  */
 package terrain;
 
-<<<<<<< HEAD
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -13,14 +12,6 @@ import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-=======
-
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Point;
->>>>>>> Hussam
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -32,27 +23,23 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Citizens extends Movables {
-<<<<<<< HEAD
-   Barrack B = new Barrack(Nation);
-             Mine SM = new Mine (Nation);
-             Farm F= new Farm(Nation);
-             Market M = new Market (Nation);
-             Stable S= new Stable(Nation);
-             Tower T = new Tower(Nation);
-             castle C = new castle(Nation);
-             WoodCutter W = new WoodCutter(Nation);
-    JLabel [] BuildLbls = new JLabel[8];
-=======
-  
->>>>>>> Hussam
-    private PriceLists price = new PriceLists();
 
+Barrack B = new Barrack(Nation);
+Mine SM = new Mine (Nation);
+Farm F= new Farm(Nation);
+Market M = new Market (Nation);
+Stable S= new Stable(Nation);
+Tower T = new Tower(Nation);
+castle C = new castle(Nation);
+WoodCutter W = new WoodCutter(Nation);
+JLabel [] BuildLbls = new JLabel[8];
+ private PriceLists price = new PriceLists();
 public JLabel [] lbl = new JLabel[3];
 public JPanel p = new JPanel();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 public Citizens(String nation)
      {          Nation = nation;
-
+      price.Setfood(20);
          lbl[0]=new JLabel(nation+" Citizen");
           
       if(nation.equals("Human Hunters"))
@@ -62,30 +49,18 @@ public Citizens(String nation)
       }
       else
       {
-<<<<<<< HEAD
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
-=======
+
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
->>>>>>> Hussam
+
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       lbl[1].addMouseListener(new ShowPanel());
      }
-<<<<<<< HEAD
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
-=======
+
      
->>>>>>> Hussam
+
     Citizens(){
-    price.Setfood(20);
+   
     }
     public PriceLists Getprice(){
     return price;
@@ -100,7 +75,7 @@ public Citizens(String nation)
      public String toString() { 
          return "Citizens";
       } 
-<<<<<<< HEAD
+
 
     private static class ShowPanel implements MouseListener {
 
@@ -203,12 +178,12 @@ for ( int i=0; i<8 ; i++)
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
-=======
+
 //      public void movieing(){
 //        Point SP=new ;
 //      MOVER m=new MOVER(this.lbl[1].getLocation(),SP,this.lbl[1]);
 //           m.TMove.start();
 //      }
 //    
->>>>>>> Hussam
+
 }

@@ -16,8 +16,7 @@ import javax.swing.JLabel;
  */
 public class Market extends Buildings implements IBuild {
    private int ctr;
-   private int price[]=new int[3];
-   private static int Number=0;
+   private int[] prices=new int[3];
    public JLabel [] lbl = new JLabel[3];
 public Market (String nation)
 {          Nation = nation;
@@ -36,15 +35,7 @@ public Market (String nation)
       }
 }
 
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
+
    public void setctr (int counter){
    if (ctr>0)
        counter=ctr;
@@ -54,24 +45,24 @@ public Market (String nation)
    }
    public void setFPrice (int prc){
    if (prc>=0)
-       price[0]=prc;
+       prices[0]=prc;
    } 
    public int getFPrice(){
-       return price[0];
+       return prices[0];
    }
    public void setWPrice (int prc){
    if (prc>=0)
-       price[1]=prc;
+       prices[1]=prc;
    } 
     public int getWPrice(){
-       return price[1];
+       return prices[1];
    }
     public void setMPrice (int prc){
    if (prc>=0)
-       price[2]=prc;
+       prices[2]=prc;
    } 
     public int getMPrice(){
-       return price[2];
+       return prices[2];
    }
    
    
@@ -96,7 +87,7 @@ public Market (String nation)
     };
     @Override
     public void spawn(){
-        return null;}
+        return ;}
     @Override
      public String toString() { 
          return "Market";
