@@ -20,9 +20,6 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Stable extends Buildings implements IBuild {
-     private static int Number=0;
-   Inventory inventory=new Inventory();
-   PriceLists price=new PriceLists();
    public JLabel [] lbl = new JLabel[3];
 public Stable (String nation)
 {Nation = nation;
@@ -38,31 +35,13 @@ public Stable (String nation)
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
+      price.Setwood(175);
 }
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
-   private void setPrice()
-     {
-    price.Setwood(175);
-     }
-//    }
-//@Override
-//    public String Build() {
-//    if(inventory.getWood()>=price.Getwood())
-//        incrementNumber();
-//    return "Stable is built";
-//    }
+
 
     @Override
     public String Destroy() {
-       dcrementNumber();
+     
         return "Stable is destroyed";
     }
 
@@ -81,9 +60,9 @@ public Stable (String nation)
         k.incrementNumber();
         inventory.Decfood(k.price.Getfood());
         inventory.Decgold(k.price.Getgold());
-        return "Now you have "+k.GetNumber()+" Knight";
+       // return "Now you have "+k.GetNumber()+" Knight";
         }else{
-        return "You dont have enough resources";
+      //  return "You dont have enough resources";
         }
         
         }
@@ -95,9 +74,9 @@ public Stable (String nation)
         ca.incrementNumber();
         inventory.Decfood(ca.price.Getfood());
         inventory.Decgold(ca.price.Getgold());
-        return "Now you have "+ca.GetNumber()+" Cavalry";
+      //  return "Now you have "+ca.GetNumber()+" Cavalry";
         }else{
-        return "You dont have enough resources";
+      //  return "You dont have enough resources";
         }
         }
         case 3:{
@@ -107,14 +86,14 @@ public Stable (String nation)
         ch.incrementNumber();
         inventory.Decwood(ch.price.Getwood());
         inventory.Decgold(ch.price.Getgold());
-        return "Now you have "+ch.GetNumber()+" Chariots";
+      //  return "Now you have "+ch.GetNumber()+" Chariots";
         }else{
-        return "You dont have enough resources";
+      //  return "You dont have enough resources";
         }
         
         }default:{
         
-        return"Wrong choice";   
+       // return"Wrong choice";   
     }
     }
 }
@@ -124,3 +103,10 @@ public Stable (String nation)
       } 
 }
 
+//    }
+//@Override
+//    public String Build() {
+//    if(inventory.getWood()>=price.Getwood())
+//        incrementNumber();
+//    return "Stable is built";
+//    }

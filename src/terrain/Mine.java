@@ -17,7 +17,6 @@ import javax.swing.JLabel;
 public class Mine extends Buildings implements IBuild{
     
     private int WorkerLimit;
-     private static int Number=0;
   public JLabel [] lbl =  new JLabel[3];
   
   public Mine (String nation)
@@ -35,28 +34,12 @@ public class Mine extends Buildings implements IBuild{
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(245,161 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
+       price.Setwood(20); 
+       price.Setgold(10);
+         setalive(true);
+         Work.start();
   }
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
-    void IncreaseStone(Inventory inventory){
-        int x = inventory.getMetal();
-       x+=10;
-       inventory.setMetal(x);
-    }
-    //    @Override
-    //    public String Build(){
-    //        Inventory inventory =new Inventory();
-    //        incrementNumber();
-    //        IncreaseStone(inventory);
-    //    return"Mine is built";
-    //    };
+
     @Override
     public String Destroy(){
         
@@ -64,10 +47,35 @@ public class Mine extends Buildings implements IBuild{
     };
     @Override
     public void spawn(){
-    return"";
+    return;
     };
     @Override
      public String toString() { 
          return "Mine";
       } 
+         public Thread Work=new Thread(){
+                
+            public void run(){
+                while(getalive()){
+                Inventory.price.Setmetal(Inventory.price.Getmetal()+4);
+                }
+                
+             try {
+                       Thread.sleep(12000);
+                    } 
+                  catch (InterruptedException ex) 
+                    {   }
+            }};
 }
+//    void IncreaseStone(Inventory inventory){
+//        int x = inventory.getMetal();
+//       x+=10;
+//       inventory.setMetal(x);
+//    }
+    //    @Override
+    //    public String Build(){
+    //        Inventory inventory =new Inventory();
+    //        incrementNumber();
+    //        IncreaseStone(inventory);
+    //    return"Mine is built";
+    //    };

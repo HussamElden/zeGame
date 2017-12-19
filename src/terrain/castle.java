@@ -21,9 +21,6 @@ import project.s.classes.PriceLists;
 public class castle extends Buildings implements IBuild{
    private Throwable arrow=new Throwable();
     private int AgroRange;
-     private static int Number=0;
-     PriceLists price=new PriceLists();
-     Inventory inventory=new Inventory();
   public JLabel []lbl = new JLabel[3];
  castle(String nation)
      {
@@ -43,15 +40,6 @@ public class castle extends Buildings implements IBuild{
          
          price.Setmetal(120);
      }
-   public void incrementNumber(){
-   Number++;
-   }
-   public void dcrementNumber(){
-   Number--;
-   }
-   public int  GetNumber(){
-   return Number;
-   }
     public void Throw(){}
 //    @Override
 //   public String Build()
@@ -62,7 +50,6 @@ public class castle extends Buildings implements IBuild{
     @Override
     public String Destroy()
     {  
-        dcrementNumber();
     return "Castle is destroyed";
     };
     @Override
@@ -80,16 +67,16 @@ public class castle extends Buildings implements IBuild{
         g.incrementNumber();
         inventory.Decfood(g.price.Getfood());
         inventory.Decgold(g.price.Getgold());
-        return "Now you have "+g.GetNumber()+" General";
+      //  return "Now you have "+g.GetNumber()+" General";
         }
         else
         {
-        return "You dont have enough resources";
+       // return "You dont have enough resources";
         }
           }
         default:
         {
-       return"Wrong choice";
+      // return"Wrong choice";
         }
     }
 }

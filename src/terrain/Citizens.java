@@ -5,7 +5,10 @@
  */
 package terrain;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Hussam
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -13,12 +16,15 @@ import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+<<<<<<< HEAD
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Point;
 
+=======
+>>>>>>> Hussam
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -32,6 +38,7 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Citizens extends Movables {
+<<<<<<< HEAD
              Barrack B = new Barrack("Human Hunters");
              Mine SM = new Mine ("Human Hunters");
              Farm F= new Farm("Human Hunters");
@@ -47,9 +54,25 @@ public class Citizens extends Movables {
 public JLabel [] lbl = new JLabel[3];
 public Panel p = new Panel();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+=======
+
+Barrack B = new Barrack(Nation);
+Mine SM = new Mine (Nation);
+Farm F= new Farm(Nation);
+Market M = new Market (Nation);
+Stable S= new Stable(Nation);
+Tower T = new Tower(Nation);
+castle C = new castle(Nation);
+WoodCutter W = new WoodCutter(Nation);
+JLabel [] BuildLbls = new JLabel[8];
+ private PriceLists price = new PriceLists();
+public JLabel [] lbl = new JLabel[3];
+public JPanel p = new JPanel();
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+>>>>>>> Hussam
 public Citizens(String nation)
      {          Nation = nation;
-
+      price.Setfood(20);
          lbl[0]=new JLabel(nation+" Citizen");
           
       if(nation.equals("Human Hunters"))
@@ -60,12 +83,18 @@ public Citizens(String nation)
       else
       {
 
+<<<<<<< HEAD
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
+=======
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+
+>>>>>>> Hussam
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
      lbl[1].addMouseListener(new ShowPanel());
      }
 
+<<<<<<< HEAD
 //   public void incrementNumber(){
 //   Number++;
 //   }
@@ -75,8 +104,12 @@ public Citizens(String nation)
 //   public int  GetNumber(){
 //   return Number;
 //   }
+=======
+     
+
+>>>>>>> Hussam
     Citizens(){
-    price.Setfood(20);
+   
     }
     public PriceLists Getprice(){
     return price;
@@ -91,6 +124,10 @@ public Citizens(String nation)
      public String toString() { 
          return "Citizens";
       } 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Hussam
 
 
     private class ShowPanel implements MouseListener {
@@ -160,6 +197,7 @@ public Citizens(String nation)
         public void mouseExited(MouseEvent me) {
         }
     }
+<<<<<<< HEAD
 }
 //
 //    public void panel ()
@@ -245,11 +283,19 @@ public Citizens(String nation)
 //        }
 //    }}
 //=======
+=======
+
+>>>>>>> Hussam
 //      public void movieing(){
 //        Point SP=new ;
 //      MOVER m=new MOVER(this.lbl[1].getLocation(),SP,this.lbl[1]);
 //           m.TMove.start();
 //      }
 //    
+<<<<<<< HEAD
 //>>>>>>> Hussam
 
+=======
+
+}
+>>>>>>> Hussam

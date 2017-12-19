@@ -75,6 +75,18 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
            static Arrs xyz=new Arrs();
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
+<<<<<<< HEAD
+=======
+
+        boolean CheckLogin= true;
+     
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        //Image Cursorimg = toolkit.getImage("‪Pics//Cursor.png");
+        //  Dimension CursorSize = toolkit.getBestCursorSize(32, 32);
+  //      Cursor c = toolkit.createCustomCursor(Cursorimg , new Point(0,0), "Cursor");
+
+             MainMenu MM=new MainMenu();
+>>>>>>> Hussam
 
         boolean CheckLogin= true;
         //InGame MM=new InGame();
@@ -104,6 +116,16 @@ public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
          Passlbl= new JLabel ("Password");
          SignUplbl = new JLabel("Don't have an account?");
 
+<<<<<<< HEAD
+=======
+       setSize(5000, 5000);
+        setTitle("Login");
+      LoginBtn= new JButton("Login");
+        SignUpBtn= new JButton("Sign Up");
+      UNlbl= new JLabel ("Username");
+        Passlbl= new JLabel ("Password");
+        SignUplbl = new JLabel("Don't have an account?");
+>>>>>>> Hussam
          UNtxt= new JTextField(16);
          UNtxt.setCursor(c);
          Passtxt= new JPasswordField(16);
@@ -311,6 +333,7 @@ InFile.close();
 //        RegisterBtn.addActionListener(new Register());
 //            setVisible(false);
 //        }
+<<<<<<< HEAD
 
          
 //        
@@ -353,6 +376,45 @@ InFile.close();
 
   
   
+=======
+  
+//        @Override
+//        public void actionPerformed(ActionEvent ae)
+//        {
+//            if (ae.getSource()== SignUpBtn)
+//            {  dispose();
+//               Registration g = new Registration();
+//                g.setVisible(true);
+//                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//                g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+//            }
+//            else if (ae.getSource()== LoginBtn){
+//                String UN= UNtxt.getText();
+//            String Pass=Passtxt.getText();
+//          
+//            try {
+//                checkUserForLogin(UN, Pass);
+//            } catch (IOException | ClassNotFoundException ex) {
+//                Logger.getLogger(UserGUI.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            if (CheckLogin==true)
+//            {
+//           dispose();
+//            InGame g = new InGame();
+//            g.setVisible(true);
+//                g.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//               g.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+//            }
+//       else 
+//           JOptionPane.showMessageDialog(null, "Invalid Username or Password","Alert",JOptionPane.ERROR_MESSAGE);
+//            
+//            }
+//        }
+//          
+//}
+//    
+//}
+>>>>>>> Hussam
 
 // private class Register implements ActionListener {
 //

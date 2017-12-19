@@ -20,7 +20,7 @@ import project.s.classes.PriceLists;
 public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
-     PriceLists price=new PriceLists();
+    
    Inventory inventory=new Inventory();
 public JLabel [] lbl = new JLabel[3];
      public WoodCutter(String nation)
@@ -36,12 +36,18 @@ public JLabel [] lbl = new JLabel[3];
       }
       else
       {
+<<<<<<< HEAD
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+=======
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+
+>>>>>>> Hussam
       }
          price.Setwood(25);   
          setalive(true);
-         Work.start();
+        // Work.start();
      }
     public void settree (Trees Tree){
           Tree=tree;
@@ -55,14 +61,7 @@ public JLabel [] lbl = new JLabel[3];
        x+=10;
        inventory.setWood(x);
     }
-//    @Override
-//    public String Build(){
-//         if(inventory.getWood()>=price.Getwood())
-//        incrementNumber();
-//   
-//        increasewood(inventory);
-//    return"Woodcutter is built";
-//    };
+
     public Thread Work=new Thread(){
                 
             public void run(){
@@ -92,3 +91,11 @@ public JLabel [] lbl = new JLabel[3];
       }
      
 }
+//    @Override
+//    public String Build(){
+//         if(inventory.getWood()>=price.Getwood())
+//        incrementNumber();
+//   
+//        increasewood(inventory);
+//    return"Woodcutter is built";
+//    };

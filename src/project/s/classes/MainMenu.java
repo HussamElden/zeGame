@@ -41,6 +41,7 @@ JButton Options;
 JButton Help;
 JButton Credits;
 JButton Quit;
+<<<<<<< HEAD
 JLabel Background;
 
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -49,6 +50,18 @@ Image image = toolkit.getImage("Pics//Cursor.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
       
         public MainMenu() 
+=======
+
+
+ Toolkit toolkit = Toolkit.getDefaultToolkit();
+             Image image = toolkit.getImage("Pics//sword.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
+           0), "img");
+     
+
+        public MainMenu() 
+
+>>>>>>> Hussam
     {   
          setSize((int)screenSize.getWidth(), (int)screenSize.getHeight());
          setCursor(c);
