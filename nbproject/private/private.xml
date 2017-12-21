@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
@@ -15,6 +15,7 @@
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/behavior/Moveee.java</file>
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/terrain/Unit.java</file>
 =======
+<<<<<<< HEAD
             <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/BarrackPanel.java</file>
             <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Market.java</file>
             <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Archer.java</file>
@@ -35,6 +36,19 @@
             <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Base.java</file>
             <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Citizens.java</file>
 >>>>>>> ali-fadl
+=======
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Base.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/castle.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/project/s/classes/LeGame.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Mine.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Farm.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Market.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/WoodCutter.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Citizens.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Tower.java</file>
+            <file>file:/C:/Users/Omar%20Anas/Documents/NetBeansProjects/zegame/src/terrain/Stable.java</file>
+>>>>>>> Omar
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
         </group>
     </open-files>
 </project-private>

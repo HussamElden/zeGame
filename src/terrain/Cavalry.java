@@ -34,8 +34,8 @@ public class Cavalry extends Movables implements  Ibehavior{
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(58,80 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-       price.Setfood(60);
-    price.Setgold(75);
+       price.setFood(60);
+    price.setGold(75);
     spear.setdamage(3);
     spear.setrange(3);
     setAgility(3);

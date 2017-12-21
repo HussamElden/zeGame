@@ -57,6 +57,7 @@ public  castle(String nation)
           
       if(nation.equals("Human Hunters"))
       {
+<<<<<<< HEAD
       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
@@ -64,13 +65,27 @@ public  castle(String nation)
       {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+=======
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+>>>>>>> Omar
+      }
+<<<<<<< HEAD
       
       
       lbl[1].addMouseListener(new mouselisten());
       
       
          price.Setmetal(120);
+=======
+         
+         price.setMetal(120);
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
      }
 <<<<<<< HEAD
 =======
@@ -124,10 +139,17 @@ public  castle(String nation)
           {
        Inventory inventory=new Inventory();
         General g=new General(Nation);
+<<<<<<< HEAD
         if(inventory.getFood()>=g.price.Getfood()&&inventory.getGold()>=g.price.Getgold()){
        // g.incrementNumber();
         inventory.Decfood(g.price.Getfood());
         inventory.Decgold(g.price.Getgold());
+=======
+        if(inventory.getFood()>=g.price.getFood()&&inventory.getGold()>=g.price.getGold()){
+        g.incrementNumber();
+        inventory.Decfood(g.price.getFood());
+        inventory.Decgold(g.price.getGold());
+>>>>>>> Omar
       //  return "Now you have "+g.GetNumber()+" General";
         }
         else

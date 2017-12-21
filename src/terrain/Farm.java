@@ -26,6 +26,7 @@ public class Farm extends Buildings implements IBuild{
           
       if(nation.equals("Human Hunters"))
       {
+<<<<<<< HEAD
       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
@@ -33,9 +34,18 @@ public class Farm extends Buildings implements IBuild{
       {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+=======
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-      price.Setwood(25);
-      price.Setfood(10);
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+>>>>>>> Omar
+      }
+      price.setWood(25);
+      price.setFood(10);
       setalive(true);
          Work.start();
      }
@@ -63,7 +73,7 @@ public class Farm extends Buildings implements IBuild{
                 
             public void run(){
                 while(getalive()){
-                Inventory.price.Setwood(Inventory.price.Getwood()+4);
+                Inventory.price.setWood(Inventory.price.getWood()+4);
                 }
                 
              try {

@@ -33,36 +33,40 @@ public class PriceLists {
         this.metal = 0;
         this.gold = 0;
     }
-  
+
+    public int getFood() {
+        return food;
+    }
+
+    public void setFood(int food) {
+        this.food = food;
+    }
+
+    public int getWood() {
+        return wood;
+    }
+
+    public void setWood(int wood) {
+        this.wood = wood;
+    }
+
+    public int getMetal() {
+        return metal;
+    }
+
+    public void setMetal(int metal) {
+        this.metal = metal;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
     
-   
-   
- 
-    public void Setmetal(int M){
-            metal =M;
-            
-    }
-    public int Getmetal(){
-    return metal;
-    }
-    public void Setwood(int W){
-    wood =W;
-    }
-    public int Getwood(){
-    return wood;
-    }
-    public void Setfood(int F){
-    food=F;
-    }
-    public int Getfood(){
-    return food;
-    }
-    public void Setgold(int G){
-    gold=G;
-    }
-    public int Getgold(){
-    return gold;
-    }
+  
     public void DecrementAny(PriceLists p)
      {
          this.food-=p.food;
@@ -76,9 +80,13 @@ public class PriceLists {
      {
          if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
          {
+<<<<<<< HEAD
            this.DecrementAny(p);
            return true;
            
+=======
+          return true;
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
          }else{
              try {
                  throw(new NotEnoughResourcesException());

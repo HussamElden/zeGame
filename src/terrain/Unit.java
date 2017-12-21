@@ -5,9 +5,11 @@
  */
 package terrain;
 
-import User.Arrs;
 import java.awt.Point;
+<<<<<<< HEAD
 import javax.swing.JLabel;
+=======
+>>>>>>> Omar
 import project.s.classes.PriceLists;
 
 /**
@@ -23,6 +25,9 @@ public abstract class Unit {
     private boolean aLive = true;
 <<<<<<< HEAD
    public  String Nation=new String();
+=======
+   public String Nation= new String();
+>>>>>>> Omar
  public PriceLists price=new PriceLists();
     public int getAS() {
         return AS;

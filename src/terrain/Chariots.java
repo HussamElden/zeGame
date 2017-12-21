@@ -36,8 +36,8 @@ public class Chariots extends Movables implements  Ibehavior{
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(85,58 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-    price.Setwood(60);
-    price.Setgold(40);
+    price.setWood(60);
+    price.setGold(40);
     Range=4;
     arrow.setDamage(4);
     setattackSpeed(0.96);
