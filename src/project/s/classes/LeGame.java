@@ -29,7 +29,7 @@ import terrain.Unit;
  */
 public class LeGame extends JFrame{
 
-    
+    INVGUI ge=new INVGUI();
     public static   JLabel mapaia=new JLabel();
      public static Point NP=new Point();
      public static Unit ob;
@@ -76,6 +76,7 @@ public class LeGame extends JFrame{
    tabs.setLayout(null);
    tabs.setVisible(true);
    tabs.setBackground(Color.yellow);
+   jb.add(ge);
    jb.add(tabs);
    jb.add(mapaia);
    add(jb);
