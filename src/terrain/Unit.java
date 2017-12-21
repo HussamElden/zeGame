@@ -18,7 +18,7 @@ public abstract class Unit {
    private  int Health;
     private String status;
     private boolean aLive = true;
-   public String Nation;
+   public String Nation=new String();
 
     public Point getPosition() {
         return position;

@@ -96,7 +96,9 @@ public Market (String nation)
     };
     @Override
     public void spawn(){
-        return null;}
+        
+        
+        }
     @Override
      public String toString() { 
          return "Market";

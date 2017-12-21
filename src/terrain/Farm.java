@@ -64,9 +64,9 @@ public JLabel []  lbl  = new JLabel[3];
     };
     @Override
     public void spawn(){
-    return null;};
-    @Override
-     public String toString() { 
-         return "Farm";
+   // return null;};
+    //@Override
+    // public String toString() { 
+        // return "Farm";
       } 
 }

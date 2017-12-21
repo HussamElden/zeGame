@@ -5,6 +5,9 @@
  */
 package project.s.classes;
 
+import Exceptionns.NotEnoughResourcesException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import terrain.Inventory;
 
 /**
@@ -73,10 +76,15 @@ public class PriceLists {
      {
          if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
          {
-          this.DecrementAny(p);
-          return true;
+           this.DecrementAny(p);
+           return true;
+           
          }else{
-         return false;
+             try {
+                 throw(new NotEnoughResourcesException());
+             } catch (NotEnoughResourcesException ex) {
+                  System.out.println(ex.getMessage());
+             }
          }       
      }
 }

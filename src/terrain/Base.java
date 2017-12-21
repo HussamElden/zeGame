@@ -30,17 +30,17 @@ public class Base extends Buildings implements IBuild  {
 
        LBL[0]=new JLabel(nation+" Base");
            System.out.println(nation);
-      if(nation.equals("Human Hunters"))
+      if(Nation.equals("Human Hunters"))
       {
       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_HumanHunters.png").getImage().getScaledInstance(422,278 ,Image.SCALE_DEFAULT)));
-      LBL[1].addMouseListener(new Selector());
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_HumanHunters.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
       }
       else
       {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_NightElves.png").getImage().getScaledInstance(422,278 ,Image.SCALE_DEFAULT)));
       }
-   
+         LBL[1].addMouseListener(new Selector());
+
    }
 
   
@@ -75,8 +75,9 @@ public class Base extends Buildings implements IBuild  {
     }
   
     @Override
-     public String toString() { 
+     public String toString() {        
          return "Base";
+         
       } 
 
     private  class Spawner implements MouseListener {
@@ -112,7 +113,8 @@ public class Base extends Buildings implements IBuild  {
         }
 
         @Override
-        public void mouseClicked(MouseEvent me) {
+        public void mouseClicked(MouseEvent me){
+            
             LBL[2].setBounds(LeGame.screenSize.width-(LeGame.screenSize.width/3),LeGame.screenSize.height-(LeGame.screenSize.height/3),LeGame.screenSize.width/3, LeGame.screenSize.height/3);
             LeGame.mapaia.add(LBL[2]);
             //repaint();

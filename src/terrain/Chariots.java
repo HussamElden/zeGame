@@ -71,7 +71,9 @@ public JLabel [] lbl = new JLabel[3];
      }
      @Override
      public String toString() { 
+         
          return "Chariots";
+         
       } 
     }
 

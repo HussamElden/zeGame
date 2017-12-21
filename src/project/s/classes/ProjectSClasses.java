@@ -6,8 +6,8 @@
 package project.s.classes;
 
 import User.User;
-import User.UserGUI;
 import java.awt.Cursor;
+import User.UserGUI;
 import java.io.IOException;
 import java.util.*;
 import javax.swing.JButton;

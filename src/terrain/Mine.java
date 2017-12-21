@@ -64,7 +64,7 @@ public class Mine extends Buildings implements IBuild{
     };
     @Override
     public void spawn(){
-    return"";
+    
     };
     @Override
      public String toString() { 
