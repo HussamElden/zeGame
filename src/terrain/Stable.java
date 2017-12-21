@@ -26,6 +26,7 @@ public Stable (String nation)
           
       if(nation.equals("Human Hunters"))
       {
+<<<<<<< HEAD
       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
@@ -33,8 +34,17 @@ public Stable (String nation)
       {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+=======
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-      price.Setwood(175);
+      else
+      {
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+>>>>>>> Omar
+      }
+      price.setWood(175);
 }
 
 
@@ -55,10 +65,17 @@ public Stable (String nation)
         {
        Inventory inventory=new Inventory();
         Knight k=new Knight(Nation);
+<<<<<<< HEAD
         if(inventory.getFood()>=k.price.Getfood()&&inventory.getGold()>=k.price.Getgold()){
         //k.incrementNumber();
         inventory.Decfood(k.price.Getfood());
         inventory.Decgold(k.price.Getgold());
+=======
+        if(inventory.getFood()>=k.price.getFood()&&inventory.getGold()>=k.price.getGold()){
+        k.incrementNumber();
+        inventory.Decfood(k.price.getFood());
+        inventory.Decgold(k.price.getGold());
+>>>>>>> Omar
        // return "Now you have "+k.GetNumber()+" Knight";
         }else{
       //  return "You dont have enough resources";
@@ -69,10 +86,17 @@ public Stable (String nation)
         {
       Inventory  inventory=new Inventory();
         Cavalry ca=new Cavalry("");
+<<<<<<< HEAD
         if(inventory.getFood()>=ca.price.Getfood()&&inventory.getGold()>=ca.price.Getgold()){
      //   ca.incrementNumber();
         inventory.Decfood(ca.price.Getfood());
         inventory.Decgold(ca.price.Getgold());
+=======
+        if(inventory.getFood()>=ca.price.getFood()&&inventory.getGold()>=ca.price.getGold()){
+        ca.incrementNumber();
+        inventory.Decfood(ca.price.getFood());
+        inventory.Decgold(ca.price.getGold());
+>>>>>>> Omar
       //  return "Now you have "+ca.GetNumber()+" Cavalry";
         }else{
       //  return "You dont have enough resources";
@@ -81,10 +105,17 @@ public Stable (String nation)
         case 3:{
         Inventory inventory=new Inventory();
         Chariots ch=new Chariots(Nation);
+<<<<<<< HEAD
          if(inventory.getWood()>=ch.price.Getwood()&&inventory.getGold()>=ch.price.Getgold()){
       //  ch.incrementNumber();
         inventory.Decwood(ch.price.Getwood());
         inventory.Decgold(ch.price.Getgold());
+=======
+         if(inventory.getWood()>=ch.price.getWood()&&inventory.getGold()>=ch.price.getGold()){
+        ch.incrementNumber();
+        inventory.Decwood(ch.price.getWood());
+        inventory.Decgold(ch.price.getGold());
+>>>>>>> Omar
       //  return "Now you have "+ch.GetNumber()+" Chariots";
         }else{
       //  return "You dont have enough resources";
@@ -105,7 +136,7 @@ public Stable (String nation)
 //    }
 //@Override
 //    public String Build() {
-//    if(inventory.getWood()>=price.Getwood())
+//    if(inventory.getWood()>=price.getWood())
 //        incrementNumber();
 //    return "Stable is built";
 //    }

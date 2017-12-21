@@ -41,8 +41,8 @@ public class Archer extends Movables implements  Ibehavior {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_NightElves.png").getImage().getScaledInstance(50,68 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Archer_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-    price.Setgold(20);
-    price.Setfood(25);
+    price.setGold(20);
+    price.setFood(25);
     Range=4;
     arrow.setDamage(4);
     setattackSpeed(0.96);

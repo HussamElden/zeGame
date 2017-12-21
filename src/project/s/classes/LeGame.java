@@ -17,10 +17,16 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import terrain.Barrack;
 import terrain.Base;
 import terrain.Citizens;
+<<<<<<< HEAD
 import behavior.Moveee;
 import behavior.Selector;
+=======
+import terrain.MOVER;
+import terrain.CitizenPanel;
+>>>>>>> Omar
 import terrain.Unit;
 
 /**
@@ -43,8 +49,27 @@ public class LeGame extends JFrame{
      
      
      JPanel jb=new JPanel();
+     public static JLabel tabs = new JLabel();
+    // Image PanelBackground= Toolkit.getDefaultToolkit().createImage("Pics//panel.png");
+     JLabel fady= new JLabel();
+     JLabel PanelBackground= new JLabel();
      public LeGame()  {
+<<<<<<< HEAD
          setSize(screenSize);
+=======
+         
+         JLabel LBL=new JLabel();
+                   tabs.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
+
+         tabs.setIcon(new ImageIcon(new ImageIcon("Pics//panel.png").getImage().getScaledInstance(screenSize.width/3, screenSize.height/3, Image.SCALE_DEFAULT)));
+        //  tabs.add(PanelBackground);
+       //tabs.setBackground(Color.yellow);
+       tabs.setLayout(null);
+       tabs.setVisible(true);
+    
+       jb.add(tabs);
+       setSize(screenSize);
+>>>>>>> Omar
          setLayout(null);
          setVisible(true);
         
@@ -53,7 +78,6 @@ public class LeGame extends JFrame{
     jb.setVisible(true);
     jb.setBackground(Color.BLACK);
     setTitle("test run");
-     
     jb.setBackground(Color.green);  
     jb.setBounds(0, 0, screenSize.width, screenSize.height);
     mapaia.setIcon(new ImageIcon(new ImageIcon("terrain.png").getImage().getScaledInstance(screenSize.width*2,screenSize.height*2 , Image.SCALE_DEFAULT)));
@@ -78,14 +102,20 @@ public class LeGame extends JFrame{
    tabs.setBackground(Color.yellow);
    jb.add(tabs);
    jb.add(mapaia);
+
    add(jb);
+//   mapaia.add(panel);
+//   mapaia.add(panel.B.lbl[1]);
    b.Start();
 //   refresh r=new refresh();
 //   r.ref.start();
   // mapaia.add( b.Start());
 //   MOVER m=new MOVER(Arrs.ArrCitizens.get(0).lbl[1].getLocation(),b.SP,Arrs.ArrCitizens.get(0).lbl[1]);
 //           m.TMove.start();
+     refresh r=new refresh();
+   r.ref.start();
      }
+<<<<<<< HEAD
      
 //     private  class refresh {
 //     
@@ -106,4 +136,25 @@ public class LeGame extends JFrame{
 //             
 //                 }}; 
 //    }
+=======
+private  class refresh {
+
+        Thread ref = new Thread()
+            {
+
+            public void run()
+              {  while(true)
+                {
+                    repaint();
+                  try {
+                       Thread.sleep(1000);
+                    } 
+                  catch (InterruptedException ex) 
+                    {   }
+
+                 }
+
+                 }}; 
+    }
+>>>>>>> Omar
 }

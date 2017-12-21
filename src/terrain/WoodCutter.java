@@ -20,6 +20,10 @@ import project.s.classes.PriceLists;
 public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
+<<<<<<< HEAD
+=======
+public JLabel [] lbl = new JLabel[3];
+>>>>>>> Omar
      public WoodCutter(String nation)
      {
                              setName("WoodCutter");
@@ -29,6 +33,7 @@ public class WoodCutter extends Buildings implements IBuild{
       if(nation.equals("Human Hunters"))
       {
 
+<<<<<<< HEAD
       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
@@ -36,9 +41,19 @@ public class WoodCutter extends Buildings implements IBuild{
       {
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+=======
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      else
+      {
+
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+>>>>>>> Omar
 
       }
-         price.Setwood(25);   
+         price.setWood(25);   
          setalive(true);
         // Work.start();
      }
@@ -59,7 +74,7 @@ public class WoodCutter extends Buildings implements IBuild{
                 
             public void run(){
                 while(getalive()){
-                Inventory.price.Setwood(Inventory.price.Getwood()+4);
+                Inventory.price.setWood(Inventory.price.getWood()+4);
                 }
                 
              try {
@@ -86,7 +101,7 @@ public class WoodCutter extends Buildings implements IBuild{
 }
 //    @Override
 //    public String Build(){
-//         if(inventory.getWood()>=price.Getwood())
+//         if(inventory.getWood()>=price.getWood())
 //        incrementNumber();
 //   
 //        increasewood(inventory);

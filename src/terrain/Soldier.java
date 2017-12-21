@@ -31,10 +31,17 @@ public class Soldier extends Movables implements  Ibehavior{
       }
       else
       {
+<<<<<<< HEAD
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }    price.Setgold(15);
     price.Setfood(20); 
+=======
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }    price.setGold(15);
+    price.setFood(20); 
+>>>>>>> Omar
     sword.setdamage(4);
     setattackSpeed(0.96);
     setHealth(30);

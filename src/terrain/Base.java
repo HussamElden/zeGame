@@ -13,9 +13,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import project.s.classes.PriceLists;
-import terrain.Citizens;
-import javax.swing.JLabel;
 import project.s.classes.LeGame;
 /**
  *
@@ -47,13 +44,13 @@ SP.y=100;
            System.out.println(nation);
       if(nation.equals("Human Hunters"))
       {
-      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_HumanHunters.png").getImage().getScaledInstance(422,278 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_HumanHunters.png").getImage().getScaledInstance(300,250 ,Image.SCALE_DEFAULT)));
       LBL[1].addMouseListener(new Selector());
       LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_HumanHunters.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_NightElves.png").getImage().getScaledInstance(422,278 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Base_NightElves.png").getImage().getScaledInstance(300,250 ,Image.SCALE_DEFAULT)));
       }
    
    }
