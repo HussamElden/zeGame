@@ -47,8 +47,8 @@ public JLabel [] lbl = new JLabel[3];
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//General_NightElves.png").getImage().getScaledInstance(117,190 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//General_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-    price.Setfood(70);
-    price.Setgold(80);
+    price.setFood(70);
+    price.setGold(80);
     }
     @Override
      public String toString() { 

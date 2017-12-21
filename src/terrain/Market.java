@@ -25,12 +25,12 @@ public Market (String nation)
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_HumanHunters.png").getImage().getScaledInstance(436,278 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_NightElves.png").getImage().getScaledInstance(436,278 ,Image.SCALE_DEFAULT)));
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Market_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
 }

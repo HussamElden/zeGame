@@ -5,9 +5,11 @@
  */
 package User;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -50,7 +52,8 @@ public class Registration extends JFrame implements Serializable {
         Image image = toolkit.getImage("Pics//Cursor.png");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
-        
+        Font myFont =  new Font("SansSerif",Font.BOLD,20);
+
         public Registration()
         {
         setSize((int)screenSize.getWidth(), (int)screenSize.getHeight());
@@ -60,9 +63,17 @@ public class Registration extends JFrame implements Serializable {
          
         RegisterBtn= new JButton("Register");
         UNlbl2= new JLabel ("Username");
+        UNlbl2.setFont(myFont);
+        UNlbl2.setForeground(Color.WHITE);
         Passlbl2= new JLabel ("Password");
+         Passlbl2.setFont(myFont);
+        Passlbl2.setForeground(Color.WHITE);
         ConfirmPasslbl= new JLabel ("Confirm Password");
+         ConfirmPasslbl.setFont(myFont);
+        ConfirmPasslbl.setForeground(Color.WHITE);
         NationLabel =  new JLabel("Your Nation");
+         NationLabel.setFont(myFont);
+        NationLabel.setForeground(Color.WHITE);
         UNtxt2= new JTextField(16);
         UNtxt2.setCursor(c);
         Passtxt2= new JPasswordField(16);
@@ -81,11 +92,11 @@ public class Registration extends JFrame implements Serializable {
         Passtxt2.setBounds(850, 350,170, 50);
         ConfirmPasstxt.setBounds(850, Passtxt2.getY()+50, 170, 50);
         NationCombo.setBounds(850, ConfirmPasstxt.getY()+50, 170, 50);
-        NationLabel.setBounds(760, NationCombo.getY()+20, 110,10);
+        NationLabel.setBounds(710, NationCombo.getY()+10, 130,30);
         RegisterBtn.setBounds(850, NationCombo.getY()+60, 169, 50);
-        UNlbl2.setBounds(770, UNtxt2.getY()+20, 70, 10);
-        Passlbl2.setBounds(770, Passtxt2.getY()+20, 70, 10);
-        ConfirmPasslbl.setBounds(722, ConfirmPasstxt.getY()+20, 110, 10);
+        UNlbl2.setBounds(730, UNtxt2.getY()+10, 170, 30);
+        Passlbl2.setBounds(730, Passtxt2.getY()+10, 170, 30);
+        ConfirmPasslbl.setBounds(648, ConfirmPasstxt.getY()+10, 190, 30);
         
         add(UNtxt2);
         add(Passtxt2);

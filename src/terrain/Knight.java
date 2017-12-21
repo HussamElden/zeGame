@@ -39,8 +39,8 @@ public class Knight extends Movables implements  Ibehavior {
       }
          
          sword.setdamage(10);
-         price.Setfood(60);
-         price.Setgold(75);
+         price.setFood(60);
+         price.setGold(75);
          setagrorange(2);
          setAgility(1);
          setattackSpeed(0.96);

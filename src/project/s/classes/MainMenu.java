@@ -5,28 +5,18 @@
  */
 package project.s.classes;
 
-import User.UserGUI;
-import User.User;
-import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.HeadlessException;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Serializable;
-import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
@@ -41,27 +31,16 @@ JButton Options;
 JButton Help;
 JButton Credits;
 JButton Quit;
-<<<<<<< HEAD
 JLabel Background;
 
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 Toolkit toolkit = Toolkit.getDefaultToolkit();
 Image image = toolkit.getImage("Pics//Cursor.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
-      
-        public MainMenu() 
-=======
 
-
- Toolkit toolkit = Toolkit.getDefaultToolkit();
-             Image image = toolkit.getImage("Pics//sword.png");
-public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
-           0), "img");
      
 
         public MainMenu() 
-
->>>>>>> Hussam
     {   
          setSize((int)screenSize.getWidth(), (int)screenSize.getHeight());
          setCursor(c);

@@ -37,8 +37,8 @@ public JLabel [] lbl = new JLabel[3];
       {
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
-      }    price.Setgold(15);
-    price.Setfood(20); 
+      }    price.setGold(15);
+    price.setFood(20); 
     sword.setdamage(4);
     setattackSpeed(0.96);
     setHealth(30);

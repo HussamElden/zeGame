@@ -49,8 +49,8 @@ public JLabel [] lbl =  new JLabel[3];
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
         
-        price.Setfood(20);
-    price.Setgold(25);
+        price.setFood(20);
+    price.setGold(25);
     spear.setDamage(5);
     setHealth(50);
     setagrorange(4);

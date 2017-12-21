@@ -17,10 +17,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import terrain.Barrack;
 import terrain.Base;
 import terrain.Citizens;
 import terrain.MOVER;
-import terrain.Panel;
+import terrain.CitizenPanel;
 import terrain.Unit;
 
 /**
@@ -31,7 +32,6 @@ public class LeGame extends JFrame{
 
     
     public static   JLabel mapaia=new JLabel();
-    Panel panel= new Panel();
      static Point NP=new Point();
      static Unit ob ;
     static public  Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -40,9 +40,23 @@ public class LeGame extends JFrame{
      Base b=new Base(Arrs.u.getNation());
      Citizens citizen=new Citizens(Arrs.u.getNation());
      JPanel jb=new JPanel();
+     public static JLabel tabs = new JLabel();
+    // Image PanelBackground= Toolkit.getDefaultToolkit().createImage("Pics//panel.png");
+     JLabel fady= new JLabel();
+     JLabel PanelBackground= new JLabel();
      public LeGame()  {
+         
          JLabel LBL=new JLabel();
-         setSize(screenSize);
+                   tabs.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
+
+         tabs.setIcon(new ImageIcon(new ImageIcon("Pics//panel.png").getImage().getScaledInstance(screenSize.width/3, screenSize.height/3, Image.SCALE_DEFAULT)));
+        //  tabs.add(PanelBackground);
+       //tabs.setBackground(Color.yellow);
+       tabs.setLayout(null);
+       tabs.setVisible(true);
+    
+       jb.add(tabs);
+       setSize(screenSize);
          setLayout(null);
          setVisible(true);
          setBackground(Color.yellow);
@@ -66,6 +80,7 @@ public class LeGame extends JFrame{
    mapaia.add(b.LBL[1]);
    //mapaia.add(citizen.lbl[1]);
    jb.add(mapaia);
+
    add(jb);
 //   mapaia.add(panel);
 //   mapaia.add(panel.B.lbl[1]);
@@ -73,5 +88,26 @@ public class LeGame extends JFrame{
   // mapaia.add( b.Start());
 //   MOVER m=new MOVER(Arrs.ArrCitizens.get(0).lbl[1].getLocation(),b.SP,Arrs.ArrCitizens.get(0).lbl[1]);
 //           m.TMove.start();
+     refresh r=new refresh();
+   r.ref.start();
      }
+private  class refresh {
+
+        Thread ref = new Thread()
+            {
+
+            public void run()
+              {  while(true)
+                {
+                    repaint();
+                  try {
+                       Thread.sleep(1000);
+                    } 
+                  catch (InterruptedException ex) 
+                    {   }
+
+                 }
+
+                 }}; 
+    }
 }

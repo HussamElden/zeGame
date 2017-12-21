@@ -48,8 +48,8 @@ public Catapult(String nation)
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Catapult_NightElves.png").getImage().getScaledInstance(99,85 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Catapult_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
-    price.Setwood(125);
-    price.Setgold(80);
+    price.setWood(125);
+    price.setGold(80);
      setHealth(70);
      Stone.setDamage(15);
      Stone.setSpeed(1);

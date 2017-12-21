@@ -20,8 +20,6 @@ import project.s.classes.PriceLists;
 public class WoodCutter extends Buildings implements IBuild{
    static int x=0;
     private Trees tree;
-    
-   Inventory inventory=new Inventory();
 public JLabel [] lbl = new JLabel[3];
      public WoodCutter(String nation)
      {
@@ -31,21 +29,17 @@ public JLabel [] lbl = new JLabel[3];
       if(nation.equals("Human Hunters"))
       {
 
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
+      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-<<<<<<< HEAD
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
-=======
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(422,317 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
 
->>>>>>> Hussam
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//WoodCutter_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+
       }
-         price.Setwood(25);   
+         price.setWood(25);   
          setalive(true);
         // Work.start();
      }
@@ -66,7 +60,7 @@ public JLabel [] lbl = new JLabel[3];
                 
             public void run(){
                 while(getalive()){
-                Inventory.price.Setwood(Inventory.price.Getwood()+4);
+                Inventory.price.setWood(Inventory.price.getWood()+4);
                 }
                 
              try {
@@ -93,7 +87,7 @@ public JLabel [] lbl = new JLabel[3];
 }
 //    @Override
 //    public String Build(){
-//         if(inventory.getWood()>=price.Getwood())
+//         if(inventory.getWood()>=price.getWood())
 //        incrementNumber();
 //   
 //        increasewood(inventory);
