@@ -8,7 +8,10 @@ package terrain;
 import java.awt.Image;
 import java.util.Scanner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 import User.Arrs;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -20,18 +23,31 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+<<<<<<< HEAD
 >>>>>>> ali-fadl
+=======
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 import javax.swing.JPanel;
 import project.s.classes.LeGame;
 import project.s.classes.PriceLists;
 import project.s.classes.LeGame;
 import static project.s.classes.LeGame.panaia;
+<<<<<<< HEAD
 >>>>>>> ali-fadl
+=======
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 
 /**
  *

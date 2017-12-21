@@ -32,6 +32,9 @@ JButton Help;
 JButton Credits;
 JButton Quit;
 <<<<<<< HEAD
+<<<<<<< HEAD
+JLabel Background;
+=======
 JLabel Background;
 
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -39,8 +42,26 @@ Toolkit toolkit = Toolkit.getDefaultToolkit();
 Image image = toolkit.getImage("Pics//Cursor.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
 
+<<<<<<< HEAD
+ Toolkit toolkit = Toolkit.getDefaultToolkit();
+             Image image = toolkit.getImage("Pics//sword.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
+           0), "img");
+<<<<<<< HEAD
+     
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
+
+        public MainMenu() 
+
+=======
+       
+                
+        public MainMenu() 
+>>>>>>> ali-fadl
+=======
      
 
+<<<<<<< HEAD
 =======
 
 
@@ -51,7 +72,10 @@ public Cursor c = toolkit.createCustomCursor(image , new Point(0,
        
                 
 >>>>>>> ali-fadl
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
         public MainMenu() 
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
     {   
          setSize((int)screenSize.getWidth(), (int)screenSize.getHeight());
          setCursor(c);

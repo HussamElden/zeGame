@@ -58,13 +58,22 @@ public class LeGame extends JFrame{
      
      JPanel jb=new JPanel();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     public static JPanel panaia=new JPanel();
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
      public static JLabel tabs = new JLabel();
     // Image PanelBackground= Toolkit.getDefaultToolkit().createImage("Pics//panel.png");
      JLabel fady= new JLabel();
      JLabel PanelBackground= new JLabel();
+<<<<<<< HEAD
 =======
      public static JPanel panaia=new JPanel();
 >>>>>>> ali-fadl
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
      public LeGame()  {
 <<<<<<< HEAD
          setSize(screenSize);
@@ -91,12 +100,20 @@ public class LeGame extends JFrame{
     jb.setBackground(Color.BLACK);
     setTitle("test run");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
       panaia.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
       panaia.setLayout(null);
       panaia.setBackground(Color.yellow); 
       panaia.setVisible(true);
+<<<<<<< HEAD
 >>>>>>> ali-fadl
+=======
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
     jb.setBackground(Color.green);  
     jb.setBounds(0, 0, screenSize.width, screenSize.height);
     mapaia.setIcon(new ImageIcon(new ImageIcon("terrain.png").getImage().getScaledInstance(screenSize.width*2,screenSize.height*2 , Image.SCALE_DEFAULT)));
@@ -162,6 +179,9 @@ public class LeGame extends JFrame{
      }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
+<<<<<<< HEAD
      
 //     private  class refresh {
 //     
@@ -183,6 +203,10 @@ public class LeGame extends JFrame{
 //                 }}; 
 //    }
 =======
+<<<<<<< HEAD
+    
+>>>>>>> ali-fadl
+=======
 private  class refresh {
 
         Thread ref = new Thread()
@@ -203,7 +227,11 @@ private  class refresh {
                  }}; 
     }
 >>>>>>> Omar
+<<<<<<< HEAD
 =======
     
 >>>>>>> ali-fadl
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 }

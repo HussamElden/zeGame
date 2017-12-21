@@ -69,6 +69,10 @@ public Stable (String nation)
       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
       lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      price.Setwood(175);
+=======
       else
       {
        lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(100,100 ,Image.SCALE_DEFAULT)));
@@ -76,7 +80,12 @@ public Stable (String nation)
 >>>>>>> Omar
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       price.setWood(175);
+=======
+      price.setWood(175);
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 }
 
 =======

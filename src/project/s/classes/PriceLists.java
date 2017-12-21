@@ -81,12 +81,21 @@ public class PriceLists {
          if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
          {
 <<<<<<< HEAD
+<<<<<<< HEAD
           return true;
 =======
            this.DecrementAny(p);
            return true;
            
 >>>>>>> ali-fadl
+=======
+           this.DecrementAny(p);
+           return true;
+           
+=======
+          return true;
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
          }else{
              try {
                  throw(new NotEnoughResourcesException());

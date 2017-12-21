@@ -7,6 +7,7 @@ package terrain;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import User.Arrs;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -22,6 +23,16 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 >>>>>>> ali-fadl
+=======
+import User.Arrs;
+=======
+
+import java.awt.Color;
+>>>>>>> ali-fadl
+import java.awt.Dimension;
+import java.awt.Image;
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 
 
 
@@ -35,8 +46,20 @@ import java.awt.event.MouseListener;
 import java.awt.Dimension;
 import java.awt.Image;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.awt.event.MouseMotionListener;
 =======
+=======
+import java.awt.event.MouseMotionListener;
+<<<<<<< HEAD
+=======
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Image;
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 import java.awt.Point;
 
 import java.util.ArrayList;
@@ -59,6 +82,9 @@ import project.s.classes.PriceLists;
  */
 public class Citizens extends Movables {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 <<<<<<< HEAD
 boolean draged =false;
 =======
@@ -126,6 +152,9 @@ public Citizens(String nation)
       else
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 <<<<<<< HEAD
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
        LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
@@ -204,8 +233,16 @@ public Citizens(String nation)
      public String toString() { 
          return "Citizens";
       } 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     
+>>>>>>> ali-fadl
+
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
     private class Drag implements MouseMotionListener , MouseListener{
 
         public Drag() {
@@ -335,9 +372,12 @@ public Citizens(String nation)
         public void mouseClicked(MouseEvent me) {
       //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
+<<<<<<< HEAD
 =======
      
 >>>>>>> ali-fadl
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 
         @Override
         public void mousePressed(MouseEvent me) {
@@ -794,6 +834,7 @@ public void CitizenPanel()
         BuildLbls[7].setBounds(BuildLbls[6].getX()+120,BuildLbls[0].getY()+120,50,50);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         for ( int i=0; i<8 ; i++)
 {
     tabs.add(BuildLbls[i]);
@@ -808,6 +849,9 @@ public void CitizenPanel()
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
         for ( int i=0; i<8 ; i++)
 {
    LeGame.tabs.add(BuildLbls[i]);
@@ -924,6 +968,12 @@ public void CitizenPanel()
 //           m.TMove.start();
 //      }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//    
+<<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 //    LeGame.mapaia.addMouseListener(new Release());
 
 //>>>>>>> Hussam
@@ -966,9 +1016,13 @@ public void CitizenPanel()
 //    setVisible(false);
 //}  
 
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
 
 =======
+<<<<<<< HEAD
 //    
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
     
 }
 >>>>>>> ali-fadl

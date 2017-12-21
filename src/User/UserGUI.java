@@ -67,7 +67,14 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
            static Arrs xyz=new Arrs();
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
         boolean CheckLogin= true;
+     
+=======
+        boolean CheckLogin= true;
+<<<<<<< HEAD
 <<<<<<< HEAD
         //InGame MM=new InGame();
        Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -75,17 +82,35 @@ Image image = toolkit.getImage("Pics//Cursor.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
         MainMenu MM=new MainMenu();
 =======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
        
+>>>>>>> ali-fadl
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         //Image Cursorimg = toolkit.getImage("‪Pics//Cursor.png");
         //  Dimension CursorSize = toolkit.getBestCursorSize(32, 32);
   //      Cursor c = toolkit.createCustomCursor(Cursorimg , new Point(0,0), "Cursor");
 
+<<<<<<< HEAD
+             MainMenu MM=new MainMenu();
+=======
   // boolean CheckLogin= true;
              MainMenu MM=new MainMenu();
 
-
 >>>>>>> ali-fadl
+
+<<<<<<< HEAD
+>>>>>>> ali-fadl
+=======
+=======
+        boolean CheckLogin= true;
+        //InGame MM=new InGame();
+       Toolkit toolkit = Toolkit.getDefaultToolkit();
+Image image = toolkit.getImage("Pics//Cursor.png");
+public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
+        MainMenu MM=new MainMenu();
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Font myFont =  new Font("SansSerif",Font.BOLD,20);
 
@@ -99,12 +124,44 @@ public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
          setLayout(null);
          setVisible(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+         
+         LoginBtn= new JButton("Login");
+         SignUpBtn= new JButton("Sign Up");
+         UNlbl= new JLabel ("Username");
+         UNlbl.setFont(myFont);
+         Passlbl= new JLabel ("Password");
+         SignUplbl = new JLabel("Don't have an account?");
+<<<<<<< HEAD
+<<<<<<< HEAD
+         SignUplbl.setFont(myFont);
+         SignUplbl.setForeground(Color.WHITE);
+         
+>>>>>>> Omar
+=======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
+
+       setSize(5000, 5000);
+>>>>>>> ali-fadl
+=======
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
         setTitle("Login");
       LoginBtn= new JButton("Login");
         SignUpBtn= new JButton("Sign Up");
       UNlbl= new JLabel ("Username");
         Passlbl= new JLabel ("Password");
         SignUplbl = new JLabel("Don't have an account?");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> ali-fadl
+<<<<<<< HEAD
+=======
+=======
 =======
          
          LoginBtn= new JButton("Login");
@@ -116,23 +173,12 @@ public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
          Passlbl.setFont(myFont);
          Passlbl.setForeground(Color.WHITE);
          SignUplbl = new JLabel("Don't have an account?");
-<<<<<<< HEAD
          SignUplbl.setFont(myFont);
          SignUplbl.setForeground(Color.WHITE);
          
 >>>>>>> Omar
-=======
-
-       setSize(5000, 5000);
-        setTitle("Login");
-      LoginBtn= new JButton("Login");
-        SignUpBtn= new JButton("Sign Up");
-      UNlbl= new JLabel ("Username");
-        Passlbl= new JLabel ("Password");
-        SignUplbl = new JLabel("Don't have an account?");
-
-        
->>>>>>> ali-fadl
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
          UNtxt= new JTextField(16);
          UNtxt.setCursor(c);
          Passtxt= new JPasswordField(16);
@@ -341,15 +387,32 @@ InFile.close();
 //        RegisterBtn.addActionListener(new Register());
 //            setVisible(false);
 //        }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  
+=======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 
          
 =======
         
+<<<<<<< HEAD
 
         
 >>>>>>> ali-fadl
+=======
+//        
+>>>>>>> ali-fadl
+=======
+
+
+         
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 //        
 //        @Override
 //        public void actionPerformed(ActionEvent ae)
@@ -387,7 +450,11 @@ InFile.close();
 //}
 //    
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 //}  
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
 //        @Override
 //        public void actionPerformed(ActionEvent ae)
 //        {
@@ -424,9 +491,13 @@ InFile.close();
 //}
 //    
 //}
+<<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 //}
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
 //=======
 //  
 //  

@@ -76,17 +76,26 @@ public  castle(String nation)
 >>>>>>> Omar
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
          
          price.setMetal(120);
      }
 =======
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
       
       
       lbl[1].addMouseListener(new mouselisten());
       
       
          price.Setmetal(120);
+=======
+         
+         price.setMetal(120);
+>>>>>>> 3c023ccb011e7f4e82951d827decc80b92b11fba
      }
+<<<<<<< HEAD
+=======
  
  public Point getSP() {
         return SP;

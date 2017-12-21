@@ -25,6 +25,9 @@ public abstract class Unit {
     private boolean aLive = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
+<<<<<<< HEAD
    public  String Nation=new String();
 =======
    public String Nation= new String();
