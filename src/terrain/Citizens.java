@@ -227,11 +227,13 @@ public Citizens(String nation)
               LeGame.mapaia.remove(B.lbl[1]);
               LeGame.mapaia.repaint();
               BoolBarrack=false;
-              //Inventory.getWood()= Inventory.getWood()- B.price.getWood();
-              //System.out.println(I.getWood());
+Inventory.price.DecrementAny(B.price); 
+                  System.out.println("gwa el If: "+ Inventory.getWood());
+//System.out.println(I.getWood());
               }
               else 
                        System.out.println("NOOOO");
+              System.out.println(Inventory.getWood());
                }
                else if (BoolSM)
                {
