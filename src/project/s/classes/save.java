@@ -5,6 +5,8 @@
  */
 package project.s.classes;
 
+import User.User;
+
 /**
  *
  * @author hos20

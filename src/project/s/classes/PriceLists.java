@@ -5,38 +5,81 @@
  */
 package project.s.classes;
 
+import terrain.Inventory;
+
 /**
  *
  * @author hos20
  */
 public class PriceLists {
-    private int food;
-    private  int wood;
+     private int food;
+    private int wood;
     private int metal;
     private int gold;
-    public void Setmetal(int M){
-            metal =M;
-            
+
+    public PriceLists(int food, int wood, int metal, int gold) {
+        this.food = food;
+        this.wood = wood;
+        this.metal = metal;
+        this.gold = gold;
     }
-    public int Getmetal(){
-    return metal;
+
+    public PriceLists() {
+         this.food = 0;
+        this.wood = 0;
+        this.metal = 0;
+        this.gold = 0;
     }
-    public void Setwood(int W){
-    wood =W;
+
+    public int getFood() {
+        return food;
     }
-    public int Getwood(){
-    return wood;
+
+    public void setFood(int food) {
+        this.food = food;
     }
-    public void Setfood(int F){
-    food=F;
+
+    public int getWood() {
+        return wood;
     }
-    public int Getfood(){
-    return food;
+
+    public void setWood(int wood) {
+        this.wood = wood;
     }
-    public void Setgold(int G){
-    gold=G;
+
+    public int getMetal() {
+        return metal;
     }
-    public int Getgold(){
-    return gold;
+
+    public void setMetal(int metal) {
+        this.metal = metal;
     }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+    
+  
+    public void DecrementAny(PriceLists p)
+     {
+         this.food-=p.food;
+         this.wood-=p.wood;
+         this.gold-=p.gold;
+         this.metal-=p.metal;
+     }
+     
+    
+      public boolean sheck(PriceLists p)
+     {
+         if(this.food>=p.food&& this.wood>=p.wood&&this.gold>=p.gold&&this.metal>=p.metal)
+         {
+          return true;
+         }else{
+         return false;
+         }       
+     }
 }
