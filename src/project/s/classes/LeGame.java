@@ -99,11 +99,6 @@ public class LeGame extends JFrame{
     jb.setVisible(true);
     jb.setBackground(Color.BLACK);
     setTitle("test run");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b4e509fe3865097aea90aa21f6db2d62feea55cb
       panaia.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
       panaia.setLayout(null);
       panaia.setBackground(Color.yellow); 
