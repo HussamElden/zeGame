@@ -24,6 +24,7 @@ public abstract class Unit {
     private String Name;
     private boolean aLive = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
    public  String Nation=new String();
 =======
    public String Nation= new String();
@@ -32,6 +33,9 @@ public abstract class Unit {
     public int getAS() {
         return AS;
     }
+=======
+   public String Nation=new String();
+>>>>>>> ali-fadl
 
     public void setAS(int AS) {
         this.AS = AS;

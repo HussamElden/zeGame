@@ -58,7 +58,9 @@ public class Chariots extends Movables implements  Ibehavior{
      }
      @Override
      public String toString() { 
+         
          return "Chariots";
+         
       } 
     }
 

@@ -68,11 +68,24 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
         boolean CheckLogin= true;
+<<<<<<< HEAD
         //InGame MM=new InGame();
        Toolkit toolkit = Toolkit.getDefaultToolkit();
 Image image = toolkit.getImage("Pics//Cursor.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
         MainMenu MM=new MainMenu();
+=======
+       
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        //Image Cursorimg = toolkit.getImage("‪Pics//Cursor.png");
+        //  Dimension CursorSize = toolkit.getBestCursorSize(32, 32);
+  //      Cursor c = toolkit.createCustomCursor(Cursorimg , new Point(0,0), "Cursor");
+
+  // boolean CheckLogin= true;
+             MainMenu MM=new MainMenu();
+
+
+>>>>>>> ali-fadl
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Font myFont =  new Font("SansSerif",Font.BOLD,20);
 
@@ -103,10 +116,23 @@ public Cursor c = toolkit.createCustomCursor(image , new Point(0,0), "img");
          Passlbl.setFont(myFont);
          Passlbl.setForeground(Color.WHITE);
          SignUplbl = new JLabel("Don't have an account?");
+<<<<<<< HEAD
          SignUplbl.setFont(myFont);
          SignUplbl.setForeground(Color.WHITE);
          
 >>>>>>> Omar
+=======
+
+       setSize(5000, 5000);
+        setTitle("Login");
+      LoginBtn= new JButton("Login");
+        SignUpBtn= new JButton("Sign Up");
+      UNlbl= new JLabel ("Username");
+        Passlbl= new JLabel ("Password");
+        SignUplbl = new JLabel("Don't have an account?");
+
+        
+>>>>>>> ali-fadl
          UNtxt= new JTextField(16);
          UNtxt.setCursor(c);
          Passtxt= new JPasswordField(16);
@@ -316,8 +342,14 @@ InFile.close();
 //            setVisible(false);
 //        }
 
+<<<<<<< HEAD
 
          
+=======
+        
+
+        
+>>>>>>> ali-fadl
 //        
 //        @Override
 //        public void actionPerformed(ActionEvent ae)
@@ -354,6 +386,7 @@ InFile.close();
 //          
 //}
 //    
+<<<<<<< HEAD
 //}  
 //        @Override
 //        public void actionPerformed(ActionEvent ae)
@@ -392,6 +425,14 @@ InFile.close();
 //    
 //}
 
+=======
+//}
+//=======
+//  
+//  
+//  
+//>>>>>>> Hussam
+>>>>>>> ali-fadl
 // private class Register implements ActionListener {
 //
 //        @Override
@@ -432,8 +473,13 @@ InFile.close();
 //            ConfirmPasstxt.setText("");
 //        }
 //        }
+<<<<<<< HEAD
 //    }
 
+=======
+//   
+ 
+>>>>>>> ali-fadl
 //<<<<<<< HEAD:src/project/s/classes/UserGUI.java
 //  private class Login implements ActionListener {
 //

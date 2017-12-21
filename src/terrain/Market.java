@@ -97,7 +97,13 @@ public Market (String nation)
     };
     @Override
     public void spawn(){
+<<<<<<< HEAD
         return ;}
+=======
+        
+        
+        }
+>>>>>>> ali-fadl
     @Override
      public String toString() { 
          return "Market";

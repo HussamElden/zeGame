@@ -10,8 +10,11 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.HeadlessException;
 import java.awt.Image;
+import java.awt.Panel;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -28,6 +31,10 @@ import terrain.MOVER;
 import terrain.CitizenPanel;
 >>>>>>> Omar
 import terrain.Unit;
+import terrain.BarrackPanel;
+import terrain.Stable;
+import terrain.castle;
+
 
 /**
  *
@@ -35,6 +42,7 @@ import terrain.Unit;
  */
 public class LeGame extends JFrame{
 
+    Panel x;
     
     public static   JLabel mapaia=new JLabel();
      public static Point NP=new Point();
@@ -49,10 +57,14 @@ public class LeGame extends JFrame{
      
      
      JPanel jb=new JPanel();
+<<<<<<< HEAD
      public static JLabel tabs = new JLabel();
     // Image PanelBackground= Toolkit.getDefaultToolkit().createImage("Pics//panel.png");
      JLabel fady= new JLabel();
      JLabel PanelBackground= new JLabel();
+=======
+     public static JPanel panaia=new JPanel();
+>>>>>>> ali-fadl
      public LeGame()  {
 <<<<<<< HEAD
          setSize(screenSize);
@@ -78,6 +90,13 @@ public class LeGame extends JFrame{
     jb.setVisible(true);
     jb.setBackground(Color.BLACK);
     setTitle("test run");
+<<<<<<< HEAD
+=======
+      panaia.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
+      panaia.setLayout(null);
+      panaia.setBackground(Color.yellow); 
+      panaia.setVisible(true);
+>>>>>>> ali-fadl
     jb.setBackground(Color.green);  
     jb.setBounds(0, 0, screenSize.width, screenSize.height);
     mapaia.setIcon(new ImageIcon(new ImageIcon("terrain.png").getImage().getScaledInstance(screenSize.width*2,screenSize.height*2 , Image.SCALE_DEFAULT)));
@@ -107,14 +126,41 @@ public class LeGame extends JFrame{
 //   mapaia.add(panel);
 //   mapaia.add(panel.B.lbl[1]);
    b.Start();
+<<<<<<< HEAD
 //   refresh r=new refresh();
 //   r.ref.start();
+=======
+   Barrack B =new Barrack(Arrs.u.getNation());
+   
+   Stable horse=new Stable(Arrs.u.getNation());
+   
+   castle home=new castle(Arrs.u.getNation());
+             
+   
+   
+   // B.Blbl[1].setBounds(1000,500,422, 278);
+    //mapaia.add(B.Blbl[1]);
+    //B.setSP(B.Blbl[1].getLocation().x+300,B.Blbl[1].getLocation().y+300);
+      
+   // horse.lbl[1].setBounds(200, 200, 422, 278);
+    //mapaia.add(horse.lbl[1]);
+    //horse.setSP(horse.lbl[1].getLocation().x+300,horse.lbl[1].getLocation().y+300);
+    
+    home.lbl[1].setBounds(400, 400, 422, 270);
+    mapaia.add(home.lbl[1]);
+    home.setSP(home.lbl[1].getLocation().x+300,home.lbl[1].getLocation().y+300);
+
+    
+    
+   
+>>>>>>> ali-fadl
   // mapaia.add( b.Start());
 //   MOVER m=new MOVER(Arrs.ArrCitizens.get(0).lbl[1].getLocation(),b.SP,Arrs.ArrCitizens.get(0).lbl[1]);
 //           m.TMove.start();
      refresh r=new refresh();
    r.ref.start();
      }
+<<<<<<< HEAD
 <<<<<<< HEAD
      
 //     private  class refresh {
@@ -157,4 +203,7 @@ private  class refresh {
                  }}; 
     }
 >>>>>>> Omar
+=======
+    
+>>>>>>> ali-fadl
 }
