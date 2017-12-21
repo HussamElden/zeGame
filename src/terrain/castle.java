@@ -21,21 +21,21 @@ import project.s.classes.PriceLists;
 public class castle extends Buildings implements IBuild{
    private Throwable arrow=new Throwable();
     private int AgroRange;
-  public JLabel []lbl = new JLabel[3];
  castle(String nation)
      {
           Nation = nation;
-       lbl[0]=new JLabel(nation+" Logging Mine");
+           setName("castle");
+       LBL[0]=new JLabel(nation+" Logging Mine");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(422,378 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Castle_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
          
          price.Setmetal(120);
@@ -64,7 +64,7 @@ public class castle extends Buildings implements IBuild{
        Inventory inventory=new Inventory();
         General g=new General(Nation);
         if(inventory.getFood()>=g.price.Getfood()&&inventory.getGold()>=g.price.Getgold()){
-        g.incrementNumber();
+       // g.incrementNumber();
         inventory.Decfood(g.price.Getfood());
         inventory.Decgold(g.price.Getgold());
       //  return "Now you have "+g.GetNumber()+" General";

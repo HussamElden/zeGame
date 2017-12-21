@@ -20,20 +20,19 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Stable extends Buildings implements IBuild {
-   public JLabel [] lbl = new JLabel[3];
 public Stable (String nation)
 {Nation = nation;
-       lbl[0]=new JLabel(nation+" Stable");
+       LBL[0]=new JLabel(nation+" Stable");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(422,344 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Stable_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       price.Setwood(175);
 }

@@ -23,6 +23,7 @@ public class Catapult extends Movables implements  Ibehavior {
 JLabel[] lbl = new JLabel[3];
 public Catapult(String nation)
     {
+                setName("Catapult");
                  Nation = nation;
 
         lbl[0]=new JLabel(nation+" Catapult");

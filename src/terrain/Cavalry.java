@@ -19,21 +19,20 @@ import project.s.classes.PriceLists;
 public class Cavalry extends Movables implements  Ibehavior{
     private Horse H;
     private Melee spear= new Melee();
-   public JLabel [] lbl = new JLabel[3];
   public Cavalry(String nation){
                Nation = nation;
-
-      lbl[0]=new JLabel(nation+" Cavalry");
+                       setName("Cavalry");
+      LBL[0]=new JLabel(nation+" Cavalry");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Cavlary_HumanHunters.png").getImage().getScaledInstance(58,80 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Cavlary_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Cavlary_HumanHunters.png").getImage().getScaledInstance(58,80 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Cavlary_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(58,80 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(58,80 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon(nation+"Pics//Cavlary_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
        price.Setfood(60);
     price.Setgold(75);

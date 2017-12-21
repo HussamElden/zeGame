@@ -20,21 +20,21 @@ public class Chariots extends Movables implements  Ibehavior{
     private Horse H;
     private Throwable arrow=new Throwable();
     private int Range;
-public JLabel [] lbl = new JLabel[3];
     public Chariots(String nation)
     {          Nation = nation;
+        setName("Chariots");
 
-         lbl[0]=new JLabel(nation+" Chariots");
+         LBL[0]=new JLabel(nation+" Chariots");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_HumanHuinters.png").getImage().getScaledInstance(85,58 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_HumanHuinters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_HumanHuinters.png").getImage().getScaledInstance(85,58 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_HumanHuinters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(85,58 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(85,58 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Chariot_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
     price.Setwood(60);
     price.Setgold(40);

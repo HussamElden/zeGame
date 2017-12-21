@@ -21,21 +21,22 @@ public class JalvinThrower extends Movables implements  Ibehavior{
    private int Range;
    Throwable spear=new Throwable();
 
-public JLabel [] lbl =  new JLabel[3];
+
     public JalvinThrower(String nation)
     {          Nation = nation;
+                    setName("JalvinThrower");
 
-      lbl[0]=new JLabel(nation+" Jalvin Thrower");
+      LBL[0]=new JLabel(nation+" Jalvin Thrower");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_HumanHunters.png").getImage().getScaledInstance(49,72 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_HumanHunters.png").getImage().getScaledInstance(49,72 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_NightElves.png").getImage().getScaledInstance(49,72,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_NightElves.png").getImage().getScaledInstance(49,72,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//JalvinThrower_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
         
         price.Setfood(20);

@@ -7,6 +7,7 @@ package terrain;
 
 import User.Arrs;
 import java.awt.Point;
+import javax.swing.JLabel;
 import project.s.classes.PriceLists;
 
 /**
@@ -14,18 +15,27 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public abstract class Unit {
-    private Point position;
+    public Point pos;
+     public JLabel[] LBL=new JLabel[3];
+     private int AS;
    private  int Health;
-    private String status;
+    private String Name;
     private boolean aLive = true;
    public  String Nation=new String();
  public PriceLists price=new PriceLists();
+    public int getAS() {
+        return AS;
+    }
+
+    public void setAS(int AS) {
+        this.AS = AS;
+    }
     public Point getPosition() {
-        return position;
+        return pos;
     }
 
     public void setPosition(Point position) {
-        this.position = position;
+        this.pos = position;
     }
 
     public boolean isaLive() {
@@ -52,12 +62,12 @@ public abstract class Unit {
         return  Health;
     }
     
-    public void setStatus (String Stat){
-       status = Stat;
+    public void setName (String Stat){
+       Name = Stat;
     }
     
-    public String getStatus (){
-        return  status;
+    public String getName (){
+        return  Name;
     }
     
     public int decreasingHealth(){

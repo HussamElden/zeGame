@@ -18,6 +18,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -127,8 +128,9 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
          add(SignUplbl);
          add(Background);
         
-         SignUpBtn.addActionListener(new SignUpndLogin());
+        SignUpBtn.addActionListener(new SignUpndLogin());
         LoginBtn.addActionListener(new SignUpndLogin());
+        Passtxt.addActionListener(new SignUpndLogin());
         
        
 
@@ -255,6 +257,9 @@ InFile.close();
             
             }
         }
+
+        
+        
     }
 }
 

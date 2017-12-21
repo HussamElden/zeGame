@@ -19,21 +19,20 @@ import project.s.classes.PriceLists;
  */
 public class Soldier extends Movables implements  Ibehavior{
   private  Melee sword=new Melee();
-public JLabel [] lbl = new JLabel[3];
    public Soldier(String nation)
   {          Nation = nation;
-
-   lbl[0]=new JLabel(nation+" Soldier");
+                    setName("Soldier");
+   LBL[0]=new JLabel(nation+" Soldier");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(36,55 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Soldier_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }    price.Setgold(15);
     price.Setfood(20); 
     sword.setdamage(4);

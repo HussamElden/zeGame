@@ -30,5 +30,7 @@ public  class  Arrs implements Serializable{
                    public static ArrayList<Stable>ArrStable=new ArrayList<>();
      public static ArrayList<Soldier>ArrSoldier=new ArrayList<>();
           public static ArrayList<WoodCutter>ArrWood=new ArrayList<>();
+          public static ArrayList<castle>ArrCastle=new ArrayList<>();
+          public static ArrayList<Tower>ArrTower=new ArrayList<>();
 
 }

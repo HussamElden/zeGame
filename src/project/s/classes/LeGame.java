@@ -19,7 +19,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import terrain.Base;
 import terrain.Citizens;
-import terrain.MOVER;
+import behavior.Moveee;
+import behavior.Selector;
 import terrain.Unit;
 
 /**
@@ -30,18 +31,23 @@ public class LeGame extends JFrame{
 
     
     public static   JLabel mapaia=new JLabel();
-     static Point NP=new Point();
-     static Unit ob ;
+     public static Point NP=new Point();
+     public static Unit ob;
     static public  Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-     static Boolean selected=new Boolean(false);
+     public static Boolean selected=new Boolean(false);
+    public static JPanel tabs=new JPanel();
+
       Point nextpos=new Point();
      Base b=new Base(Arrs.u.getNation());
      Citizens citizen=new Citizens(Arrs.u.getNation());
+     
+     
      JPanel jb=new JPanel();
      public LeGame()  {
          setSize(screenSize);
          setLayout(null);
          setVisible(true);
+        
          setBackground(Color.yellow);
          jb.setLayout(null);
     jb.setVisible(true);
@@ -56,13 +62,21 @@ public class LeGame extends JFrame{
    if(Arrs.u.getNation().equals("Human Hunters")){
   // citizen.lbl[1].setBounds(0, 0, 100, 100);
    b.LBL[1].setBounds(10,10,422, 278);
-   b.SP.x=300;
-   b.SP.y=300;
+       System.out.println(b.LBL[1].getLocation().x);
+       
+   //b.setSP(b.LBL[1].getLocation());
+   b.SP.x=1000;
+   b.SP.y=100;
    }else{
    b.LBL[1].setBounds(100,100, 422, 278);
    }
    mapaia.add(b.LBL[1]);
    //mapaia.add(citizen.lbl[1]);
+    tabs.setBounds(0,screenSize.height- screenSize.height/3, screenSize.width/3,screenSize.height/3);
+   tabs.setLayout(null);
+   tabs.setVisible(true);
+   tabs.setBackground(Color.yellow);
+   jb.add(tabs);
    jb.add(mapaia);
    add(jb);
    b.Start();

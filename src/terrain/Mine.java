@@ -16,23 +16,21 @@ import javax.swing.JLabel;
  */
 public class Mine extends Buildings implements IBuild{
     
-    private int WorkerLimit;
-  public JLabel [] lbl =  new JLabel[3];
-  
+    private int WorkerLimit;  
   public Mine (String nation)
   {          Nation = nation;
-
-    lbl[0]=new JLabel(nation+" Stone Mine");
+                                setName("Mine");
+    LBL[0]=new JLabel(nation+" Stone Mine");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_HumanHunters.png").getImage().getScaledInstance(245,161 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_HumanHunters.png").getImage().getScaledInstance(245,161 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(245,161 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(245,161 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//StoneMine_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
        price.Setwood(20); 
        price.Setgold(10);

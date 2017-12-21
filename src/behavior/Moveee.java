@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package terrain;
+package behavior;
 
 import java.awt.Point;
 import javax.swing.JLabel;
@@ -12,12 +12,12 @@ import javax.swing.JLabel;
  *
  * @author al 7asob
  */
-public class MOVER {
+public class Moveee {
      private Point no2ta,nextNo2ta;
        private JLabel arch;
          int speed=1;
-        public MOVER(Point no2ta1,Point nextNo2ta1,JLabel arch1) {
-          //  System.out.println("constructing thread");
+        public Moveee(Point no2ta1,Point nextNo2ta1,JLabel arch1) {
+           System.out.println("constructing thread");
             no2ta=no2ta1;
             nextNo2ta=nextNo2ta1;
             arch=arch1;

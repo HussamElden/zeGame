@@ -5,6 +5,7 @@
  */
 package terrain;
 
+import behavior.Moveee;
 import User.Arrs;
 import java.awt.Image;
 import java.awt.Point;
@@ -21,13 +22,27 @@ import project.s.classes.LeGame;
  * @author Ahmed
  */
 public class Base extends Buildings implements IBuild  {
+    
+    public Point getSP() {
+        return SP;
+    }
+
+    public void setSP(Point SP) {
+        this.SP = SP;
+    }
+     public void setSP(int x,int y) {
+        this.SP.x = SP.x;
+        this.SP.y=SP.y;
+    }
+     behavior.Selector S=new behavior.Selector();
 
    public Point SP=new Point();
     public void setlvl(){};
-   public JLabel[] LBL = new JLabel[3];
    public Base (String nation){
                  Nation = nation;
-
+        setName("Base");
+SP.x=100;
+SP.y=100;
        LBL[0]=new JLabel(nation+" Base");
            System.out.println(nation);
       if(nation.equals("Human Hunters"))
@@ -49,10 +64,13 @@ public class Base extends Buildings implements IBuild  {
        citizen.setPosition(SP);
        Arrs.ALL.add(citizen);
        Arrs.ArrCitizens.add(citizen);
-       citizen.lbl[1].setBounds(this.LBL[1].getWidth()-100,this.LBL[1].getHeight()-100, 32, 50);
-       LeGame.mapaia.add(citizen.lbl[1]);
-     MOVER m=new MOVER(citizen.lbl[1].getLocation(),SP,citizen.lbl[1]);
+       citizen.LBL[1].setBounds(this.LBL[1].getWidth(),this.LBL[1].getHeight(), 32, 50);
+       LeGame.mapaia.add(citizen.LBL[1]);
+        System.out.println(" "+SP.x+" "+SP.y);
+     Moveee m=new Moveee(citizen.LBL[1].getLocation(),SP,citizen.LBL[1]);
            m.TMove.start();
+           // S.movie(citizen);
+           
     }
     @Override
     public String Destroy() {
@@ -67,11 +85,12 @@ public class Base extends Buildings implements IBuild  {
        Arrs.ALL.add(citizen);
        Arrs.ArrCitizens.add(citizen);
        System.out.println(Arrs.ArrCitizens.size());
-       citizen.lbl[1].setBounds((this.LBL[1].getWidth()-100),this.LBL[1].getHeight()-100, 32, 50);
-       LeGame.mapaia.add(citizen.lbl[1]);
+       citizen.LBL[1].setBounds(this.LBL[1].getBounds().width,this.LBL[1].getBounds().height, 32, 50);
+       LeGame.mapaia.add(citizen.LBL[1]);
        SP.x+=Arrs.ArrCitizens.size()+3;
-     MOVER m=new MOVER(citizen.lbl[1].getLocation(),SP,citizen.lbl[1]);
+     Moveee m=new Moveee(citizen.LBL[1].getLocation(),SP,citizen.LBL[1]);
            m.TMove.start();
+       //   S.movie(citizen);
     }
   
     @Override
@@ -115,7 +134,7 @@ public class Base extends Buildings implements IBuild  {
         public void mouseClicked(MouseEvent me) {
             LBL[2].setBounds(LeGame.screenSize.width-(LeGame.screenSize.width/3),LeGame.screenSize.height-(LeGame.screenSize.height/3),LeGame.screenSize.width/3, LeGame.screenSize.height/3);
             LeGame.mapaia.add(LBL[2]);
-            //repaint();
+            LeGame.mapaia.repaint();
             LBL[2].addMouseListener(new Spawner());
         }
 

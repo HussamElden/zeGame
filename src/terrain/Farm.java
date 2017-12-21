@@ -18,21 +18,21 @@ public class Farm extends Buildings implements IBuild{
     
     private int WorkerLimit=1;
 
-public JLabel []  lbl  = new JLabel[3];
      public Farm (String nation)
      {          Nation = nation;
+                    setName("Farm");
 
-             lbl[0]=new JLabel(nation+" Farm");
+             LBL[0]=new JLabel(nation+" Farm");
           
       if(nation.equals("Human Hunters"))
       {
-      lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_HumanHunters.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       else
       {
-       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
-      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+       LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(364,278 ,Image.SCALE_DEFAULT)));
+      LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Farm_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
       price.Setwood(25);
       price.Setfood(10);
