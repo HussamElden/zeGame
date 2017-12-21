@@ -21,11 +21,15 @@ public abstract class Unit {
    private  int Health;
     private String Name;
     private boolean aLive = true;
+<<<<<<< HEAD
    public  String Nation=new String();
  public PriceLists price=new PriceLists();
     public int getAS() {
         return AS;
     }
+=======
+   public String Nation=new String();
+>>>>>>> ali-fadl
 
     public void setAS(int AS) {
         this.AS = AS;

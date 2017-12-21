@@ -5,13 +5,30 @@
  */
 package terrain;
 
+<<<<<<< HEAD
 import User.Arrs;
+=======
+
+import java.awt.Color;
+>>>>>>> ali-fadl
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+<<<<<<< HEAD
+=======
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Point;
+
+import java.util.ArrayList;
+>>>>>>> ali-fadl
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import static project.s.classes.LeGame.*;
@@ -23,6 +40,7 @@ import project.s.classes.PriceLists;
  * @author Ahmed
  */
 public class Citizens extends Movables {
+<<<<<<< HEAD
 boolean draged =false;
              Barrack B;
              Mine SM;
@@ -42,6 +60,24 @@ boolean draged =false;
                      boolean BoolWC=false;
     JLabel [] BuildLbls = new JLabel[8];
 JLabel Holder = new JLabel();
+=======
+
+   Barrack B = new Barrack(Nation);
+             Mine SM = new Mine (Nation);
+             Farm F= new Farm(Nation);
+             Market M = new Market (Nation);
+             Stable S= new Stable(Nation);
+             Tower T = new Tower(Nation);
+             castle C = new castle(Nation);
+             WoodCutter W = new WoodCutter(Nation);
+    JLabel [] BuildLbls = new JLabel[8];
+
+ 
+    
+    
+    
+    
+>>>>>>> ali-fadl
     private PriceLists price = new PriceLists();
 // JPanel panel = new JPanel();
 //public CitizenPanel p = new CitizenPanel(Nation);
@@ -58,6 +94,7 @@ public Citizens(String nation)
       }
       else
       {
+<<<<<<< HEAD
        LBL[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
        LBL[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
       }
@@ -88,6 +125,32 @@ public Citizens(String nation)
 
     Citizens(){
    
+=======
+
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(32,50 ,Image.SCALE_DEFAULT)));
+
+       lbl[1]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(100,150 ,Image.SCALE_DEFAULT)));
+
+      lbl[2]=new JLabel(new ImageIcon(new ImageIcon("Pics//Citizen_NightElves.png").getImage().getScaledInstance(10,15 ,Image.SCALE_DEFAULT)));
+      }
+      lbl[1].addMouseListener(new ShowPanel());
+
+//   public void incrementNumber(){
+//   Number++;
+//   }
+//   public void dcrementNumber(){
+//   Number--;
+//   }
+//   public int  GetNumber(){
+//   return Number;
+//   }
+
+     }
+    
+    Citizens()
+            {
+    price.Setfood(20);
+>>>>>>> ali-fadl
     }
     public PriceLists Getprice(){
     return price;
@@ -103,6 +166,11 @@ public Citizens(String nation)
      public String toString() { 
          return "Citizens";
       } 
+<<<<<<< HEAD
+=======
+
+     
+>>>>>>> ali-fadl
 
     private class Drag implements MouseMotionListener , MouseListener{
 
@@ -369,18 +437,31 @@ public Citizens(String nation)
 
         @Override
         public void mousePressed(MouseEvent me) {
+<<<<<<< HEAD
+=======
+         //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> ali-fadl
         }
 
         @Override
         public void mouseReleased(MouseEvent me) {
+<<<<<<< HEAD
+=======
+           //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> ali-fadl
         }
 
         @Override
         public void mouseEntered(MouseEvent me) {
+<<<<<<< HEAD
+=======
+           // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> ali-fadl
         }
 
         @Override
         public void mouseExited(MouseEvent me) {
+<<<<<<< HEAD
         }
     }
 
@@ -391,6 +472,38 @@ public void CitizenPanel()
         BuildLbls[0].setBounds(2, 2, 50,50);
         
         
+=======
+           // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+
+    public void panel ()
+    {
+     
+             Barrack B = new Barrack(Nation);
+             Mine SM = new Mine (Nation);
+             Farm F= new Farm(Nation);
+             Market M = new Market (Nation);
+             Stable S= new Stable(Nation);
+             Tower T = new Tower(Nation);
+             castle C = new castle(Nation);
+             WoodCutter W = new WoodCutter(Nation);
+        JPanel panel = new JPanel();
+       panel.setBounds(0,(screenSize.height-(screenSize.height/3)), screenSize.width/3,screenSize.height/3);
+       panel.setBackground(Color.yellow);
+       panel.setVisible(true);
+       B.Blbl[1].addMouseMotionListener(new CitizenSpawner());
+      SM.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       F.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       M.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       S.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       T.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       C.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       W.lbl[1].addMouseMotionListener(new CitizenSpawner());
+       
+        BuildLbls[0] = new JLabel("Barrack");
+        BuildLbls[0].setBounds(2, 2, 100, 100);
+>>>>>>> ali-fadl
         BuildLbls[1]= new JLabel("Stone Mine");
         BuildLbls[1].setIcon(new ImageIcon(new ImageIcon("Pics//StoneMineIco.png").getImage().getScaledInstance(50,50, Image.SCALE_DEFAULT)));
         BuildLbls[1].setBounds(BuildLbls[0].getX()+120,2,50,50);
@@ -425,6 +538,7 @@ public void CitizenPanel()
         BuildLbls[7].setIcon(new ImageIcon(new ImageIcon("Pics//WoodCutterIco.png").getImage().getScaledInstance(50,50, Image.SCALE_DEFAULT)));
         BuildLbls[7].setBounds(BuildLbls[6].getX()+120,BuildLbls[0].getY()+120,50,50);
 
+<<<<<<< HEAD
         for ( int i=0; i<8 ; i++)
 {
     tabs.add(BuildLbls[i]);
@@ -505,10 +619,39 @@ public void CitizenPanel()
 //        }
 //    }
 
+=======
+    
+
+    private  class CitizenSpawner implements MouseMotionListener {
+
+        public CitizenSpawner() {
+    
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent me) 
+        {
+        if (BuildLbls[0].equals(me.getSource()))
+        B.Blbl[1].setBounds(me.getXOnScreen(), me.getYOnScreen(), 422, 359);
+        
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent me) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+
+>>>>>>> ali-fadl
 //      public void movieing(){
 //        Point SP=new ;
 //      MOVER m=new MOVER(this.lbl[1].getLocation(),SP,this.lbl[1]);
 //           m.TMove.start();
 //      }
 //    
+<<<<<<< HEAD
 
+=======
+    
+}
+>>>>>>> ali-fadl

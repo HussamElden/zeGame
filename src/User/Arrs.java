@@ -16,9 +16,15 @@ import terrain.*;
 public  class  Arrs implements Serializable{
                public static User u=new User();
                public static ArrayList<Unit> ALL=new ArrayList();
+<<<<<<< HEAD
                public static ArrayList<Archer> ArrArcher=new ArrayList();
+=======
+               public static ArrayList<castle>Arrcastle=new ArrayList<>();
+     public static ArrayList<General>ArrGeneral=new ArrayList();
+>>>>>>> ali-fadl
              public static ArrayList<Barrack>ArrBarrack= new ArrayList<>();
                         public static ArrayList<Catapult>ArrCatapult=new ArrayList<>();
+                        public static ArrayList<Archer>ArrArcher=new ArrayList<>();
          public static ArrayList<Cavalry>ArrCavalry=new ArrayList<>();
                              public static ArrayList<Chariots>ArrChariots=new ArrayList<>();
              public static ArrayList<Citizens>ArrCitizens=new ArrayList<>();
@@ -27,8 +33,9 @@ public  class  Arrs implements Serializable{
                      public static ArrayList<Knight>ArrKnight=new ArrayList<>();
                     public static ArrayList<Market>ArrMarket=new ArrayList<>();
                public static ArrayList<Mine>ArrMine=new ArrayList<>();
-                   public static ArrayList<Stable>ArrStable=new ArrayList<>();
+     public static ArrayList<Stable>ArrStable=new ArrayList<>();
      public static ArrayList<Soldier>ArrSoldier=new ArrayList<>();
+     
           public static ArrayList<WoodCutter>ArrWood=new ArrayList<>();
           public static ArrayList<castle>ArrCastle=new ArrayList<>();
           public static ArrayList<Tower>ArrTower=new ArrayList<>();

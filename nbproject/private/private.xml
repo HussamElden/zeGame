@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/behavior/Selector.java</file>
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/terrain/Citizens.java</file>
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/terrain/Stable.java</file>
@@ -13,6 +14,27 @@
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/terrain/Barrack.java</file>
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/behavior/Moveee.java</file>
             <file>file:/C:/Users/al%207asob/Documents/GitHub/zegame/src/terrain/Unit.java</file>
+=======
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/BarrackPanel.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Market.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Archer.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/castle.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Mine.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/WoodCutter.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/project/s/classes/MainMenu.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/User/Arrs.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/project/s/classes/ProjectSClasses.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/project/s/classes/MiniMap.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/project/s/classes/LeGame.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Barrack.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Farm.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Stable.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Unit.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Buildings.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/MOVER.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Base.java</file>
+            <file>file:/F:/New%20folder%20(2)/zegame-405ba7fb249d1a834d946d4db79194a0ddab2fd9/src/terrain/Citizens.java</file>
+>>>>>>> ali-fadl
         </group>
     </open-files>
 </project-private>

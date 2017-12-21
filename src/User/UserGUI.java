@@ -76,15 +76,26 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
            static Arrs xyz=new Arrs();
         ObjectOutputStream OutFile;
         boolean CheckNew= true;
+<<<<<<< HEAD
 
         boolean CheckLogin= true;
      
+=======
+        boolean CheckLogin= true;
+       
+>>>>>>> ali-fadl
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         //Image Cursorimg = toolkit.getImage("‪Pics//Cursor.png");
         //  Dimension CursorSize = toolkit.getBestCursorSize(32, 32);
   //      Cursor c = toolkit.createCustomCursor(Cursorimg , new Point(0,0), "Cursor");
 
+<<<<<<< HEAD
              MainMenu MM=new MainMenu();
+=======
+  // boolean CheckLogin= true;
+             MainMenu MM=new MainMenu();
+
+>>>>>>> ali-fadl
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Font myFont =  new Font("SansSerif",Font.BOLD,20);
@@ -98,12 +109,29 @@ public class UserGUI extends JFrame implements Iuser,Serializable  {
          setTitle("Login");
          setLayout(null);
          setVisible(false);
+<<<<<<< HEAD
+=======
+         
+         LoginBtn= new JButton("Login");
+         SignUpBtn= new JButton("Sign Up");
+         UNlbl= new JLabel ("Username");
+         UNlbl.setFont(myFont);
+         Passlbl= new JLabel ("Password");
+         SignUplbl = new JLabel("Don't have an account?");
+
+       setSize(5000, 5000);
+>>>>>>> ali-fadl
         setTitle("Login");
       LoginBtn= new JButton("Login");
         SignUpBtn= new JButton("Sign Up");
       UNlbl= new JLabel ("Username");
         Passlbl= new JLabel ("Password");
         SignUplbl = new JLabel("Don't have an account?");
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> ali-fadl
          UNtxt= new JTextField(16);
          Passtxt= new JPasswordField(16);
          
@@ -312,7 +340,15 @@ InFile.close();
 //        RegisterBtn.addActionListener(new Register());
 //            setVisible(false);
 //        }
+<<<<<<< HEAD
   
+=======
+
+        
+
+        
+//        
+>>>>>>> ali-fadl
 //        @Override
 //        public void actionPerformed(ActionEvent ae)
 //        {
@@ -349,7 +385,15 @@ InFile.close();
 //}
 //    
 //}
+<<<<<<< HEAD
 
+=======
+//=======
+//  
+//  
+//  
+//>>>>>>> Hussam
+>>>>>>> ali-fadl
 // private class Register implements ActionListener {
 //
 //        @Override
@@ -390,8 +434,13 @@ InFile.close();
 //            ConfirmPasstxt.setText("");
 //        }
 //        }
+<<<<<<< HEAD
 //    }
 
+=======
+//   
+ 
+>>>>>>> ali-fadl
 //<<<<<<< HEAD:src/project/s/classes/UserGUI.java
 //  private class Login implements ActionListener {
 //

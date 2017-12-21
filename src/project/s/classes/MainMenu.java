@@ -45,10 +45,16 @@ JButton Quit;
              Image image = toolkit.getImage("Pics//sword.png");
 public Cursor c = toolkit.createCustomCursor(image , new Point(0, 
            0), "img");
+<<<<<<< HEAD
      
 
         public MainMenu() 
 
+=======
+       
+                
+        public MainMenu() 
+>>>>>>> ali-fadl
     {   
           setSize(5000, 5000);
 

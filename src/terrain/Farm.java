@@ -47,10 +47,17 @@ public class Farm extends Buildings implements IBuild{
     };
     @Override
     public void spawn(){
+<<<<<<< HEAD
    return ;};
     @Override
      public String toString() { 
          return "Farm";
+=======
+   // return null;};
+    //@Override
+    // public String toString() { 
+        // return "Farm";
+>>>>>>> ali-fadl
       } 
       public Thread Work=new Thread(){
                 

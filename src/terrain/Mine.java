@@ -45,7 +45,11 @@ public class Mine extends Buildings implements IBuild{
     };
     @Override
     public void spawn(){
+<<<<<<< HEAD
     return;
+=======
+    
+>>>>>>> ali-fadl
     };
     @Override
      public String toString() { 
